@@ -4,7 +4,7 @@ import { useState } from "react";
 import { User2, Search } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -24,14 +24,15 @@ const Navbar = () => {
         <motion.header
             initial={{ y: -100 }}
             animate={{ y: 0 }}
-            className={`fixed z-50 w-full items-center hidden lg:flex lg:flex-col ${
+            transition={{ delay: 0.5 }}
+            className={`transition-[padding] fixed z-50 w-full items-center hidden lg:flex lg:flex-col ${
                 isHovered ? "px-0" : "px-5"
             }`}
         >
-            <nav
+            <motion.nav
                 onMouseEnter={handleHover}
                 onMouseLeave={handleHover}
-                className={`flex w-full text-custom-cream bg-custom-grey text-sm font-normal px-16 py-3 rounded-b-2xl ${
+                className={`transition-all flex w-full text-custom-cream bg-custom-grey text-sm font-normal px-16 py-3 rounded-b-2xl ${
                     isHovered ? "items-start" : "items-center"
                 }`}
             >
@@ -308,7 +309,7 @@ const Navbar = () => {
                         </select>
                     </li>
                 </ul>
-            </nav>
+            </motion.nav>
         </motion.header>
     );
 };
