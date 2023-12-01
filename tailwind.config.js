@@ -26,6 +26,12 @@ module.exports = {
             "custom-green": {
                 DEFAULT: "#51c14b",
             },
+            "custom-red": {
+                DEFAULT: "#ff6f52",
+            },
+            "custom-sky": {
+                DEFAULT: "#2cabca",
+            },
         },
     },
     plugins: [],

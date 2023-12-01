@@ -2,13 +2,46 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import SideBar from "@/components/SideBar";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 
+import SideBar from "@/components/SideBar";
+import LandingForm from "@/components/Form/LandingForm";
+
 export default function Home() {
     const [counterOn, setCounterOn] = useState(false);
+    const [isShrinked, setIsShrinked] = useState(false);
+
+    const shrinkLabel = (e) => {};
+
+    const [textHover, setTextHover] = useState({
+        distribucionElectrica: false,
+        transmisionElectrica: false,
+        generacionElectrica: false,
+        comercializacionDeEnergia: false,
+        elaboracionDeProyectos: false,
+    });
+
+    const handleHover = (name) => {
+        setTextHover({
+            distribucionElectrica: false,
+            transmisionElectrica: false,
+            generacionElectrica: false,
+            comercializacionDeEnergia: false,
+            elaboracionDeProyectos: false,
+            [name]: true,
+        });
+    };
+    const handleExitHover = () => {
+        setTextHover({
+            distribucionElectrica: false,
+            transmisionElectrica: false,
+            generacionElectrica: false,
+            comercializacionDeEnergia: false,
+            elaboracionDeProyectos: false,
+        });
+    };
 
     return (
         <>
@@ -123,28 +156,143 @@ export default function Home() {
                     </div>
                 </section>
                 <section className="w-full flex h-[85vh]">
-                    <div className="bg-custom-grey text-custom-cream w-1/2 p-32 items-end justify-start flex">
-                        <h1 className="text-6xl w-3/4">
-                            Expertos en soluciones eléctricas integrales
-                        </h1>
+                    <div
+                        className="relative bg-custom-grey text-custom-cream w-1/2 p-32 items-end justify-start flex transition-all duration-500"
+                        style={{
+                            backgroundImage: `${
+                                textHover.distribucionElectrica
+                                    ? "url(/images/landing/sunset.jpg)"
+                                    : textHover.transmisionElectrica
+                                    ? "url(/images/landing/sunset.jpg)"
+                                    : textHover.generacionElectrica
+                                    ? "url(/images/landing/sunset.jpg)"
+                                    : textHover.comercializacionDeEnergia
+                                    ? "url(/images/landing/sunset.jpg)"
+                                    : textHover.elaboracionDeProyectos
+                                    ? "url(/images/landing/sunset.jpg)"
+                                    : "bg-custom-grey"
+                            }`,
+                        }}
+                    >
+                        <div
+                            className={`${
+                                textHover.distribucionElectrica && "opacity-0"
+                            } ${
+                                textHover.transmisionElectrica && "opacity-0"
+                            } ${textHover.generacionElectrica && "opacity-0"} ${
+                                textHover.comercializacionDeEnergia &&
+                                "opacity-0"
+                            } ${
+                                textHover.elaboracionDeProyectos && "opacity-0"
+                            } transition-all duration-500 bg-custom-grey z-10 w-full h-full absolute top-0 left-0`}
+                        ></div>
+                        {!Object.values(textHover).some((value) => value) && (
+                            <AnimatePresence>
+                                <motion.h1
+                                    initial={{ x: -50, opacity: 0 }}
+                                    whileInView={{
+                                        x: 0,
+                                        opacity: 1,
+                                        transition: {
+                                            duration: 0.3,
+                                            delay: 0.1,
+                                        },
+                                    }}
+                                    exit={{ opacity: 0 }}
+                                    className="text-6xl w-3/4 z-20"
+                                >
+                                    Expertos en soluciones eléctricas integrales
+                                </motion.h1>
+                            </AnimatePresence>
+                        )}
                     </div>
                     <div className="bg-custom-cream text-custom-grey w-1/2 p-32 flex items-center justify-center">
-                        <ul className="flex flex-col text-3xl gap-12 font-light">
-                            <li>Distribución eléctrica</li>
-                            <li>Transmisión eléctrica</li>
-                            <li>Generación eléctrica</li>
-                            <li>Comercialización de energia</li>
-                            <li>Elaboración de proyectos</li>
+                        <ul className="flex flex-col text-3xl gap-12 font-light w-full">
+                            <motion.li
+                                initial={{ x: -50, opacity: 0 }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: { duration: 0.3, delay: 0.1 },
+                                }}
+                                whileHover={{ fontWeight: 600 }}
+                                onMouseEnter={() =>
+                                    handleHover("distribucionElectrica")
+                                }
+                                onMouseLeave={() => handleExitHover()}
+                            >
+                                Distribución eléctrica
+                            </motion.li>
+                            <motion.li
+                                initial={{ x: -50, opacity: 0 }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: { duration: 0.3, delay: 0.1 },
+                                }}
+                                whileHover={{ fontWeight: 600 }}
+                                onMouseEnter={() =>
+                                    handleHover("transmisionElectrica")
+                                }
+                                onMouseLeave={() => handleExitHover()}
+                            >
+                                Transmisión eléctrica
+                            </motion.li>
+                            <motion.li
+                                initial={{ x: -50, opacity: 0 }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: { duration: 0.3, delay: 0.1 },
+                                }}
+                                whileHover={{ fontWeight: 600 }}
+                                onMouseEnter={() =>
+                                    handleHover("generacionElectrica")
+                                }
+                                onMouseLeave={() => handleExitHover()}
+                            >
+                                Generación eléctrica
+                            </motion.li>
+                            <motion.li
+                                initial={{ x: -50, opacity: 0 }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: { duration: 0.3, delay: 0.1 },
+                                }}
+                                whileHover={{ fontWeight: 600 }}
+                                onMouseEnter={() =>
+                                    handleHover("comercializacionDeEnergia")
+                                }
+                                onMouseLeave={() => handleExitHover()}
+                            >
+                                Comercialización de energía
+                            </motion.li>
+                            <motion.li
+                                initial={{ x: -50, opacity: 0 }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: { duration: 0.3, delay: 0.1 },
+                                    viewport: { amount: 0.8 },
+                                }}
+                                whileHover={{ fontWeight: 600 }}
+                                onMouseEnter={() =>
+                                    handleHover("elaboracionDeProyectos")
+                                }
+                                onMouseLeave={() => handleExitHover()}
+                            >
+                                Elaboración de proyectos
+                            </motion.li>
                         </ul>
                     </div>
                 </section>
                 <iframe
                     className="w-full aspect-video"
                     src="https://www.youtube.com/embed/BcuaXzBUfno?si=OrvY0TgsZjai6ln9&amp;controls=0"
-                    title="YouTube video player"
-                    frameborder="0"
+                    title="CVC Intro"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
+                    allowFullScreen
                 />
                 <section className="w-full flex flex-col bg-custom-cream px-6 py-12 md:p-24 lg:p-32 justify-center">
                     <div className="w-full flex items-center pb-36">
@@ -152,17 +300,57 @@ export default function Home() {
                             Potencia tu desarollo con nosotros
                         </h1>
                     </div>
-                    <form className="w-full flex">
-                        <div className="w-1/2">
-                            <div className="relative">
-                                <label className="absolute bottom-3 font-medium text-2xl text-custom-blue/60 pointer-events-none">
-                                    Nombre Completo*
-                                </label>
-                                <input className="border-b-[3px] h-12 w-1/2 border-custom-blue focus:outline-none" />
-                            </div>
+                    <LandingForm />
+                </section>
+                <section className="w-full flex h-[50vh] gap-[2px]">
+                    <div className="w-1/3 flex flex-col aspect-square">
+                        <div className="relative h-3/4">
+                            <Image
+                                className="object-cover"
+                                src="/images/landing/news0001.jpg"
+                                alt=""
+                                fill
+                            />
                         </div>
-                        <div className="w-1/2"></div>
-                    </form>
+                        <div className="h-1/4 bg-custom-blue p-4 flex items-center">
+                            <p className="font-normal text-2xl text-custom-cream">
+                                Coelvisac suministrará energía a San Gabán por
+                                cinco años
+                            </p>
+                        </div>
+                    </div>
+                    <div className="w-1/3 flex flex-col aspect-square">
+                        <div className="relative h-3/4">
+                            <Image
+                                className="object-cover"
+                                src="/images/landing/news0002.jpg"
+                                alt=""
+                                fill
+                            />
+                        </div>
+                        <div className="h-1/4 bg-custom-blue p-4 flex items-center">
+                            <p className="font-normal text-2xl text-custom-cream">
+                                Coelvisac suministrará energía a San Gabán por
+                                cinco años
+                            </p>
+                        </div>
+                    </div>
+                    <div className="w-1/3 flex flex-col aspect-square">
+                        <div className="relative h-3/4">
+                            <Image
+                                className="object-cover"
+                                src="/images/landing/news0003.jpg"
+                                alt=""
+                                fill
+                            />
+                        </div>
+                        <div className="h-1/4 bg-custom-blue p-4 flex items-center">
+                            <p className="font-normal text-2xl text-custom-cream">
+                                Coelvisac suministrará energía a San Gabán por
+                                cinco años
+                            </p>
+                        </div>
+                    </div>
                 </section>
             </div>
         </>
