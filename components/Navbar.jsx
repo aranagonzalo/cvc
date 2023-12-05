@@ -4,7 +4,7 @@ import { useState } from "react";
 import { User2, Search } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -36,14 +36,14 @@ const Navbar = () => {
                     isHovered ? "items-start" : "items-center"
                 }`}
             >
-                <div className="w-[14%] flex items-center">
+                <Link href="/" className="w-[14%] flex items-center">
                     <Image
                         src="/images/logo/logo.png"
                         alt="Logo CVC Energía"
                         width={132}
                         height={128}
                     />
-                </div>
+                </Link>
                 <ul
                     className={`flex justify-evenly w-[61%] ${
                         isHovered ? "pt-[9px] items-start" : "pt-0 items-center"

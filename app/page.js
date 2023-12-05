@@ -6,14 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 
-import SideBar from "@/components/SideBar";
+import SideBar from "@/components/Landing/SideBar";
 import LandingForm from "@/components/Form/LandingForm";
 
 export default function Home() {
     const [counterOn, setCounterOn] = useState(false);
-    const [isShrinked, setIsShrinked] = useState(false);
-
-    const shrinkLabel = (e) => {};
 
     const [textHover, setTextHover] = useState({
         distribucionElectrica: false,

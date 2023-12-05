@@ -13,7 +13,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="es">
-            <body className={`${outfit.className} overflow-x-hidden`}>
+            <body
+                className={`${outfit.className} bg-custom-grey overflow-x-hidden`}
+            >
                 <Navbar />
                 {children}
                 <Footer />

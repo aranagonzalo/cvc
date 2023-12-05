@@ -32,6 +32,9 @@ module.exports = {
             "custom-sky": {
                 DEFAULT: "#2cabca",
             },
+            "custom-yellow": {
+                DEFAULT: "#fac32a",
+            },
         },
     },
     plugins: [],
