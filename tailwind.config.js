@@ -15,6 +15,7 @@ module.exports = {
         colors: {
             "custom-grey": {
                 DEFAULT: "#1c1c1c",
+                100: "#DDD",
                 300: "#777",
             },
             "custom-cream": {

@@ -9,16 +9,19 @@ import Input from "@/components/Form/Input";
 import Select from "@/components/Form/Select";
 import CustomFileInput from "./CustomFileInput";
 
-const LandingForm = () => {
-    const [formData, setFormData] = useState({
+const ExtraForm = ({ reclamo, denuncia, color }) => {
+    const initialFormData = {
         name: "",
         number: "",
+        suministro: "",
         email: "",
-        location: "",
-        projectType: "",
         file: null,
         message: "",
-    });
+        ...(reclamo && { reclamo: "" }),
+        ...(denuncia && { denuncia: "" }),
+    };
+
+    const [formData, setFormData] = useState(initialFormData);
 
     const [focused, setFocused] = useState({
         name: false,
@@ -45,15 +48,7 @@ const LandingForm = () => {
             setIsLoading(false);
             toast.success("Mensaje enviado exitosamente");
             setFocused({});
-            setFormData({
-                name: "",
-                number: "",
-                email: "",
-                location: "",
-                projectType: "",
-                file: null,
-                message: "",
-            });
+            setFormData(initialFormData);
         } catch (error) {
             setIsLoading(false);
             toast.error("Hubo un error al enviar el mensaje");
@@ -74,8 +69,8 @@ const LandingForm = () => {
             <div className="flex pb-36">
                 <div className="flex flex-col w-1/2 gap-12">
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        color="cream"
+                        backgroundColor={`${color}`}
                         name="name"
                         required
                         type="text"
@@ -87,8 +82,8 @@ const LandingForm = () => {
                         focused={focused}
                     />
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        color="cream"
+                        backgroundColor={`${color}`}
                         name="number"
                         required
                         type="number"
@@ -100,8 +95,8 @@ const LandingForm = () => {
                         focused={focused}
                     />
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        color="cream"
+                        backgroundColor={`${color}`}
                         name="email"
                         required
                         type="email"
@@ -112,43 +107,69 @@ const LandingForm = () => {
                         formData={formData}
                         focused={focused}
                     />
-                    <Select
-                        name="location"
-                        required
-                        fieldName="Ubicación del proyecto"
+                    <Input
+                        color="cream"
+                        backgroundColor={`${color}`}
+                        name="suministro"
+                        type="number"
+                        fieldName="Nro. de suministro"
                         handleChange={handleChange}
-                        options={[
-                            "Negativa a la instalación del suministro",
-                            "Excesivo consumo",
-                            "Excesiva facturación",
-                            "Recupero de energía",
-                            "Cobro indebido",
-                            "Corte del servicio",
-                            "Negativa al incremento de potencia",
-                            "Negativa al cambio de opción tarifaria",
-                            "Reembolso de aportes o contribuciones",
-                            "Reubicación de instalaciones que se encuentren bajo responsabilidad de la concesionaria",
-                            "Mala calidad (tensión, interrupciones)",
-                            "Deudas de Terceros",
-                            "Otras cuestiones vinculadas a la prestación de los servicios públicos de electricidad y gas natural",
-                        ]}
                         onBlur={onBlur}
                         onFocus={onFocus}
                         formData={formData}
                         focused={focused}
                     />
-                    <Select
-                        name="projectType"
-                        required
-                        fieldName="Tipo de proyecto"
-                        handleChange={handleChange}
-                        options={["Energía", "Obra", "Otros"]}
-                        onBlur={onBlur}
-                        onFocus={onFocus}
-                        formData={formData}
-                        focused={focused}
-                    />
-                    <CustomFileInput color="blue" />
+                    {reclamo && (
+                        <Select
+                            color="cream"
+                            backgroundColor={`${color}`}
+                            name="reclamo"
+                            required
+                            fieldName="Tipo de reclamo"
+                            handleChange={handleChange}
+                            options={[
+                                "Negativa a la instalación del suministro",
+                                "Excesivo consumo",
+                                "Excesiva facturación",
+                                "Recupero de energía",
+                                "Cobro indebido",
+                                "Corte del servicio",
+                                "Negativa al incremento de potencia",
+                                "Negativa al cambio de opción tarifaria",
+                                "Reembolso de aportes o contribuciones",
+                                "Reubicación de instalaciones que se encuentren bajo responsabilidad de la concesionaria",
+                                "Mala calidad (tensión, interrupciones)",
+                                "Deudas de Terceros",
+                                "Otras cuestiones vinculadas a la prestación de los servicios públicos de electricidad y gas natural",
+                            ]}
+                            onBlur={onBlur}
+                            onFocus={onFocus}
+                            formData={formData}
+                            focused={focused}
+                        />
+                    )}
+                    {denuncia && (
+                        <Select
+                            color="cream"
+                            backgroundColor={`${color}`}
+                            name="denuncia"
+                            required
+                            fieldName="Tipo de denuncia"
+                            handleChange={handleChange}
+                            options={[
+                                "Por interrupción del suministro",
+                                "Por deterioro de artefactos eléctricos",
+                                "Por procesos de facturación irregular",
+                                "Por deficiencias típicas del servicio de alumbrado público",
+                                "Por riesgo eléctrico en la vía pública",
+                            ]}
+                            onBlur={onBlur}
+                            onFocus={onFocus}
+                            formData={formData}
+                            focused={focused}
+                        />
+                    )}
+                    <CustomFileInput color="cream" />
                 </div>
                 <div className="flex flex-col w-1/2 gap-4">
                     <textarea
@@ -156,18 +177,16 @@ const LandingForm = () => {
                         name="message"
                         onChange={handleChange}
                         value={formData.message}
-                        className="h-full placeholder:text-custom-blue/60 border-[2.5px] w-full bg-custom-cream border-custom-blue text-custom-blue p-4 text-2xl font-medium focus:outline-none rounded-lg"
+                        className={`h-full placeholder:text-custom-cream/80 border-[2.5px] w-full border-custom-cream bg-custom-${color} text-custom-cream p-4 text-2xl font-medium focus:outline-none rounded-lg`}
                         placeholder="Escribenos los detalles aquí"
                     ></textarea>
                 </div>
             </div>
             <div className="flex">
-                <div className="flex flex-col w-1/2 gap-4 text-custom-blue font-normal text-2xl">
+                <div className="flex flex-col w-1/2 gap-4 text-custom-cream font-normal text-2xl">
                     <p className="w-3/4">
                         Al apretar el botón, usted está aceptando los{" "}
-                        <Link href="/terminos" className="underline">
-                            Términos y Condiciones
-                        </Link>
+                        <Link href="/terminos">Términos y Condiciones</Link>
                     </p>
                 </div>
                 <div className="flex flex-col w-1/2 gap-4">
@@ -176,15 +195,15 @@ const LandingForm = () => {
                             isLoading ||
                             !formData.name ||
                             !formData.email ||
-                            !formData.number ||
-                            !formData.projectType ||
-                            !formData.location
+                            !formData.number
                         }
                         type="submit"
-                        className={`flex items-center justify-center text-2xl py-3 px-8 font-normal text-custom-cream bg-custom-blue rounded-full max-w-max ${
-                            !formData.email && "bg-zinc-500 cursor-not-allowed"
+                        className={`flex items-center justify-center text-2xl py-3 px-8 font-normal !text-custom-${color} bg-custom-cream rounded-full max-w-max ${
+                            !formData.email &&
+                            "bg-custom-grey-100 cursor-not-allowed"
                         } ${
-                            !formData.name && "bg-zinc-500 cursor-not-allowed"
+                            !formData.name &&
+                            "bg-custom-grey-100 cursor-not-allowed"
                         }`}
                     >
                         {isLoading ? (
@@ -206,4 +225,4 @@ const LandingForm = () => {
     );
 };
 
-export default LandingForm;
+export default ExtraForm;

@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="es">
             <body
+                suppressHydrationWarning={true}
                 className={`${outfit.className} bg-custom-grey overflow-x-hidden`}
             >
                 <Navbar />

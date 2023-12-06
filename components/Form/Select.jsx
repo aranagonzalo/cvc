@@ -1,6 +1,8 @@
 "use client";
 
 const Select = ({
+    color,
+    backgroundColor,
     name,
     required,
     fieldName,
@@ -14,7 +16,7 @@ const Select = ({
     return (
         <div className="relative">
             <label
-                className={`transition-text duration-300 ease-out bg-custom-cream absolute font-medium text-2xl text-custom-blue/60 pointer-events-none ${
+                className={`transition-text duration-300 ease-out bg-custom-${backgroundColor} absolute font-medium text-2xl text-custom-${color} pointer-events-none ${
                     focused[name] || formData[name]
                         ? "text-base -top-5"
                         : "bottom-2 pb-2"
@@ -30,7 +32,7 @@ const Select = ({
                 onFocus={onFocus}
                 value={formData[name]}
                 required={required}
-                className={`border-b-[2.5px] h-12 w-1/2 border-custom-blue text-2xl font-medium text-custom-blue focus:outline-none bg-custom-cream`}
+                className={`border-b-[2.5px] h-12 w-1/2 border-custom-${color} text-2xl font-medium text-custom-${color} focus:outline-none bg-custom-${backgroundColor}`}
             >
                 <option value="">[Seleccionar]</option>
                 {options.map((o, i) => (
@@ -40,7 +42,7 @@ const Select = ({
                 ))}
             </select>
             {focused[name] && !formData[name] && (
-                <p className="font-medium text-base text-custom-red/60">
+                <p className="font-medium text-base text-custom-red">
                     Campo Requerido
                 </p>
             )}

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const CustomFileInput = ({}) => {
+const CustomFileInput = ({ color }) => {
     const [selectedFile, setSelectedFile] = useState(null);
 
     const handleFileChange = (e) => {
@@ -12,11 +12,11 @@ const CustomFileInput = ({}) => {
         <div className="flex flex-col w-max gap-2">
             <label
                 htmlFor="fileInput"
-                className="text-custom-blue px-5 py-2 cursor-pointer border-[2.5px] border-custom-blue rounded-full text-xl w-max"
+                className={`text-custom-${color} px-5 py-2 cursor-pointer border-[2.5px] border-custom-${color} rounded-full text-xl w-max`}
             >
                 Adjuntar archivo
             </label>
-            <span className="text-custom-blue">
+            <span className={`text-custom-${color}`}>
                 {selectedFile ? selectedFile.name : ""}
             </span>
             <input

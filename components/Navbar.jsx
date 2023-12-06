@@ -1,10 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import React, { Component, useEffect, useState, useRef } from "react";
 import { User2, Search } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Navbar = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -20,8 +24,24 @@ const Navbar = () => {
 
     const isActive = (section) => hoveredSection === section;
 
+    const navbarRef = useRef(null);
+
+    useEffect(() => {
+        const showNav = gsap
+            .fromTo(navbarRef.current, { y: -100 }, { y: 0, duration: 0.3 })
+            .progress(1);
+        ScrollTrigger.create({
+            start: "top top",
+            end: "max",
+            onUpdate: (self) => {
+                self.direction === -1 ? showNav.play() : showNav.reverse();
+            },
+        });
+    }, []);
+
     return (
         <motion.header
+            ref={navbarRef}
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ delay: 0.5 }}
@@ -32,7 +52,7 @@ const Navbar = () => {
             <motion.nav
                 onMouseEnter={handleHover}
                 onMouseLeave={handleHover}
-                className={`transition-all flex w-full text-custom-cream bg-custom-grey text-sm font-normal px-16 py-3 rounded-b-2xl ${
+                className={`transition-all flex w-full text-custom-cream bg-custom-grey/[.95] backdrop-blur text-sm font-normal px-16 py-3 rounded-b-2xl ${
                     isHovered ? "items-start" : "items-center"
                 }`}
             >
@@ -59,7 +79,9 @@ const Navbar = () => {
                             onMouseEnter={() => handleHoverSection("nosotros")}
                             onMouseLeave={() => handleHoverSection(null)}
                         >
-                            <p
+                            <motion.p
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 className={`${
                                     isHovered
                                         ? "pb-8"
@@ -67,7 +89,7 @@ const Navbar = () => {
                                 }`}
                             >
                                 Nosotros
-                            </p>
+                            </motion.p>
                             <motion.ul
                                 initial={{ opacity: 0, y: -20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -93,14 +115,6 @@ const Navbar = () => {
                                 </li>
                                 <li className="flex">
                                     <Link
-                                        className="py-2 w-full"
-                                        href="/zonas-de-concesion"
-                                    >
-                                        Zonas de concesión
-                                    </Link>
-                                </li>
-                                <li className="flex">
-                                    <Link
                                         className="pt-2 w-full"
                                         href="/activos"
                                     >
@@ -122,7 +136,9 @@ const Navbar = () => {
                             }
                             onMouseLeave={() => handleHoverSection(null)}
                         >
-                            <p
+                            <motion.p
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 className={`${
                                     isHovered
                                         ? "pb-8"
@@ -130,7 +146,7 @@ const Navbar = () => {
                                 }`}
                             >
                                 Soluciones
-                            </p>
+                            </motion.p>
                             <motion.ul
                                 initial={{ opacity: 0, y: -20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -139,27 +155,42 @@ const Navbar = () => {
                                 }`}
                             >
                                 <li className="flex">
-                                    <Link className="pb-2 w-full" href="#">
+                                    <Link
+                                        className="pb-2 w-full"
+                                        href="/distribucion"
+                                    >
                                         Distribución
                                     </Link>
                                 </li>
                                 <li className="flex">
-                                    <Link className="py-2 w-full" href="#">
+                                    <Link
+                                        className="py-2 w-full"
+                                        href="/transmision"
+                                    >
                                         Transmisión
                                     </Link>
                                 </li>
                                 <li className="flex">
-                                    <Link className="py-2 w-full" href="#">
+                                    <Link
+                                        className="py-2 w-full"
+                                        href="/generacion"
+                                    >
                                         Generación
                                     </Link>
                                 </li>
                                 <li className="flex">
-                                    <Link className="py-2 w-full" href="#">
+                                    <Link
+                                        className="py-2 w-full"
+                                        href="/elaboracion-de-proyectos"
+                                    >
                                         Elaboración de Proyectos
                                     </Link>
                                 </li>
                                 <li className="flex">
-                                    <Link className="pt-2 w-full" href="#">
+                                    <Link
+                                        className="pt-2 w-full"
+                                        href="/comercializacion-de-energia"
+                                    >
                                         Comercialización de energía
                                     </Link>
                                 </li>
@@ -187,7 +218,9 @@ const Navbar = () => {
                                         : "pb-0 text-custom-cream"
                                 }`}
                             >
-                                <Link href="/">Ahorra Energía</Link>
+                                <Link href="/ahorra-energia">
+                                    Ahorra Energía
+                                </Link>
                             </motion.p>
                         </div>
                     </li>
@@ -203,7 +236,9 @@ const Navbar = () => {
                             }
                             onMouseLeave={() => handleHoverSection(null)}
                         >
-                            <p
+                            <motion.p
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 className={`${
                                     isHovered
                                         ? "pb-8"
@@ -211,7 +246,7 @@ const Navbar = () => {
                                 }`}
                             >
                                 Zona Cliente
-                            </p>
+                            </motion.p>
                             <motion.ul
                                 initial={{ opacity: 0, y: -20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -287,9 +322,13 @@ const Navbar = () => {
                     }`}
                 >
                     <li>
-                        <button className="flex items-center bg-custom-cream text-custom-grey text-xs rounded-full px-4 py-[7px]">
+                        <Link
+                            target="_blank"
+                            href="https://pagolink.niubiz.com.pe/pagoseguro/CVCenergia/1603339"
+                            className="flex items-center bg-custom-cream text-custom-grey text-xs rounded-full px-4 py-[7px]"
+                        >
                             Paga tu recibo aquí
-                        </button>
+                        </Link>
                     </li>
                     <li>
                         <Link

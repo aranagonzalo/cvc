@@ -119,7 +119,7 @@ const Page = () => {
             <Hero
                 alt="Torre eléctrica con cielo despejado"
                 src="/images/zonas-de-concesion/zonas-de-concesion.jpg"
-                title="Dónde brindamos servicios"
+                title="Distribución Eléctrica"
             />
             <section className="w-full flex h-[800px] relative overflow-hidden">
                 <div
@@ -186,11 +186,13 @@ const Page = () => {
                             </div>
                         </div>
                         <div className="w-full h-[320px] relative">
-                            <Image
-                                fill
-                                alt="Mapa político del Perú"
-                                src={dotData.url}
-                            />
+                            {dotData.url && (
+                                <Image
+                                    fill
+                                    alt={dotData.title}
+                                    src={dotData.url}
+                                />
+                            )}
                         </div>
                     </div>
                 </div>
@@ -201,12 +203,17 @@ const Page = () => {
                             alt="Mapa político del Perú"
                             src="/images/zonas-de-concesion/mapa.svg"
                         />
+                        <div
+                            className="top-0 cursor-pointer bg-custom-blue rounded-full py-1 px-3 z-20 before:z-0 text-sm text-custom-cream absolute hover:shadow-lg hover:scale-110 transition-all"
+                            onClick={handleExit}
+                        >
+                            menú
+                        </div>
                         {dots.map((d, i) => (
                             <div
                                 key={i}
-                                onMouseEnter={() => handleHover(d)}
-                                onMouseLeave={handleExit}
-                                className="bg-custom-yellow rounded-full w-[22px] h-[22px] absolute before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:pointer-events-none hover:before:h-24 hover:before:w-24 before:transition-all before:-translate-y-1/2 before:flex before:rounded-full before:bg-custom-yellow/40 before:w-0 before:h-0"
+                                onClick={() => handleHover(d)}
+                                className="cursor-pointer bg-custom-yellow rounded-full w-[22px] h-[22px] absolute before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:pointer-events-none hover:before:h-24 hover:before:w-24 before:transition-all before:-translate-y-1/2 before:flex before:rounded-full before:bg-custom-yellow/40 before:w-0 before:h-0"
                                 style={{ top: d.top, left: d.left }}
                             ></div>
                         ))}

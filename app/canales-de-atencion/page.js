@@ -78,23 +78,21 @@ const Page = () => {
                 title="Comunícate con nosotros"
             />
             <section className="w-full flex h-[700px] relative overflow-hidden">
-                <div className="w-1/2 flex justify-start items-end h-full">
-                    <div className="flex justify-start items-end bg-custom-cream h-full p-24">
-                        <motion.h1
-                            initial={{ opacity: 0, x: -100 }}
-                            whileInView={{
-                                opacity: 1,
-                                x: 0,
-                                transition: { duration: 0.3 },
-                            }}
-                            className="text-6xl text-custom-grey w-1/2"
-                        >
-                            Conoce nuestros canales
-                        </motion.h1>
-                    </div>
+                <div className="w-1/2 flex justify-start items-end h-full bg-custom-cream p-24">
+                    <motion.h1
+                        initial={{ opacity: 0, x: -100 }}
+                        whileInView={{
+                            opacity: 1,
+                            x: 0,
+                            transition: { duration: 0.3 },
+                        }}
+                        className="text-6xl text-custom-grey w-1/2"
+                    >
+                        Conoce nuestros canales
+                    </motion.h1>
                 </div>
                 {showDetail ? (
-                    <div className={`bg-custom-${detail.color} w-1/2 p-16`}>
+                    <div className={`bg-custom-${detail.color} w-1/2 p-12`}>
                         <div
                             className="flex w-fit items-center cursor-pointer pb-2 gap-4"
                             onClick={() => setShowDetail(false)}
@@ -109,7 +107,7 @@ const Page = () => {
                                 regresa
                             </p>
                         </div>
-                        <div className="flex flex-col items-center">
+                        <div className="flex flex-col items-center h-full relative text-center">
                             <Image
                                 width={60}
                                 height={60}
@@ -119,78 +117,142 @@ const Page = () => {
                             <h1 className="text-xl text-custom-cream pt-2 pb-12">
                                 {detail.label}
                             </h1>
-                            {detail.label == "CVC Fono | 24h" ? (
+                            {detail.label === "CVC Fono | 24h" ? (
                                 <>
-                                    <p className="text-2xl text-custom-cream pt-12">
+                                    <p className="text-lg font-semibold text-custom-cream pt-12">
                                         Lima
                                     </p>
-                                    <p className="text-2xl text-custom-cream pb-8">
+                                    <p className="text-base font-light text-custom-cream pb-8">
                                         (01) 640-0770
                                     </p>
-                                    <p className="text-2xl text-custom-cream">
+                                    <p className="text-lg font-semibold text-custom-cream">
                                         Ica
                                     </p>
-                                    <p className="text-2xl text-custom-cream pb-8">
+                                    <p className="text-base font-light text-custom-cream pb-8">
                                         (056) 640-001
                                     </p>
-                                    <p className="text-2xl text-custom-cream">
+                                    <p className="text-lg font-semibold text-custom-cream">
                                         Lambayeque
                                     </p>
-                                    <p className="text-2xl text-custom-cream">
+                                    <p className="text-base font-light text-custom-cream">
                                         (074) 640-771
                                     </p>
                                 </>
-                            ) : detail.label == "WhatsApp" ? (
+                            ) : detail.label === "WhatsApp" ? (
                                 <>
-                                    <p className="text-xl font-semibold text-custom-cream pt-20">
-                                        Solo disponible
+                                    <p className="text-lg font-semibold text-custom-cream pt-12">
+                                        Escríbenos al
                                     </p>
-                                    <p className="text-xl font-semibold text-custom-cream pb-8">
-                                        para mensajes
-                                    </p>
-                                    <p className="text-2xl font-light text-custom-cream">
+                                    <p className="text-lg font-semibold text-custom-cream">
                                         +51 998 166 703
                                     </p>
-                                </>
-                            ) : detail.label == "Centros de atención" ? (
-                                <>
-                                    <p className="text-lg font-semibold text-custom-cream">
-                                        Lima
-                                    </p>
-                                    <p className="text-base font-light leading-none text-custom-cream">
-                                        Av. Victor Andrés Belaunde N°147
-                                    </p>
-                                    <p className="text-base font-light leading-none text-custom-cream pb-8">
-                                        Torre 1 - Pisos 8 y 9, Lima
+                                    <p className="text-lg font-semibold text-custom-cream pt-16">
+                                        Horario de
                                     </p>
                                     <p className="text-lg font-semibold text-custom-cream">
-                                        Villacuri
+                                        atención
                                     </p>
-                                    <p className="text-base font-light leading-none text-custom-cream">
-                                        Carretera Panamericana Sur Km.274
+                                    <p className="text-lg font-light text-custom-cream pt-4">
+                                        Lunes a viernes
                                     </p>
-                                    <p className="text-base font-light leading-none text-custom-cream pb-8">
-                                        Salas de Guadalupe - Ica
+                                    <p className="text-lg font-light text-custom-cream">
+                                        8:30am a 6pm
                                     </p>
-                                    <p className="text-lg font-semibold text-custom-cream">
-                                        Andahuasi
-                                    </p>
-                                    <p className="text-base font-light leading-none text-custom-cream">
-                                        Las Alhelíe Mz.P Lote 6 Sector 4
-                                    </p>
-                                    <p className="text-base font-light leading-none text-custom-cream pb-8">
-                                        Sayán - Huaura - Lima
-                                    </p>
-                                    <p className="text-lg font-semibold text-custom-cream">
-                                        Lambayeque
-                                    </p>
-                                    <p className="text-base font-light leading-none text-custom-cream">
-                                        Calle Las Mercedes 466
-                                    </p>
-                                    <p className="text-base font-light leading-none text-custom-cream">
-                                        Pacora - Lambayeque
+                                    <p className="flex self-center text-sm font-light pt-24 text-custom-cream">
+                                        Este es un canal exclusivo de
+                                        mensajería. No se atenderán llamadas.
                                     </p>
                                 </>
+                            ) : detail.label === "Centros de atención" ? (
+                                <div className="flex h-full gap-8">
+                                    <div className="flex flex-col h-full pt-12 text-center gap-2">
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Lima
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Av. Victor Andrés Belaunde N°147
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Torre 1 - Pisos 8 y 9, Lima
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Atención al público | 9am a 6pm
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream pb-20">
+                                            Recepción de documentos | 9am a
+                                            4:30pm
+                                        </p>
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Villacuri
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Carretera Panamericana Sur Km.274
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Salas de Guadalupe - Ica
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Atención al publico | 8am a 4pm 
+                                        </p>
+                                    </div>
+                                    <div className="flex flex-col h-full pt-12 text-center gap-2">
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Andahuasi
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Las Alhelíe Mz.P Lote 6 Sector 4
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Sayán - Huaura - Lima
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream pb-[102px]">
+                                            Atención al publico | 8am a 4pm
+                                        </p>
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Lambayeque
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Calle Las Mercedes 466
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Pacora - Lambayeque
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Atención al publico | 8am a 4pm
+                                        </p>
+                                    </div>
+                                </div>
+                            ) : detail.label === "Medios de pago" ? (
+                                <div className="flex flex-col text-custom-cream items-center">
+                                    <h3 className="text-lg font-semibold pb-6">
+                                        Pago presencial
+                                    </h3>
+                                    <p className="text-base font-light w-3/4">
+                                        Puedes realizar tus pagos presenciales
+                                        en cualquiera de nuestros centros de
+                                        atención.
+                                    </p>
+
+                                    <h3 className="text-lg font-semibold pb-6 pt-12">
+                                        Pago digital
+                                    </h3>
+                                    <p className="text-base font-light">
+                                        Puedes realizar tus pagos digitales en
+                                        dólares o soles.
+                                    </p>
+                                    <p className="text-base font-light pb-12">
+                                        Para ver nuestra{" "}
+                                        <strong className="font-semibold">
+                                            Guía de Pagos Digitales,{" "}
+                                            <Link href="" className="underline">
+                                                haz click aquí.
+                                            </Link>
+                                        </strong>
+                                    </p>
+                                    <button className="bg-custom-cream text-custom-grey p-4 rounded-full hover:shadow-lg hover:scale-110 transition-all">
+                                        Realiza tu pago aquí
+                                    </button>
+                                </div>
                             ) : null}
                         </div>
                     </div>

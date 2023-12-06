@@ -1,75 +1,9 @@
 "use client";
 import Hero from "@/components/Hero.jsx";
-import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState } from "react";
-
-const items = [
-    {
-        src: "/images/canales-de-atencion/telefono.svg",
-        alt: "Icono de Teléfono CVC",
-        label: "CVC Fono | 24h",
-        color: "red",
-    },
-    {
-        src: "/images/canales-de-atencion/whatsapp.svg",
-        alt: "Icono WhastApp",
-        label: "WhatsApp",
-        color: "green",
-    },
-    {
-        src: "/images/canales-de-atencion/direcciones.svg",
-        alt: "Icono de edificio",
-        label: "Centros de atención",
-        color: "sky",
-    },
-    {
-        src: "/images/canales-de-atencion/medios-de-pago.svg",
-        alt: "Icono de billetes",
-        label: "Medios de pago",
-        color: "blue",
-    },
-];
 
 const Page = () => {
-    const [showDetail, setShowDetail] = useState(false);
-
-    const [detail, setDetail] = useState({});
-
-    const handleClick = (item) => {
-        setShowDetail(true);
-        item.label == "CVC Fono | 24h"
-            ? setDetail({
-                  color: item.color,
-                  src: "/images/canales-de-atencion/telefono.svg",
-                  alt: "Icono de Teléfono CVC",
-                  label: "CVC Fono | 24h",
-              })
-            : item.label == "WhatsApp"
-            ? setDetail({
-                  color: item.color,
-                  src: "/images/canales-de-atencion/whatsapp.svg",
-                  alt: "Icono WhastApp",
-                  label: "WhatsApp",
-              })
-            : item.label == "Centros de atención"
-            ? setDetail({
-                  color: item.color,
-                  src: "/images/canales-de-atencion/direcciones.svg",
-                  alt: "Icono de edificio",
-                  label: "Centros de atención",
-              })
-            : item.label == "Medios de pago"
-            ? setDetail({
-                  color: item.color,
-                  src: "/images/canales-de-atencion/medios-de-pago.svg",
-                  alt: "Icono de billetes",
-                  label: "Medios de pago",
-              })
-            : null;
-    };
-
     return (
         <div className="w-full flex flex-col">
             <Hero
@@ -78,8 +12,26 @@ const Page = () => {
                 title="Beneficiarios FISE"
             />
             <section className="w-full flex flex-col bg-custom-cream gap-16 px-28 py-32">
-                <h1 className="text-6xl font-medium">¿Sábes qué es el FISE?</h1>
-                <p className="text-4xl font-light w-[90%] leading-tight">
+                <motion.h1
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        transition: { duration: 0.8 },
+                    }}
+                    className="text-6xl font-medium"
+                >
+                    ¿Sábes qué es el FISE?
+                </motion.h1>
+                <motion.p
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        transition: { duration: 0.6 },
+                    }}
+                    className="text-4xl font-light w-[90%] leading-tight"
+                >
                     Es el fondo de inclusión Social Energético (FISE) creado por
                     la ley Nº 29852, que asignara recursos para la compensación
                     social y promoción para el acceso al GLP de los sectores
@@ -89,7 +41,7 @@ const Page = () => {
                     <strong className="font-semibold">
                         un balón de GLP de 10 kg con S/. 25.00 de descuento.
                     </strong>
-                </p>
+                </motion.p>
             </section>
             <iframe
                 className="w-full aspect-video"
@@ -116,16 +68,107 @@ const Page = () => {
                 </div>
                 <div className="w-1/2 flex h-full justify-center p-12 bg-custom-cream">
                     <ul className="flex flex-col justify-evenly items-center w-3/4 m-0">
-                        <li className="list-disc font-light leading-tight text-4xl">
+                        <motion.li
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{
+                                opacity: 1,
+                                x: 0,
+                                transition: { duration: 0.5 },
+                            }}
+                            className="list-disc font-light leading-tight text-4xl"
+                        >
                             Los usuarios residenciales de electricidad con
                             consumo promedio anual menor o igual a 70 KWh y que
                             cuenten con cocina a GLP.
-                        </li>
-                        <li className="list-disc font-light leading-tight text-4xl">
+                        </motion.li>
+                        <motion.li
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{
+                                opacity: 1,
+                                x: 0,
+                                transition: { duration: 0.5 },
+                            }}
+                            className="list-disc font-light leading-tight text-4xl"
+                        >
                             Las personas que no cuentan con el servicio
                             residencial de electricidad pero si cuentan con una
                             cocina a GLP.
-                        </li>
+                        </motion.li>
+                    </ul>
+                </div>
+            </section>
+            <section className="w-full flex flex-col gap-16 relative overflow-hidden bg-custom-sky px-28 py-32">
+                <h1 className="text-6xl font-medium text-custom-cream">
+                    Requisitos para acceder
+                </h1>
+                <p className="text-4xl font-light w-[90%] leading-tight text-custom-cream">
+                    El nuevo procedimiento de identificación de beneficiarios
+                    del FISE permite que más viviendas en todo el país puedan
+                    acceder a una energía menos contaminante y de manera
+                    económica, para lo cual se debe cumplir con los siguientes
+                    requisitos.
+                </p>
+                <ul className="self-center text-center flex flex-col gap-4 w-full">
+                    <li className="px-32 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-full text-center self-center">
+                        Criterio socioeconómico y geográfico (distritos más
+                        pobres)
+                    </li>
+                    <li className="px-32 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-[90%] text-center self-center">
+                        No contar con gas natural residencial en su distrito
+                    </li>
+                    <li className="px-32 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-[80%] text-center self-center">
+                        Consumo de electricidad: ≤ 70 Kwh mes{" "}
+                    </li>
+                    <li className="px-24 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-[70%] text-center self-center">
+                        Debidamente identificado en RENIEC
+                    </li>
+                    <li className="px-24 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-[60%] text-center self-center">
+                        Ingreso anual: S/.19.000 (SUNAT)
+                    </li>
+                    <li className="px-24 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-[50%] text-center self-center">
+                        Un solo beneficiario por familia
+                    </li>
+                    <li className="px-0 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-[40%] text-center self-center">
+                        Precariedad de vivienda
+                    </li>
+                    <li className="px-0 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-[30%] text-center self-center">
+                        Contar con cocina a gas
+                    </li>
+                    <li className="px-0 py-8 text-2xl bg-custom-cream text-custom-grey rounded-full w-[20%] text-center self-center">
+                        Beneficiario
+                    </li>
+                </ul>
+            </section>
+            <section className="w-full flex h-[320px] relative overflow-hidden">
+                <div className="w-1/2 flex justify-start items-end h-full">
+                    <div className="flex justify-start items-end bg-custom-red h-full p-24 w-full">
+                        <motion.h1
+                            initial={{ opacity: 0, x: -100 }}
+                            whileInView={{
+                                opacity: 1,
+                                x: 0,
+                                transition: { duration: 0.3 },
+                            }}
+                            className="text-6xl text-custom-cream"
+                        >
+                            Conoce más
+                        </motion.h1>
+                    </div>
+                </div>
+                <div className="w-1/2 flex h-full justify-center p-12 bg-custom-cream">
+                    <ul className="flex flex-col justify-evenly items-center w-3/4 m-0 text-custom-red">
+                        <Link
+                            href=""
+                            className="font-normal leading-tight text-4xl"
+                        >
+                            Beneficiarios del programa
+                        </Link>
+                        <Link
+                            href=""
+                            className="font-normal leading-tight text-4xl"
+                        >
+                            Tríptico informativo del FISE
+                        </Link>
                     </ul>
                 </div>
             </section>

@@ -9,16 +9,18 @@ import Input from "@/components/Form/Input";
 import Select from "@/components/Form/Select";
 import CustomFileInput from "./CustomFileInput";
 
-const LandingForm = () => {
-    const [formData, setFormData] = useState({
+const AhorroEnergiaForm = ({ color }) => {
+    const initialFormData = {
         name: "",
         number: "",
+        suministro: "",
         email: "",
         location: "",
-        projectType: "",
         file: null,
         message: "",
-    });
+    };
+
+    const [formData, setFormData] = useState(initialFormData);
 
     const [focused, setFocused] = useState({
         name: false,
@@ -45,15 +47,7 @@ const LandingForm = () => {
             setIsLoading(false);
             toast.success("Mensaje enviado exitosamente");
             setFocused({});
-            setFormData({
-                name: "",
-                number: "",
-                email: "",
-                location: "",
-                projectType: "",
-                file: null,
-                message: "",
-            });
+            setFormData(initialFormData);
         } catch (error) {
             setIsLoading(false);
             toast.error("Hubo un error al enviar el mensaje");
@@ -71,11 +65,11 @@ const LandingForm = () => {
 
     return (
         <form onSubmit={handleSubmit} className="flex flex-col">
-            <div className="flex pb-36">
-                <div className="flex flex-col w-1/2 gap-12">
+            <div className="flex pb-24">
+                <div className="flex flex-col gap-12">
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        color="grey"
+                        backgroundColor={`${color}`}
                         name="name"
                         required
                         type="text"
@@ -87,8 +81,8 @@ const LandingForm = () => {
                         focused={focused}
                     />
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        color="grey"
+                        backgroundColor={`${color}`}
                         name="number"
                         required
                         type="number"
@@ -100,8 +94,8 @@ const LandingForm = () => {
                         focused={focused}
                     />
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        color="grey"
+                        backgroundColor={`${color}`}
                         name="email"
                         required
                         type="email"
@@ -112,7 +106,21 @@ const LandingForm = () => {
                         formData={formData}
                         focused={focused}
                     />
+                    <Input
+                        color="grey"
+                        backgroundColor={`${color}`}
+                        name="suministro"
+                        type="number"
+                        fieldName="Nro. de suministro"
+                        handleChange={handleChange}
+                        onBlur={onBlur}
+                        onFocus={onFocus}
+                        formData={formData}
+                        focused={focused}
+                    />
                     <Select
+                        color="grey"
+                        backgroundColor="cream"
                         name="location"
                         required
                         fieldName="Ubicación del proyecto"
@@ -137,54 +145,25 @@ const LandingForm = () => {
                         formData={formData}
                         focused={focused}
                     />
-                    <Select
-                        name="projectType"
-                        required
-                        fieldName="Tipo de proyecto"
-                        handleChange={handleChange}
-                        options={["Energía", "Obra", "Otros"]}
-                        onBlur={onBlur}
-                        onFocus={onFocus}
-                        formData={formData}
-                        focused={focused}
-                    />
-                    <CustomFileInput color="blue" />
-                </div>
-                <div className="flex flex-col w-1/2 gap-4">
-                    <textarea
-                        required
-                        name="message"
-                        onChange={handleChange}
-                        value={formData.message}
-                        className="h-full placeholder:text-custom-blue/60 border-[2.5px] w-full bg-custom-cream border-custom-blue text-custom-blue p-4 text-2xl font-medium focus:outline-none rounded-lg"
-                        placeholder="Escribenos los detalles aquí"
-                    ></textarea>
+                    <CustomFileInput color="grey" />
                 </div>
             </div>
-            <div className="flex">
-                <div className="flex flex-col w-1/2 gap-4 text-custom-blue font-normal text-2xl">
-                    <p className="w-3/4">
-                        Al apretar el botón, usted está aceptando los{" "}
-                        <Link href="/terminos" className="underline">
-                            Términos y Condiciones
-                        </Link>
-                    </p>
-                </div>
-                <div className="flex flex-col w-1/2 gap-4">
+            <div className="flex flex-col">
+                <div className="flex flex-col gap-4 pb-6">
                     <button
                         disabled={
                             isLoading ||
                             !formData.name ||
                             !formData.email ||
-                            !formData.number ||
-                            !formData.projectType ||
-                            !formData.location
+                            !formData.number
                         }
                         type="submit"
-                        className={`flex items-center justify-center text-2xl py-3 px-8 font-normal text-custom-cream bg-custom-blue rounded-full max-w-max ${
-                            !formData.email && "bg-zinc-500 cursor-not-allowed"
+                        className={`flex items-center justify-center text-2xl py-3 px-8 font-normal text-custom-cream bg-custom-grey rounded-full max-w-max ${
+                            !formData.email &&
+                            "bg-custom-grey-100 cursor-not-allowed text-custom-grey"
                         } ${
-                            !formData.name && "bg-zinc-500 cursor-not-allowed"
+                            !formData.name &&
+                            "bg-custom-grey-100 cursor-not-allowed text-custom-grey"
                         }`}
                     >
                         {isLoading ? (
@@ -201,9 +180,20 @@ const LandingForm = () => {
                         <Toaster richColors />
                     </button>
                 </div>
+                <div className="flex flex-col gap-4 text-custom-grey font-normal text-2xl">
+                    <p className="w-full">
+                        Al apretar el botón, usted está aceptando los{" "}
+                        <Link
+                            href="/terminos"
+                            className="font-semibold underline"
+                        >
+                            Términos y Condiciones
+                        </Link>
+                    </p>
+                </div>
             </div>
         </form>
     );
 };
 
-export default LandingForm;
+export default AhorroEnergiaForm;
