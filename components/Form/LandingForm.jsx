@@ -74,8 +74,8 @@ const LandingForm = () => {
             <div className="flex pb-36">
                 <div className="flex flex-col w-1/2 gap-12">
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        backgroundColor="cream"
+                        color="blue"
                         name="name"
                         required
                         type="text"
@@ -87,8 +87,8 @@ const LandingForm = () => {
                         focused={focused}
                     />
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        backgroundColor="cream"
+                        color="blue"
                         name="number"
                         required
                         type="number"
@@ -100,8 +100,8 @@ const LandingForm = () => {
                         focused={focused}
                     />
                     <Input
-                        backgroundColor="bg-custom-cream"
-                        color="text-custom-blue"
+                        backgroundColor="cream"
+                        color="blue"
                         name="email"
                         required
                         type="email"
@@ -113,6 +113,8 @@ const LandingForm = () => {
                         focused={focused}
                     />
                     <Select
+                        backgroundColor="cream"
+                        color="blue"
                         name="location"
                         required
                         fieldName="Ubicación del proyecto"
@@ -138,6 +140,8 @@ const LandingForm = () => {
                         focused={focused}
                     />
                     <Select
+                        backgroundColor="cream"
+                        color="blue"
                         name="projectType"
                         required
                         fieldName="Tipo de proyecto"
