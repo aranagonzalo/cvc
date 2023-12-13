@@ -3,6 +3,7 @@ import { useState } from "react";
 import Hero from "@/components/Hero.jsx";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { ChevronLeft } from "lucide-react";
 
 const dots = [
     {
@@ -203,12 +204,11 @@ const Page = () => {
                             alt="Mapa político del Perú"
                             src="/images/zonas-de-concesion/mapa.svg"
                         />
-                        <div
-                            className="top-0 cursor-pointer bg-custom-blue rounded-full py-1 px-3 z-20 before:z-0 text-sm text-custom-cream absolute hover:shadow-lg hover:scale-110 transition-all"
+                        <ChevronLeft
+                            className="top-0 -left-16 cursor-pointer z-20 text-lg text-custom-blue absolute hover:scale-125 transition-all"
                             onClick={handleExit}
-                        >
-                            menú
-                        </div>
+                            size={32}
+                        />
                         {dots.map((d, i) => (
                             <div
                                 key={i}

@@ -81,7 +81,7 @@ export default function Home() {
                     <motion.button
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="z-10 text-custom-grey bg-custom-cream py-3 px-5 w-fit rounded-full"
+                        className="z-10 text-custom-grey bg-custom-cream py-3 px-5 w-fit rounded-full hover:scale-110 hover:shadow-lg transition-all"
                     >
                         Descubre los beneficios
                     </motion.button>

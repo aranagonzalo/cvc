@@ -325,7 +325,7 @@ const Navbar = () => {
                         <Link
                             target="_blank"
                             href="https://pagolink.niubiz.com.pe/pagoseguro/CVCenergia/1603339"
-                            className="flex items-center bg-custom-cream text-custom-grey text-xs rounded-full px-4 py-[7px]"
+                            className="flex items-center bg-custom-cream text-custom-grey text-xs rounded-full px-4 py-[7px] font-medium"
                         >
                             Paga tu recibo aquí
                         </Link>

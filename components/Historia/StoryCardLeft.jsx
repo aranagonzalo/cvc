@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
-const StoryCardLeft = ({ src, alt, date, title, first, last }) => {
+const StoryCardLeft = ({ logo, text, date, title }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleHover = () => {
@@ -50,15 +51,23 @@ const StoryCardLeft = ({ src, alt, date, title, first, last }) => {
                     </h1>
                 </motion.div>
                 <div
-                    className="rounded-l-[60px] relative w-1/2 p-0 items-end justify-start flex transition-all duration-500"
+                    className="relative w-1/2 p-0  justify-center flex flex-col transition-all duration-500"
                     style={{
                         transitionDuration: "0.6s",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundImage: "url(/images/landing/sunset.jpg)",
                         opacity: isHovered ? 1 : 0,
                     }}
-                ></div>
+                >
+                    {logo && (
+                        <Image
+                            width={180}
+                            height={48}
+                            alt="Logo CVC"
+                            src="/images/logo/logo-black.png"
+                            className="pb-4"
+                        ></Image>
+                    )}
+                    <p className="text-xl font-extralight w-3/4">{text}</p>
+                </div>
             </div>
         </div>
     );

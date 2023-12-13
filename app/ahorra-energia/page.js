@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import AhorroEnergiaForm from "@/components/Form/AhorroEnergiaForm";
 import { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 
 const preguntasFrecuentes = [
     {
@@ -45,6 +47,15 @@ const Page = () => {
             4: false,
             [p.id]: !activeQuestion[p.id],
         });
+    };
+
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
     };
 
     return (
@@ -274,6 +285,35 @@ const Page = () => {
                         )}
                     </div>
                 ))}
+            </section>
+            <section className="flex flex-col p-32 bg-custom-cream">
+                <h1 className="font-medium text-5xl text-center pb-20 text-custom-grey">
+                    Algunos de nuestros clientes
+                </h1>
+                <Slider {...settings}>
+                    <div className="w-full flex justify-evenly">
+                        <div>
+                            <Image
+                                width={128}
+                                height={128}
+                                alt=""
+                                src="/images/ahorra-energia/kimberly.png"
+                            />
+                        </div>
+                        <Image
+                            width={128}
+                            height={128}
+                            alt=""
+                            src="/images/ahorra-energia/republica.png"
+                        />
+                        <Image
+                            width={128}
+                            height={128}
+                            alt=""
+                            src="/images/ahorra-energia/agromar.png"
+                        />
+                    </div>
+                </Slider>
             </section>
         </div>
     );

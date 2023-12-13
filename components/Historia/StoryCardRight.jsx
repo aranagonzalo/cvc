@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const StoryCardRight = ({ src, alt, date, title, first, last }) => {
+const StoryCardRight = ({ text, date, title, first, last }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleHover = () => {
@@ -35,15 +35,14 @@ const StoryCardRight = ({ src, alt, date, title, first, last }) => {
                     <div className="mt-10 absolute top-1/2 left-1/2 h-1/2 z-10 w-[2.5px] -translate-x-1/2 bg-custom-grey"></div>
                 )}
                 <div
-                    className="rounded-r-[60px] relative w-1/2 p-0 items-end justify-start flex transition-all duration-500"
+                    className="rounded-r-[60px] relative w-1/2 p-0 items-center justify-end flex transition-all duration-500"
                     style={{
                         transitionDuration: "0.6s",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
-                        backgroundImage: "url(/images/landing/sunset.jpg)",
                         opacity: isHovered ? 1 : 0,
                     }}
-                ></div>
+                >
+                    <p className="text-xl font-extralight w-3/4">{text}</p>
+                </div>
                 <motion.div
                     initial={{ scale: 0.5 }}
                     whileInView={{

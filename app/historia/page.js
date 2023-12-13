@@ -72,52 +72,43 @@ const page = () => {
                 <StoryCardRight
                     first={true}
                     last={false}
-                    src="/images/landing/sunset.jpg"
-                    alt="Sunset"
+                    text=""
                     date="1994"
                     title="Fundación"
                 />
                 <StoryCardLeft
-                    src="/images/landing/sunset.jpg"
-                    alt="Sunset"
+                    text="Es la zona de concesión de distribución más desarrollada, dado que fue otorgada a CVC energía en el año 1995. En ese entonces, tan sólo existían 500 hectáreas cultivadas. Ahora, existen más de 40,000 hectáreas cultivadas que generan más de 160,000 puestos de trabajo, gracias al soporte energético que promovió CVC energía."
                     date="1995"
-                    title="Otorgamiento de concesión de Villacurí"
+                    title="Otorgamiento Villacurí"
                 />
                 <StoryCardRight
-                    first={false}
-                    last={false}
-                    src="/images/landing/sunset.jpg"
-                    alt="Sunset"
+                    text="Fueron otorgadas en el 2001. Ambas concesiones albergan suministros residenciales y operaciones de agricultura producto de concesiones y autorizaciones."
                     date="1994"
-                    title="Fundación"
+                    title="Otorgamiento Andahuasi e Íllimo"
                 />
                 <StoryCardLeft
-                    src="/images/landing/sunset.jpg"
-                    alt="Sunset"
+                    text="Fue otorgada en el año 2014, el crecimiento dinámico de su demanda de potencia fue más rápida gracias a los proyectos del gobierno que incentivaron las inversiones por más de $ 1,000 millones para el proyecto de irrigación de Olmos, parte de la zona de concesión de distribución."
                     date="1995"
-                    title="Otorgamiento de concesión de Villacurí"
+                    title="Otorgamiento Olmos"
                 />
                 <StoryCardRight
-                    first={false}
-                    last={false}
-                    src="/images/landing/sunset.jpg"
-                    alt="Sunset"
+                    text=" Fue otorgada en el 2021 con una inversión en activos de más de 13 millones y una demanda proyectada de 420 kW. Tenemos el objetivo de suministrar energía eléctrica para impulsar proyectos de agroexportación que generen un mayor desarrollo en las comunidades y comercios."
                     date="1994"
-                    title="Fundación"
+                    title="Otorgamiento Tacna"
                 />
                 <StoryCardLeft
-                    src="/images/landing/sunset.jpg"
-                    alt="Sunset"
+                    text="Después de más de 20 años de operar, cambiamos nuestra imagen, pero siempre manteniendo la esencia de nuestro trabajo."
+                    logo
                     date="1995"
-                    title="Otorgamiento de concesión de Villacurí"
+                    title="Renovamos nuestra imagen"
                 />
                 <StoryCardRight
                     first={false}
                     last={true}
-                    src="/images/landing/sunset.jpg"
-                    alt="Sunset"
+                    text="En el 2023 nos otorgaron ambas concesiones. Piura contará con una inversión de 18 millones de dólares y una potencia demandada de 1200 kw. 
+Mientras que Moquegua, con una inversión de más de 11 millones y una potencia demandada de 160 kW. De esta manera podremos abastecer a más de 80 mil hectáreas rurales que aún no tienen acceso a electricidad."
                     date="1994"
-                    title="Fundación"
+                    title="Otorgamiento Moquegua y Piura"
                 />
             </section>
         </div>

@@ -244,14 +244,22 @@ const Page = () => {
                                         Para ver nuestra{" "}
                                         <strong className="font-semibold">
                                             Guía de Pagos Digitales,{" "}
-                                            <Link href="" className="underline">
+                                            <Link
+                                                target="_blank"
+                                                href="pdf/Guia de pago - CVC energía VF.pdf"
+                                                className="underline"
+                                            >
                                                 haz click aquí.
                                             </Link>
                                         </strong>
                                     </p>
-                                    <button className="bg-custom-cream text-custom-grey p-4 rounded-full hover:shadow-lg hover:scale-110 transition-all">
+                                    <Link
+                                        target="_blank"
+                                        href="https://pagolink.niubiz.com.pe/pagoseguro/CVCenergia/1603339"
+                                        className="bg-custom-cream text-custom-grey p-4 rounded-full hover:shadow-lg hover:scale-110 transition-all"
+                                    >
                                         Realiza tu pago aquí
-                                    </button>
+                                    </Link>
                                 </div>
                             ) : null}
                         </div>
