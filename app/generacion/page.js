@@ -26,11 +26,16 @@ const lineasDeGeneracion = [
         bottomRightData: "Termoeléctrica",
         url: "/images/generacion/2.jpg",
     },
-];
-
-const slideItems = [
-    { url: "/images/generacion/2.jpg", alt: "Maquinaria de generación" },
-    { url: "/images/generacion/3.jpg", alt: "Maquinaria de generación" },
+    {
+        title: "C.T. Salas",
+        description:
+            "Contamos con una operación térmica de 5 MW que se está reubicando en Villacurí desde Piura, donde operó hasta el 2017. Esta Operación se ha denominado “C.T. Villacurí”.",
+        topLeftData: "5 MW",
+        topRightData: "Natural Gas",
+        bottomLeftData: "Villacurí",
+        bottomRightData: "Termoeléctrica",
+        url: "/images/generacion/3.jpg",
+    },
 ];
 
 const Page = () => {
@@ -57,15 +62,6 @@ const Page = () => {
         });
     };
 
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 800,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-    };
-
     return (
         <div className="w-full flex flex-col">
             <Hero
@@ -80,7 +76,7 @@ const Page = () => {
                             onClick={() => handleClick(l)}
                             className={`text-4xl cursor-pointer transition-all w-fit ${
                                 activeData.title === l.title
-                                    ? "font-semibold drop-shadow-md text-custom-cream"
+                                    ? "font-semibold text-custom-cream"
                                     : "font-light text-custom-cream/90"
                             }`}
                             key={i}
@@ -91,34 +87,14 @@ const Page = () => {
                 </div>
                 <div className="w-[56%] bg-custom-cream flex flex-col justify-center items-center">
                     <div className="h-[40%] w-full relative">
-                        {activeData.title === "C.H. Coelvihidro 1" ? (
-                            <Image
-                                className="transition-all"
-                                alt={activeData.title}
-                                src={activeData.url}
-                                fill
-                            />
-                        ) : (
-                            <Slider {...settings}>
-                                {slideItems.map((item, index) => (
-                                    <div
-                                        key={index}
-                                        className="relative h-[438px]"
-                                    >
-                                        <Image
-                                            alt={item.alt}
-                                            src={item.url}
-                                            fill
-                                        />
-                                    </div>
-                                ))}
-                            </Slider>
-                        )}
+                        <Image
+                            className="transition-all"
+                            alt={activeData.title}
+                            src={activeData.url}
+                            fill
+                        />
                     </div>
                     <div className="h-[60%] w-full relative px-16 py-20 flex justify-between flex-col">
-                        <p className="absolute right-3 top-1 font-medium text-xs">
-                            Información general Nov - 2023
-                        </p>
                         <p className="text-3xl font-light leading-normal">
                             {activeData.description}
                         </p>

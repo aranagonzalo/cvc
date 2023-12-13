@@ -42,9 +42,6 @@ const Navbar = () => {
     return (
         <motion.header
             ref={navbarRef}
-            initial={{ y: -100 }}
-            animate={{ y: 0 }}
-            transition={{ delay: 0.5 }}
             className={`transition-[padding] fixed z-50 w-full items-center hidden lg:flex lg:flex-col ${
                 isHovered ? "px-0" : "px-5"
             }`}
@@ -97,30 +94,39 @@ const Navbar = () => {
                                     isHovered ? "flex flex-col pb-4" : "hidden"
                                 }`}
                             >
-                                <li className="flex">
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="pb-2 w-full"
                                         href="/historia"
                                     >
                                         Historia
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="py-2 w-full"
                                         href="/cultura"
                                     >
                                         Cultura CVC
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="pt-2 w-full"
                                         href="/activos"
                                     >
-                                        Activos (fotos)
+                                        Activos eléctricos
                                     </Link>
-                                </li>
+                                </motion.li>
                             </motion.ul>
                         </div>
                     </li>
@@ -154,46 +160,61 @@ const Navbar = () => {
                                     isHovered ? "flex flex-col pb-4" : "hidden"
                                 }`}
                             >
-                                <li className="flex">
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="pb-2 w-full"
                                         href="/distribucion"
                                     >
                                         Distribución
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="py-2 w-full"
                                         href="/transmision"
                                     >
                                         Transmisión
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="py-2 w-full"
                                         href="/generacion"
                                     >
                                         Generación
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="py-2 w-full"
                                         href="/elaboracion-de-proyectos"
                                     >
                                         Elaboración de Proyectos
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="pt-2 w-full"
-                                        href="/comercializacion-de-energia"
+                                        href="/ahorra-energia"
                                     >
                                         Comercialización de energía
                                     </Link>
-                                </li>
+                                </motion.li>
                             </motion.ul>
                         </div>
                     </li>
@@ -254,31 +275,43 @@ const Navbar = () => {
                                     isHovered ? "flex flex-col pb-4" : "hidden"
                                 }`}
                             >
-                                <li className="flex">
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="pb-2 w-full"
                                         href="/canales-de-atencion"
                                     >
                                         Canales de Atención
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="py-2 w-full"
                                         href="/beneficiarios-fise"
                                     >
                                         Beneficiarios FISE
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="py-2 w-full"
                                         href="/guia-de-reclamos"
                                     >
                                         Reclamos
                                     </Link>
-                                </li>
-                                <li className="flex">
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
                                     <Link
                                         className="pt-2 w-full"
                                         href="http://190.187.233.82/iscon/Login.aspx"
@@ -286,7 +319,7 @@ const Navbar = () => {
                                     >
                                         Mi cuenta
                                     </Link>
-                                </li>
+                                </motion.li>
                             </motion.ul>
                         </div>
                     </li>

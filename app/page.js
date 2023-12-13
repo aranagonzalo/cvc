@@ -212,7 +212,10 @@ export default function Home() {
                                     opacity: 1,
                                     transition: { duration: 0.3, delay: 0.1 },
                                 }}
-                                whileHover={{ fontWeight: 600 }}
+                                whileHover={{
+                                    fontWeight: 600,
+                                    cursor: "pointer",
+                                }}
                                 onMouseEnter={() =>
                                     handleHover("distribucionElectrica")
                                 }
@@ -227,7 +230,10 @@ export default function Home() {
                                     opacity: 1,
                                     transition: { duration: 0.3, delay: 0.1 },
                                 }}
-                                whileHover={{ fontWeight: 600 }}
+                                whileHover={{
+                                    fontWeight: 600,
+                                    cursor: "pointer",
+                                }}
                                 onMouseEnter={() =>
                                     handleHover("transmisionElectrica")
                                 }
@@ -242,7 +248,10 @@ export default function Home() {
                                     opacity: 1,
                                     transition: { duration: 0.3, delay: 0.1 },
                                 }}
-                                whileHover={{ fontWeight: 600 }}
+                                whileHover={{
+                                    fontWeight: 600,
+                                    cursor: "pointer",
+                                }}
                                 onMouseEnter={() =>
                                     handleHover("generacionElectrica")
                                 }
@@ -256,14 +265,18 @@ export default function Home() {
                                     x: 0,
                                     opacity: 1,
                                     transition: { duration: 0.3, delay: 0.1 },
+                                    viewport: { amount: 0.8 },
                                 }}
-                                whileHover={{ fontWeight: 600 }}
+                                whileHover={{
+                                    fontWeight: 600,
+                                    cursor: "pointer",
+                                }}
                                 onMouseEnter={() =>
-                                    handleHover("comercializacionDeEnergia")
+                                    handleHover("elaboracionDeProyectos")
                                 }
                                 onMouseLeave={() => handleExitHover()}
                             >
-                                Comercialización de energía
+                                Elaboración de proyectos
                             </motion.li>
                             <motion.li
                                 initial={{ x: -50, opacity: 0 }}
@@ -271,15 +284,17 @@ export default function Home() {
                                     x: 0,
                                     opacity: 1,
                                     transition: { duration: 0.3, delay: 0.1 },
-                                    viewport: { amount: 0.8 },
                                 }}
-                                whileHover={{ fontWeight: 600 }}
+                                whileHover={{
+                                    fontWeight: 600,
+                                    cursor: "pointer",
+                                }}
                                 onMouseEnter={() =>
-                                    handleHover("elaboracionDeProyectos")
+                                    handleHover("comercializacionDeEnergia")
                                 }
                                 onMouseLeave={() => handleExitHover()}
                             >
-                                Elaboración de proyectos
+                                Comercialización de energía
                             </motion.li>
                         </ul>
                     </div>
@@ -299,7 +314,7 @@ export default function Home() {
                     </div>
                     <LandingForm />
                 </section>
-                <section className="w-full flex h-[50vh] gap-[2px]">
+                {/* <section className="w-full flex h-[50vh] gap-[2px]">
                     <div className="w-1/3 flex flex-col aspect-square">
                         <div className="relative h-3/4">
                             <Image
@@ -348,7 +363,7 @@ export default function Home() {
                             </p>
                         </div>
                     </div>
-                </section>
+                </section> */}
             </div>
         </>
     );

@@ -161,7 +161,7 @@ const LandingForm = () => {
                         onChange={handleChange}
                         value={formData.message}
                         className="h-full placeholder:text-custom-blue/60 border-[2.5px] w-full bg-custom-cream border-custom-blue text-custom-blue p-4 text-2xl font-medium focus:outline-none rounded-lg"
-                        placeholder="Escribenos los detalles aquí"
+                        placeholder="Escríbenos los detalles aquí"
                     ></textarea>
                 </div>
             </div>

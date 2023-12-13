@@ -12,7 +12,7 @@ const CustomFileInput = ({ color }) => {
         <div className="flex flex-col w-max gap-2">
             <label
                 htmlFor="fileInput"
-                className={`text-custom-${color} px-5 py-2 cursor-pointer border-[2.5px] border-custom-${color} rounded-full text-xl w-max`}
+                className={`text-custom-${color} px-5 py-2 cursor-pointer font-medium hover:bg-custom-blue hover:text-custom-cream border-[2.5px] border-custom-${color} rounded-full text-xl w-max`}
             >
                 Adjuntar archivo
             </label>

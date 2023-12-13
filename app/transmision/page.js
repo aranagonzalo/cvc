@@ -122,7 +122,7 @@ const Page = () => {
                             onClick={() => handleClick(l)}
                             className={`text-4xl cursor-pointer transition-all w-fit ${
                                 activeData.title === l.title
-                                    ? "font-semibold drop-shadow-md text-custom-cream"
+                                    ? "font-semibold text-custom-cream"
                                     : "font-light text-custom-cream/90"
                             }`}
                             key={i}
