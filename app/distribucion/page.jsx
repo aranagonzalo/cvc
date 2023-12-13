@@ -13,6 +13,7 @@ const dots = [
         inversion: "US$ 533 M",
         demanda: "265 kW",
         redes: "23 km",
+        clientes: "501",
         left: "63px",
         top: "167px",
         url: "/images/zonas-de-concesion/1.jpg",
@@ -24,6 +25,7 @@ const dots = [
         inversion: "US$ 5771 M",
         demanda: "30 MW",
         redes: "292 km",
+        clientes: "143",
         left: "78px",
         top: "204px",
         url: "/images/zonas-de-concesion/2.jpg",
@@ -35,6 +37,7 @@ const dots = [
         inversion: "US$ 1238 M",
         demanda: "2 MW",
         redes: "67 km",
+        clientes: "2139",
         left: "170px",
         top: "355px",
         url: "/images/zonas-de-concesion/3.jpg",
@@ -46,6 +49,7 @@ const dots = [
         inversion: "US$ 9120 M",
         demanda: "43 MW",
         redes: "483 km",
+        clientes: "1526",
         left: "210px",
         top: "445px",
         url: "/images/zonas-de-concesion/4.jpg",
@@ -57,6 +61,7 @@ const dots = [
         inversion: "US$ 13 M",
         demanda: "420 MW",
         redes: "28 km",
+        clientes: "",
         left: "384px",
         top: "580px",
         url: "/images/zonas-de-concesion/5.jpg",
@@ -68,6 +73,7 @@ const dots = [
         inversion: "US$ 15 M",
         demanda: "+ 1 MW",
         redes: "32 km",
+        clientes: "",
         left: "86px",
         top: "143px",
         url: "/images/zonas-de-concesion/6.jpg",
@@ -79,6 +85,7 @@ const dots = [
         inversion: "US$ 11 M",
         demanda: "160 MW",
         redes: "75 km",
+        clientes: "",
         left: "368px",
         top: "539px",
         url: "/images/zonas-de-concesion/7.jpg",
@@ -95,6 +102,7 @@ const Page = () => {
         inversion: "",
         demanda: "",
         redes: "",
+        clientes: "",
         url: "",
     });
 
@@ -107,6 +115,7 @@ const Page = () => {
             inversion: d.inversion,
             demanda: d.demanda,
             redes: d.redes,
+            clientes: d.clientes,
             url: d.url,
         });
     };
@@ -122,7 +131,7 @@ const Page = () => {
                 src="/images/zonas-de-concesion/zonas-de-concesion.jpg"
                 title="Distribución Eléctrica"
             />
-            <section className="w-full flex h-[800px] relative overflow-hidden">
+            <section className="w-full flex h-[1000px] relative overflow-hidden">
                 <div
                     className={`w-[84%] flex justify-start items-end z-0 absolute top-0 h-full transition-all duration-[800ms] ease-out ${
                         isHovered ? "-left-[42%]" : "left-0"
@@ -142,15 +151,15 @@ const Page = () => {
                         </motion.h1>
                     </div>
                     <div className="w-1/2 flex flex-col justify-start items-end bg-custom-yellow">
-                        <div className="w-full h-[480px] bg-custom-yellow px-20 py-16">
-                            <div className="w-full flex flex-col gap-2">
+                        <div className="w-full h-[640px] bg-custom-yellow px-20 flex items-center">
+                            <div className="w-full flex flex-col gap-4">
                                 <h1 className="text-5xl font-medium">
                                     {dotData.title}
                                 </h1>
                                 <h3 className="text-xl font-light">
                                     {dotData.subtitle}
                                 </h3>
-                                <ul className="flex flex-col w-full gap-4 pt-8">
+                                <ul className="flex flex-col w-full gap-8 pt-8">
                                     <li className="flex gap-4 items-center">
                                         <p className="text-3xl font-medium w-1/2 justify-end flex">
                                             {dotData.area}
@@ -183,10 +192,20 @@ const Page = () => {
                                             redes de media tensión
                                         </p>
                                     </li>
+                                    {dotData.clientes.length !== 0 && (
+                                        <li className="flex gap-4 items-center">
+                                            <p className="text-3xl font-medium w-1/2 justify-end flex">
+                                                {dotData.clientes}
+                                            </p>
+                                            <p className="text-xl font-light w-1/4 leading-none">
+                                                clientes
+                                            </p>
+                                        </li>
+                                    )}
                                 </ul>
                             </div>
                         </div>
-                        <div className="w-full h-[320px] relative">
+                        <div className="w-full h-[360px] relative">
                             {dotData.url && (
                                 <Image
                                     fill

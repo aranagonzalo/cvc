@@ -344,7 +344,12 @@ const Navbar = () => {
                                         : "pb-0 text-custom-cream"
                                 }`}
                             >
-                                <Link href="/">Linea Ética</Link>
+                                <Link
+                                    target="_blank"
+                                    href="http://190.187.233.86:83/LINEA_ETICA_FORM"
+                                >
+                                    Linea Ética
+                                </Link>
                             </motion.p>
                         </div>
                     </li>

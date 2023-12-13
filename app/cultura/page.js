@@ -44,7 +44,7 @@ const page = () => {
             <Hero
                 alt="Personal de la empresa en planta"
                 src="/images/cultura/cultura.jpg"
-                title="Cultura CVC"
+                title="Nuestra cultura CVC"
             />
             <section className="w-full flex">
                 <div className="w-1/2 flex flex-col bg-custom-cream p-32 justify-center items-center">

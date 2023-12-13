@@ -194,24 +194,20 @@ const Page = () => {
                 </div>
             </section>
             <section className="w-full flex h-[320px] relative overflow-hidden">
-                <div className="w-1/2 flex justify-start items-center h-full">
-                    <div className="flex justify-start items-center bg-custom-green h-full px-32 py-24 w-full">
-                        <motion.h1
-                            initial={{ opacity: 0, x: -100 }}
-                            whileInView={{
-                                opacity: 1,
-                                x: 0,
-                                transition: { duration: 0.3 },
-                            }}
-                            className="text-5xl text-custom-cream leading-tight"
-                        >
-                            Más información al +51 951 306 952
-                        </motion.h1>
+                <div className="w-3/4 flex justify-start items-center h-full">
+                    <div className="flex flex-col justify-start bg-custom-green h-full pl-24 py-24 w-full">
+                        <h1 className="text-5xl text-custom-cream leading-tight">
+                            Más información
+                        </h1>
+                        <h1 className="text-5xl text-custom-cream leading-tight">
+                            al +51 951 306 952
+                        </h1>
                     </div>
                 </div>
-                <div className="w-1/2 flex h-full justify-end px-32 py-24 bg-custom-green text-custom-cream items-center">
+                <div className="w-1/4 flex h-full justify-end pr-24 py-24 bg-custom-green text-custom-cream items-center">
                     <Link
-                        href=""
+                        target="_blank"
+                        href="https://api.whatsapp.com/send/?phone=51951306952"
                         className="relative font-normal leading-tight text-4xl"
                     >
                         <Image
@@ -237,7 +233,7 @@ const Page = () => {
                         Cambia tu condición en tres pasos
                     </h1>
                     <div className="flex gap-8 items-center">
-                        <h1 className="font-semibold text-9xl">1</h1>
+                        <h1 className="font-semibold text-9xl pr-6">1</h1>
                         <p className="font-extralight text-lg w-1/4">
                             suscripción y firma del contrato
                         </p>
@@ -291,27 +287,105 @@ const Page = () => {
                     Algunos de nuestros clientes
                 </h1>
                 <Slider {...settings}>
-                    <div className="w-full flex justify-evenly">
-                        <div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
                             <Image
-                                width={128}
-                                height={128}
+                                width={220}
+                                height={0}
+                                className="object-contain"
                                 alt=""
                                 src="/images/ahorra-energia/kimberly.png"
                             />
+                            <Image
+                                width={180}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/republica.png"
+                            />
+                            <Image
+                                width={160}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/agromar.png"
+                            />
                         </div>
-                        <Image
-                            width={128}
-                            height={128}
-                            alt=""
-                            src="/images/ahorra-energia/republica.png"
-                        />
-                        <Image
-                            width={128}
-                            height={128}
-                            alt=""
-                            src="/images/ahorra-energia/agromar.png"
-                        />
+                    </div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
+                            <Image
+                                width={140}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/dayr.png"
+                            />
+                            <Image
+                                width={140}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/razzeto.png"
+                            />
+                            <Image
+                                width={200}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/newton-college.png"
+                            />
+                        </div>
+                    </div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
+                            <Image
+                                width={220}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/sol-de-laredo.png"
+                            />
+                            <Image
+                                width={180}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/iron-mountain.png"
+                            />
+                            <Image
+                                width={120}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/mali.png"
+                            />
+                        </div>
+                    </div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
+                            <Image
+                                width={140}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/wenco.png"
+                            />
+                            <Image
+                                width={120}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/agrovision.png"
+                            />
+                            <Image
+                                width={180}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/chutana.png"
+                            />
+                        </div>
                     </div>
                 </Slider>
             </section>
