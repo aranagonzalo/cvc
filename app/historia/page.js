@@ -83,23 +83,23 @@ const page = () => {
                 />
                 <StoryCardRight
                     text="Fueron otorgadas en el 2001. Ambas concesiones albergan suministros residenciales y operaciones de agricultura producto de concesiones y autorizaciones."
-                    date="1994"
+                    date="2001"
                     title="Otorgamiento Andahuasi e Íllimo"
                 />
                 <StoryCardLeft
                     text="Fue otorgada en el año 2014, el crecimiento dinámico de su demanda de potencia fue más rápida gracias a los proyectos del gobierno que incentivaron las inversiones por más de $ 1,000 millones para el proyecto de irrigación de Olmos, parte de la zona de concesión de distribución."
-                    date="1995"
+                    date="2014"
                     title="Otorgamiento Olmos"
                 />
                 <StoryCardRight
                     text=" Fue otorgada en el 2021 con una inversión en activos de más de 13 millones y una demanda proyectada de 420 kW. Tenemos el objetivo de suministrar energía eléctrica para impulsar proyectos de agroexportación que generen un mayor desarrollo en las comunidades y comercios."
-                    date="1994"
+                    date="2021"
                     title="Otorgamiento Tacna"
                 />
                 <StoryCardLeft
                     text="Después de más de 20 años de operar, cambiamos nuestra imagen, pero siempre manteniendo la esencia de nuestro trabajo."
                     logo
-                    date="1995"
+                    date="2022"
                     title="Renovamos nuestra imagen"
                 />
                 <StoryCardRight
@@ -107,7 +107,7 @@ const page = () => {
                     last={true}
                     text="En el 2023 nos otorgaron ambas concesiones. Piura contará con una inversión de 18 millones de dólares y una potencia demandada de 1200 kw. 
 Mientras que Moquegua, con una inversión de más de 11 millones y una potencia demandada de 160 kW. De esta manera podremos abastecer a más de 80 mil hectáreas rurales que aún no tienen acceso a electricidad."
-                    date="1994"
+                    date="2023"
                     title="Otorgamiento Moquegua y Piura"
                 />
             </section>

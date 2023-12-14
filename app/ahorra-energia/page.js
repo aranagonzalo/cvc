@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import AhorroEnergiaForm from "@/components/Form/AhorroEnergiaForm";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 
@@ -58,6 +58,16 @@ const Page = () => {
         autoplay: true,
     };
 
+    const targetContainerRef = useRef(null);
+
+    const scrollToContainer = () => {
+        if (targetContainerRef.current) {
+            targetContainerRef.current.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
         <div className="w-full flex flex-col">
             <Hero
@@ -80,13 +90,13 @@ const Page = () => {
                 >
                     Conviértete en cliente libre con nosotros.
                 </motion.h1>
-                <Link
-                    href="https://www.bumeran.com.pe/perfiles/empresa_consorcio-electrico-de-villacuri-cvc-energia_13228415.html"
+                <motion.button
+                    onClick={scrollToContainer}
                     target="blank"
                     className="text-4xl font-medium rounded-[40px] bg-custom-cream text-custom-grey px-16 h-fit py-8 mr-24 hover:scale-105 hover:shadow-lg transition-all"
                 >
                     Empieza aquí
-                </Link>
+                </motion.button>
             </section>
             <section className="w-full flex h-[640px] relative overflow-hidden">
                 <div className="w-1/2 flex justify-start items-end h-full">
@@ -183,7 +193,10 @@ const Page = () => {
                     />
                 </div>
             </section>
-            <section className="w-full flex gap-48 relative overflow-hidden bg-custom-cream px-28 py-32">
+            <section
+                ref={targetContainerRef}
+                className="w-full flex gap-48 relative overflow-hidden bg-custom-cream px-28 py-32"
+            >
                 <div className="w-1/2">
                     <h1 className="text-7xl font-medium text-custom-grey w-3/4 leading-tight">
                         ¡Déjanos tus datos para simular gratuitamente tu ahorro!

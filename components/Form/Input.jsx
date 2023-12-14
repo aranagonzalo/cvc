@@ -13,6 +13,7 @@ const Input = ({
     formData,
     focused,
 }) => {
+    const isNumberType = type === "number";
     return (
         <div className="relative">
             <label
@@ -31,7 +32,9 @@ const Input = ({
                 value={formData[name]}
                 required={required}
                 type={type}
-                className={`border-b-[2.5px] h-12 w-3/4 border-custom-${color} text-2xl font-medium text-custom-${color} focus:outline-none bg-custom-${backgroundColor}`}
+                className={`border-b-[2.5px] h-12 w-3/4 border-custom-${color} text-2xl font-medium text-custom-${color} focus:outline-none bg-custom-${backgroundColor} ${
+                    isNumberType ? "appearance-none" : ""
+                }`}
             ></input>
             {focused[name] && !formData[name] && (
                 <p className="font-medium text-base text-custom-red">

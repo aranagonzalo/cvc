@@ -86,7 +86,7 @@ const Page = () => {
                             x: 0,
                             transition: { duration: 0.3 },
                         }}
-                        className="text-6xl text-custom-grey w-1/2"
+                        className="text-6xl text-custom-grey font-medium w-1/2"
                     >
                         Conoce nuestros canales
                     </motion.h1>
@@ -100,8 +100,8 @@ const Page = () => {
                             <Image
                                 alt="Boton de regreso"
                                 src="/images/canales-de-atencion/back.svg"
-                                width={32}
-                                height={32}
+                                width={22}
+                                height={22}
                             />
                             <p className="text-2xl font-semibold text-custom-cream -translate-y-[2px]">
                                 regresa
@@ -140,12 +140,20 @@ const Page = () => {
                                 </>
                             ) : detail.label === "WhatsApp" ? (
                                 <>
-                                    <p className="text-lg font-semibold text-custom-cream pt-12">
+                                    <Link
+                                        target="_blank"
+                                        href="https://api.whatsapp.com/send/?phone=51998166703"
+                                        className="text-lg font-semibold text-custom-cream pt-12"
+                                    >
                                         Escríbenos al
-                                    </p>
-                                    <p className="text-lg font-semibold text-custom-cream">
+                                    </Link>
+                                    <Link
+                                        target="_blank"
+                                        href="https://api.whatsapp.com/send/?phone=51998166703"
+                                        className="text-lg font-semibold text-custom-cream"
+                                    >
                                         +51 998 166 703
-                                    </p>
+                                    </Link>
                                     <p className="text-lg font-semibold text-custom-cream pt-16">
                                         Horario de
                                     </p>
@@ -164,8 +172,8 @@ const Page = () => {
                                     </p>
                                 </>
                             ) : detail.label === "Centros de atención" ? (
-                                <div className="flex h-full gap-8">
-                                    <div className="flex flex-col h-full pt-12 text-center gap-2">
+                                <div className="flex h-full gap-20">
+                                    <div className="flex flex-col h-full pt-12 text-center gap-[6px]">
                                         <p className="text-lg font-semibold text-custom-cream">
                                             Lima
                                         </p>
@@ -192,10 +200,10 @@ const Page = () => {
                                             Salas de Guadalupe - Ica
                                         </p>
                                         <p className="text-base font-light leading-none text-custom-cream">
-                                            Atención al publico | 8am a 4pm 
+                                            Atención al publico | 8am a 4pm
                                         </p>
                                     </div>
-                                    <div className="flex flex-col h-full pt-12 text-center gap-2">
+                                    <div className="flex flex-col h-full pt-12 text-center gap-[6px]">
                                         <p className="text-lg font-semibold text-custom-cream">
                                             Andahuasi
                                         </p>

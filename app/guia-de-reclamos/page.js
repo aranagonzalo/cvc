@@ -16,12 +16,19 @@ const Page = () => {
         <div className="w-full flex flex-col">
             <Hero
                 alt="Personal atendiendo consultas"
-                src="/images/guia-de-reclamos/guia-de-reclamos.jpg"
+                src="/images/guia-de-reclamos/foto-general.jpg"
                 title="Guía de reclamos"
             />
             <section className="w-full flex flex-col bg-custom-sky">
                 <div
-                    className={`flex justify-between px-24 pt-24 ${
+                    onClick={() =>
+                        setOpenMenu({
+                            quejas: !openMenu.quejas,
+                            reclamos: false,
+                            denuncias: false,
+                        })
+                    }
+                    className={`cursor-pointer flex justify-between px-24 pt-24 ${
                         openMenu.quejas ? "pb-12" : "pb-24"
                     }`}
                 >
@@ -35,13 +42,6 @@ const Page = () => {
                         }.png`}
                         height={68}
                         width={68}
-                        className="cursor-pointer"
-                        onClick={() =>
-                            setOpenMenu({
-                                ...openMenu,
-                                quejas: !openMenu.quejas,
-                            })
-                        }
                     />
                 </div>
                 {openMenu.quejas && (
@@ -73,7 +73,7 @@ const Page = () => {
                             <div className="w-3/5 flex flex-col gap-24">
                                 <div>
                                     <Link
-                                        href=""
+                                        href="public/pdf/formato-de-reclamo.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Formato de Quejas
@@ -100,9 +100,16 @@ const Page = () => {
                     </>
                 )}
             </section>
-            <section className="w-full flex flex-col bg-custom-red">
+            <section className="w-full flex flex-col bg-custom-red ">
                 <div
-                    className={`flex justify-between px-24 pt-24 ${
+                    onClick={() =>
+                        setOpenMenu({
+                            quejas: false,
+                            reclamos: !openMenu.reclamos,
+                            denuncias: false,
+                        })
+                    }
+                    className={`cursor-pointer flex justify-between px-24 pt-24 ${
                         openMenu.reclamos ? "pb-12" : "pb-24"
                     }`}
                 >
@@ -116,13 +123,6 @@ const Page = () => {
                         }.png`}
                         height={68}
                         width={68}
-                        className="cursor-pointer"
-                        onClick={() =>
-                            setOpenMenu({
-                                ...openMenu,
-                                reclamos: !openMenu.reclamos,
-                            })
-                        }
                     />
                 </div>
                 {openMenu.reclamos && (
@@ -154,63 +154,57 @@ const Page = () => {
                             <div className="w-3/5 flex flex-col gap-24">
                                 <div className="flex flex-col">
                                     <Link
-                                        href=""
+                                        href="/pdf/guia-de-reclamos.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Guía de Reclamos
                                     </Link>
                                     <Link
-                                        href=""
+                                        href="/pdf/formato-de-reclamo.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Formato de Reclamo
                                     </Link>
                                     <Link
-                                        href=""
+                                        href="/pdf/solicitud-de-medida-cautelar.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Solicitud de Medida Cautelar
                                     </Link>
                                     <Link
-                                        href=""
+                                        href="/pdf/recursos-administrativos.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Formato de Recurso Administrativo
                                     </Link>
-                                    <Link
-                                        href=""
-                                        className="text-2xl font-light"
-                                    >
-                                        Recursos Legales
-                                    </Link>
                                 </div>
                                 <div className="flex flex-col">
                                     <Link
-                                        href=""
+                                        href="/pdf/precedente-de-observancia.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Precedente de Observancia
                                     </Link>
                                     <Link
-                                        href=""
+                                        href="/pdf/lineamientos-resolutivos-jaru-001-2011.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Lineamientos Resolutivos - JARU 001-2011
                                     </Link>
                                     <Link
-                                        href=""
+                                        href="/pdf/lineamientos-resolutivos-jaru-001-2009.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Lineamientos Resolutivos - JARU 001-2009
                                     </Link>
                                     <Link
-                                        href=""
+                                        href="/pdf/lineamientos-resolutivos-jaru-001-2006.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Lineamientos Resolutivos - JARU 001-2006
                                     </Link>
                                     <Link
-                                        href=""
+                                        href="/pdf/osinergmin-269-2014-os-cd.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Osinergmin No.269-2014-OS-CD
@@ -245,9 +239,16 @@ const Page = () => {
                     </>
                 )}
             </section>
-            <section className="w-full flex flex-col bg-custom-green">
+            <section className="w-full flex flex-col bg-custom-green ">
                 <div
-                    className={`flex justify-between px-24 pt-24 ${
+                    onClick={() =>
+                        setOpenMenu({
+                            quejas: false,
+                            reclamos: false,
+                            denuncias: !openMenu.denuncias,
+                        })
+                    }
+                    className={`cursor-pointer flex justify-between px-24 pt-24 ${
                         openMenu.denuncias ? "pb-12" : "pb-24"
                     }`}
                 >
@@ -261,13 +262,6 @@ const Page = () => {
                         }.png`}
                         height={68}
                         width={68}
-                        className="cursor-pointer"
-                        onClick={() =>
-                            setOpenMenu({
-                                ...openMenu,
-                                denuncias: !openMenu.denuncias,
-                            })
-                        }
                     />
                 </div>
                 {openMenu.denuncias && (
@@ -303,7 +297,7 @@ const Page = () => {
                             <div className="w-3/5 flex flex-col gap-24">
                                 <div className="flex flex-col">
                                     <Link
-                                        href=""
+                                        href="/pdf/guia-de-denuncias.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Guía de Denuncias
@@ -311,7 +305,7 @@ const Page = () => {
                                 </div>
                                 <div className="flex flex-col">
                                     <Link
-                                        href=""
+                                        href="/pdf/procedimiento-de-denuncias.pdf"
                                         className="text-2xl font-light"
                                     >
                                         Resolución de Procedimientos de

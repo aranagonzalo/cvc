@@ -1,12 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 
-import SideBar from "@/components/Landing/SideBar";
 import LandingForm from "@/components/Form/LandingForm";
 
 export default function Home() {
@@ -40,9 +39,18 @@ export default function Home() {
         });
     };
 
+    const targetContainerRef = useRef(null);
+
+    const scrollToContainer = () => {
+        if (targetContainerRef.current) {
+            targetContainerRef.current.scrollIntoView({
+                behavior: "smooth",
+            });
+        }
+    };
+
     return (
         <>
-            <SideBar />
             <div className="w-full flex flex-col">
                 <section className="shadow-landing w-full flex flex-col relative bg-custom-grey px-6 py-12 md:p-24 lg:p-32 justify-center">
                     <div className="absolute z-50 bottom-0 w-full h-[150px] right-0 bg-gradient-to-b from-custom-cream/0 to-custom-grey/40"></div>
@@ -79,9 +87,10 @@ export default function Home() {
                         de tu negocio.
                     </motion.h1>
                     <motion.button
+                        onClick={scrollToContainer}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="z-10 text-custom-grey bg-custom-cream py-3 px-5 w-fit rounded-full hover:scale-110 hover:shadow-lg transition-all"
+                        className="z-[60] text-custom-grey bg-custom-cream py-3 px-5 w-fit rounded-full hover:scale-110 hover:shadow-lg transition-all"
                     >
                         Descubre los beneficios
                     </motion.button>
@@ -306,7 +315,10 @@ export default function Home() {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
                 />
-                <section className="w-full flex flex-col bg-custom-cream px-6 py-12 md:p-24 lg:p-32 justify-center">
+                <section
+                    ref={targetContainerRef}
+                    className="w-full flex flex-col bg-custom-cream px-6 py-12 md:p-24 lg:p-32 justify-center"
+                >
                     <div className="w-full flex items-center pb-36">
                         <h1 className="text-6xl font-normal w-1/2 text-custom-blue">
                             Potencia tu desarollo con nosotros

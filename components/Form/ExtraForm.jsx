@@ -169,7 +169,11 @@ const ExtraForm = ({ reclamo, denuncia, color }) => {
                             focused={focused}
                         />
                     )}
-                    <CustomFileInput color="cream" />
+                    <CustomFileInput
+                        color="cream"
+                        reclamo={reclamo}
+                        denuncia={denuncia}
+                    />
                 </div>
                 <div className="flex flex-col w-1/2 gap-4">
                     <textarea
@@ -198,7 +202,7 @@ const ExtraForm = ({ reclamo, denuncia, color }) => {
                             !formData.number
                         }
                         type="submit"
-                        className={`flex items-center justify-center text-2xl py-3 px-8 font-normal !text-custom-${color} bg-custom-cream rounded-full max-w-max ${
+                        className={`cursor-pointer flex items-center justify-center text-2xl py-3 px-8 font-normal !text-custom-${color} bg-custom-cream rounded-full max-w-max ${
                             !formData.email &&
                             "bg-custom-grey-100 cursor-not-allowed"
                         } ${

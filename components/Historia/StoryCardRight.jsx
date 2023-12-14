@@ -17,22 +17,20 @@ const StoryCardRight = ({ text, date, title, first, last }) => {
     return (
         <div className="w-full flex h-[320px] items-center">
             <div
-                className={`flex w-full relative transition-all ${
-                    isHovered ? "h-full" : "h-[80%]"
-                } gap-60 top-0`}
+                className={`flex w-full relative transition-all h-full gap-60 top-0`}
             >
                 {!first && (
-                    <div className="mb-10 absolute -top-1/4 left-1/2 h-1/2 z-10 w-[2.5px] -translate-x-1/2 bg-custom-grey"></div>
+                    <div className="absolute top-0 left-1/2 h-1/2 z-10 w-[2.5px] -translate-x-1/2 bg-custom-grey"></div>
                 )}
                 <div
                     onMouseEnter={handleHover}
                     onMouseLeave={handleExit}
                     className={`z-20 absolute top-1/2 left-1/2 ${
-                        isHovered ? "w-12 h-12" : "w-6 h-6"
-                    } transition-all rounded-full bg-custom-blue -translate-x-1/2 -translate-y-1/2`}
+                        isHovered && !first ? "w-24 h-24" : "w-16 h-16"
+                    } transition-all rounded-full bg-custom-blue -translate-x-1/2 -translate-y-1/2 z-20 border-[20px] border-custom-cream`}
                 ></div>
                 {!last && (
-                    <div className="mt-10 absolute top-1/2 left-1/2 h-1/2 z-10 w-[2.5px] -translate-x-1/2 bg-custom-grey"></div>
+                    <div className="absolute bottom-0 left-1/2 h-1/2 z-10 w-[2.5px] -translate-x-1/2 bg-custom-grey"></div>
                 )}
                 <div
                     className="rounded-r-[60px] relative w-1/2 p-0 items-center justify-end flex transition-all duration-500"

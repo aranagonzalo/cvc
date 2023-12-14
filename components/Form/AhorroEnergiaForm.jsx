@@ -13,7 +13,7 @@ const AhorroEnergiaForm = ({ color }) => {
     const initialFormData = {
         name: "",
         number: "",
-        suministro: "",
+        empresa: "",
         email: "",
         location: "",
         file: null,
@@ -66,7 +66,20 @@ const AhorroEnergiaForm = ({ color }) => {
     return (
         <form onSubmit={handleSubmit} className="flex flex-col">
             <div className="flex pb-24">
-                <div className="flex flex-col gap-12">
+                <div className="flex flex-col gap-12 w-full">
+                    <Input
+                        color="grey"
+                        backgroundColor={`${color}`}
+                        name="empresa"
+                        type="text"
+                        required
+                        fieldName="Empresa"
+                        handleChange={handleChange}
+                        onBlur={onBlur}
+                        onFocus={onFocus}
+                        formData={formData}
+                        focused={focused}
+                    />
                     <Input
                         color="grey"
                         backgroundColor={`${color}`}
@@ -109,37 +122,11 @@ const AhorroEnergiaForm = ({ color }) => {
                     <Input
                         color="grey"
                         backgroundColor={`${color}`}
-                        name="suministro"
-                        type="number"
-                        fieldName="Nro. de suministro"
-                        handleChange={handleChange}
-                        onBlur={onBlur}
-                        onFocus={onFocus}
-                        formData={formData}
-                        focused={focused}
-                    />
-                    <Select
-                        color="grey"
-                        backgroundColor="cream"
                         name="location"
                         required
+                        type="text"
                         fieldName="Ubicación del proyecto"
                         handleChange={handleChange}
-                        options={[
-                            "Negativa a la instalación del suministro",
-                            "Excesivo consumo",
-                            "Excesiva facturación",
-                            "Recupero de energía",
-                            "Cobro indebido",
-                            "Corte del servicio",
-                            "Negativa al incremento de potencia",
-                            "Negativa al cambio de opción tarifaria",
-                            "Reembolso de aportes o contribuciones",
-                            "Reubicación de instalaciones que se encuentren bajo responsabilidad de la concesionaria",
-                            "Mala calidad (tensión, interrupciones)",
-                            "Deudas de Terceros",
-                            "Otras cuestiones vinculadas a la prestación de los servicios públicos de electricidad y gas natural",
-                        ]}
                         onBlur={onBlur}
                         onFocus={onFocus}
                         formData={formData}

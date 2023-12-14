@@ -112,28 +112,14 @@ const LandingForm = () => {
                         formData={formData}
                         focused={focused}
                     />
-                    <Select
+                    <Input
                         backgroundColor="cream"
                         color="blue"
                         name="location"
                         required
+                        type="text"
                         fieldName="Ubicación del proyecto"
                         handleChange={handleChange}
-                        options={[
-                            "Negativa a la instalación del suministro",
-                            "Excesivo consumo",
-                            "Excesiva facturación",
-                            "Recupero de energía",
-                            "Cobro indebido",
-                            "Corte del servicio",
-                            "Negativa al incremento de potencia",
-                            "Negativa al cambio de opción tarifaria",
-                            "Reembolso de aportes o contribuciones",
-                            "Reubicación de instalaciones que se encuentren bajo responsabilidad de la concesionaria",
-                            "Mala calidad (tensión, interrupciones)",
-                            "Deudas de Terceros",
-                            "Otras cuestiones vinculadas a la prestación de los servicios públicos de electricidad y gas natural",
-                        ]}
                         onBlur={onBlur}
                         onFocus={onFocus}
                         formData={formData}
