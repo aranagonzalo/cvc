@@ -56,7 +56,7 @@ const page = () => {
                     </motion.p>
                     <div className="absolute bottom-8 right-8 font-extralight text-3xl text-right text-custom-cream">
                         <p>Ing. Percy</p>
-                        <p>Ortiz Mendoza</p>
+                        <p>Ortiz Espinoza</p>
                     </div>
                 </div>
                 <div className="relative w-1/2">
