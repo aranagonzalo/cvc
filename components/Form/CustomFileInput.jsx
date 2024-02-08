@@ -40,6 +40,27 @@ const CustomFileInput = ({ color, reclamo, denuncia }) => {
                 >
                     Adjuntar archivo
                 </label>
+            ) : color === "green" ? (
+                <label
+                    htmlFor="fileInput"
+                    className={`text-custom-green px-5 py-2 cursor-pointer font-medium h-12 bg-custom-cream rounded-full text-xl w-max ${getHoverStyles()}`}
+                >
+                    Adjuntar archivo
+                </label>
+            ) : color === "red" ? (
+                <label
+                    htmlFor="fileInput"
+                    className={`text-custom-red px-5 py-2 cursor-pointer font-medium h-12 bg-custom-cream rounded-full text-xl w-max ${getHoverStyles()}`}
+                >
+                    Adjuntar archivo
+                </label>
+            ) : color === "sky" ? (
+                <label
+                    htmlFor="fileInput"
+                    className={`text-custom-sky px-5 py-2 cursor-pointer font-medium h-12 bg-custom-cream rounded-full text-xl w-max ${getHoverStyles()}`}
+                >
+                    Adjuntar archivo
+                </label>
             ) : null}
 
             <span className={`text-custom-${color}`}>

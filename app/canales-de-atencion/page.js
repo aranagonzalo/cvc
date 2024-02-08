@@ -114,7 +114,7 @@ const Page = () => {
                                 src={detail.src}
                                 alt={detail.alt}
                             />
-                            <h1 className="text-xl text-custom-cream pt-2 pb-12">
+                            <h1 className="text-xl text-custom-cream pt-2 pb-16">
                                 {detail.label}
                             </h1>
                             {detail.label === "CVC Fono | 24h" ? (
@@ -172,7 +172,7 @@ const Page = () => {
                                     </p>
                                 </>
                             ) : detail.label === "Centros de atención" ? (
-                                <div className="flex h-full gap-20">
+                                <div className="flex h-full gap-12">
                                     <div className="flex flex-col h-full pt-12 text-center gap-[6px]">
                                         <p className="text-lg font-semibold text-custom-cream">
                                             Lima
@@ -183,13 +183,13 @@ const Page = () => {
                                         <p className="text-base font-light leading-none text-custom-cream">
                                             Torre 1 - Pisos 8 y 9, Lima
                                         </p>
-                                        <p className="text-base font-light leading-none text-custom-cream">
+                                        <p className="text-base font-light leading-none text-custom-cream pb-[102px]">
                                             Atención al público | 9am a 6pm
                                         </p>
-                                        <p className="text-base font-light leading-none text-custom-cream pb-20">
+                                        {/* <p className="text-base font-light leading-none text-custom-cream pb-20">
                                             Recepción de documentos | 9am a
                                             4:30pm
-                                        </p>
+                                        </p> */}
                                         <p className="text-lg font-semibold text-custom-cream">
                                             Villacuri
                                         </p>

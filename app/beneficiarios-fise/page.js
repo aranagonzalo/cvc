@@ -43,13 +43,13 @@ const Page = () => {
                     </strong>
                 </motion.p>
             </section>
-            <iframe
+            {/* <iframe
                 className="w-full aspect-video"
                 src="https://www.youtube.com/embed/BcuaXzBUfno?si=OrvY0TgsZjai6ln9&amp;controls=0"
                 title="CVC Intro"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
-            />
+            /> */}
             <section className="w-full flex h-[640px] relative overflow-hidden">
                 <div className="w-1/2 flex justify-start items-end h-full">
                     <div className="flex justify-start items-end bg-custom-green h-full p-24 w-full">
@@ -66,7 +66,7 @@ const Page = () => {
                         </motion.h1>
                     </div>
                 </div>
-                <div className="w-1/2 flex h-full justify-center p-12 bg-custom-cream">
+                <div className="w-1/2 flex h-full justify-center p-12 bg-custom-green">
                     <ul className="flex flex-col justify-evenly items-center w-3/4 m-0">
                         <motion.li
                             initial={{ opacity: 0, x: -50 }}
@@ -75,7 +75,7 @@ const Page = () => {
                                 x: 0,
                                 transition: { duration: 0.5 },
                             }}
-                            className="list-disc font-light leading-tight text-4xl"
+                            className="list-disc font-light leading-tight text-4xl text-custom-cream"
                         >
                             Los usuarios residenciales de electricidad con
                             consumo promedio anual menor o igual a 70 KWh y que
@@ -88,7 +88,7 @@ const Page = () => {
                                 x: 0,
                                 transition: { duration: 0.5 },
                             }}
-                            className="list-disc font-light leading-tight text-4xl"
+                            className="list-disc font-light leading-tight text-4xl text-custom-cream"
                         >
                             Las personas que no cuentan con el servicio
                             residencial de electricidad pero si cuentan con una
@@ -158,13 +158,15 @@ const Page = () => {
                 <div className="w-1/2 flex h-full justify-center p-12 bg-custom-cream">
                     <ul className="flex flex-col justify-evenly items-center w-3/4 m-0 text-custom-red">
                         <Link
-                            href=""
+                            target="_blank"
+                            href="/pdf/beneficiarios.pdf"
                             className="font-normal leading-tight text-4xl"
                         >
                             Beneficiarios del programa
                         </Link>
                         <Link
-                            href=""
+                            target="_blank"
+                            href="/pdf/fise.pdf"
                             className="font-normal leading-tight text-4xl"
                         >
                             Tríptico informativo del FISE

@@ -8,6 +8,7 @@ import { RotatingLines } from "react-loader-spinner";
 import Input from "@/components/Form/Input";
 import Select from "@/components/Form/Select";
 import CustomFileInput from "./CustomFileInput";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const ExtraForm = ({ reclamo, denuncia, color }) => {
     const initialFormData = {
@@ -66,7 +67,7 @@ const ExtraForm = ({ reclamo, denuncia, color }) => {
 
     return (
         <form onSubmit={handleSubmit} className="flex flex-col">
-            <div className="flex pb-36">
+            <div className="flex pb-16">
                 <div className="flex flex-col w-1/2 gap-12">
                     <Input
                         color="cream"
@@ -169,11 +170,6 @@ const ExtraForm = ({ reclamo, denuncia, color }) => {
                             focused={focused}
                         />
                     )}
-                    <CustomFileInput
-                        color="cream"
-                        reclamo={reclamo}
-                        denuncia={denuncia}
-                    />
                 </div>
                 <div className="flex flex-col w-1/2 gap-4">
                     <textarea
@@ -181,19 +177,28 @@ const ExtraForm = ({ reclamo, denuncia, color }) => {
                         name="message"
                         onChange={handleChange}
                         value={formData.message}
-                        className={`h-full placeholder:text-custom-cream/80 border-[2.5px] w-full border-custom-cream bg-custom-${color} text-custom-cream p-4 text-2xl font-medium focus:outline-none rounded-lg`}
+                        className={`h-full placeholder:text-custom-cream/80 border-[2px] w-full border-custom-cream bg-custom-${color} text-custom-cream p-4 text-2xl font-medium focus:outline-none rounded-3xl`}
                         placeholder="Escribenos los detalles aquí"
                     ></textarea>
                 </div>
             </div>
             <div className="flex">
-                <div className="flex flex-col w-1/2 gap-4 text-custom-cream font-normal text-2xl">
-                    <p className="w-3/4">
-                        Al apretar el botón, usted está aceptando los{" "}
-                        <Link href="/terminos">Términos y Condiciones</Link>
+                <div className="flex items-start w-1/2 gap-4 text-custom-cream font-normal">
+                    <Checkbox className="border-[2px] mt-2 border-custom-cream data-[state=checked]:bg-custom-green data-[state=checked]:text-custom-cream" />
+                    <p className="text-lg w-3/5 leading-tight ml-4">
+                        Acepto el uso de mis datos personales conforme a la{" "}
+                        <Link href="/politica" className="underline">
+                            Política de Protección de Datos Personales
+                        </Link>{" "}
+                        de CVC Energía
                     </p>
                 </div>
-                <div className="flex flex-col w-1/2 gap-4">
+                <div className="flex justify-between w-1/2 gap-4">
+                    <CustomFileInput
+                        color={color}
+                        reclamo={reclamo}
+                        denuncia={denuncia}
+                    />
                     <button
                         disabled={
                             isLoading ||
@@ -202,7 +207,7 @@ const ExtraForm = ({ reclamo, denuncia, color }) => {
                             !formData.number
                         }
                         type="submit"
-                        className={`cursor-pointer flex items-center justify-center text-2xl py-3 px-8 font-normal !text-custom-${color} bg-custom-cream rounded-full max-w-max ${
+                        className={`cursor-pointer flex items-center justify-center text-2xl py-3 px-8 h-12 font-normal !text-custom-${color} bg-custom-cream rounded-full max-w-max ${
                             !formData.email &&
                             "bg-custom-grey-100 cursor-not-allowed"
                         } ${

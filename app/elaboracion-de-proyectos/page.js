@@ -6,20 +6,20 @@ import { motion } from "framer-motion";
 
 const sections = [
     {
-        title: "Diseño e Ingeniería",
-        text: "Creamos y planificamos proyectos de energía. Realizamos la configuración óptima del proyecto, considerando factores como la ubicación, los recursos disponibles, las tecnologías más adecuadas y los requisitos específicos del cliente.",
+        title: "Ingeniería",
+        text: "Brindamos el servicio de ingeniería especializada para proyectos de distribución, generación y transmisión eléctrica a nivel nacional, garantizando la calidad de nuestros servicios.",
         color: "bg-custom-blue",
         img: "1",
     },
     {
         title: "Estudio de Coordinación de Protecciones (ECP)",
-        text: "Verificamos el comportamiento de los elementos del sistema de protección en Redes de Distribución para buscar la menor afectación de la continuidad de la operación ante el desarrollo de fallas por corto circuito y así garantizar la confiabilidad, selectividad y seguridad del sistema eléctrico de distribución.",
+        text: "Realizamos la ingeniería, pruebas y verificación del comportamiento de los elementos del sistema de protección en Redes de Distribución para buscar la menor afectación de la continuidad de la operación ante el desarrollo de fallas por corto circuito y así garantizar la confiabilidad, selectividad y seguridad de los sistemas eléctricos.",
         color: "bg-custom-sky",
         img: "2",
     },
     {
         title: "Esquema de Rechazo Automático de Carga y Generación (ERACG)",
-        text: "Implementamos el ERACG con la finalidad de preservar la estabilidad y seguridad del Sistema Eléctrico. Recuerda que esta implementación es obligación de todos los clientes libres.",
+        text: "Realizamos la ingeniería, pruebas e implementación del ERAGG con la finalidad de preservar la estabilidad y seguridad del Sistema Eléctrico. Recuerda que esta implementación es obligación de todos los clientes libres.",
         color: "bg-custom-red",
         img: "3",
     },
@@ -31,7 +31,7 @@ const sections = [
     },
     {
         title: "Asesoría",
-        text: "Brindamos asesoramiento en optimización energética industrial y en desarrollo de proyectos eléctricos de media y alta tensión.",
+        text: "Brindamos asesoramiento en optimización energética industrial y en desarrollo de proyectos eléctricos de media, alta y muy alta tensión.",
         color: "bg-custom-yellow",
         img: "5",
     },
@@ -59,39 +59,39 @@ const page = () => {
                         className={`px-28 py-24 ${color} flex flex-col w-1/2 relative justify-between`}
                     >
                         <motion.h1
-                            initial={{ x: -20, opacity: 0 }}
+                            initial={{ x: 15, opacity: 0 }}
                             whileInView={{
                                 x: 0,
                                 opacity: 1,
                                 transition: {
-                                    duration: 0.6,
-                                    delay: 0.2,
+                                    duration: 0.4,
+                                    delay: 0.1,
                                 },
                             }}
                             className={`${
                                 img === "5"
                                     ? "text-custom-grey"
-                                    : "text-custom-cream/90"
+                                    : "text-custom-cream"
                             } font-normal ${
                                 img === "2" || img === "3" ? "w-full" : "w-3/4"
-                            } text-5xl leading-normal`}
+                            } text-4xl leading-tight`}
                         >
                             {title}
                         </motion.h1>
                         <motion.p
-                            initial={{ x: 20, opacity: 0 }}
+                            initial={{ x: 15, opacity: 0 }}
                             whileInView={{
                                 x: 0,
                                 opacity: 1,
                                 transition: {
-                                    duration: 0.6,
-                                    delay: 0.2,
+                                    duration: 0.4,
+                                    delay: 0.1,
                                 },
                             }}
                             className={`text-lg ${
                                 img === "5"
                                     ? "text-custom-grey"
-                                    : "text-custom-cream/90"
+                                    : "text-custom-cream"
                             } font-normal pt-4 leading-normal text-justify w-3/4`}
                         >
                             {text}
@@ -102,21 +102,21 @@ const page = () => {
 
             <section className="w-full flex p-32 bg-custom-cream justify-between items-center">
                 <motion.h1
-                    initial={{ x: -20, opacity: 0 }}
+                    initial={{ x: 15, opacity: 0 }}
                     whileInView={{
                         x: 0,
                         opacity: 1,
                         transition: {
-                            duration: 0.6,
-                            delay: 0.2,
+                            duration: 0.4,
+                            delay: 0.1,
                         },
                     }}
-                    className="text-7xl text-custom-grey w-3/4 leading-tight font-normal"
+                    className="text-6xl text-custom-grey w-1/2 leading-tight font-normal"
                 >
                     ¿Te gustaría solicitar nuestros servicios?
                 </motion.h1>
                 <Link
-                    href="https://www.bumeran.com.pe/perfiles/empresa_consorcio-electrico-de-villacuri-cvc-energia_13228415.html"
+                    href="/#formContainer"
                     target="blank"
                     className="text-4xl font-normal rounded-[60px] bg-custom-grey text-custom-cream px-16 h-fit py-8 hover:scale-105 hover:shadow-lg transition-all"
                 >

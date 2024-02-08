@@ -17,7 +17,7 @@ const Input = ({
     return (
         <div className="relative">
             <label
-                className={`transition-text duration-300 ease-out bg-custom-${backgroundColor} absolute font-medium text-2xl text-custom-${color} pointer-events-none ${
+                className={`transition-text duration-300 ease-out bg-custom-${backgroundColor} absolute font-normal text-2xl text-custom-${color} pointer-events-none ${
                     focused[name] || formData[name] ? "text-base -top-5" : ""
                 }`}
             >
@@ -32,7 +32,7 @@ const Input = ({
                 value={formData[name]}
                 required={required}
                 type={type}
-                className={`border-b-[2.5px] h-12 w-3/4 border-custom-${color} text-2xl font-medium text-custom-${color} focus:outline-none bg-custom-${backgroundColor} ${
+                className={`border-b-[2px] h-12 w-3/4 border-custom-${color} text-2xl font-medium text-custom-${color} focus:outline-none bg-custom-${backgroundColor} ${
                     isNumberType ? "appearance-none" : ""
                 }`}
             ></input>

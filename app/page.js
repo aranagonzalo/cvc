@@ -308,14 +308,15 @@ export default function Home() {
                         </ul>
                     </div>
                 </section>
-                <iframe
+                {/* <iframe
                     className="w-full aspect-video"
                     src="https://www.youtube.com/embed/BcuaXzBUfno?si=OrvY0TgsZjai6ln9&amp;controls=0"
                     title="CVC Intro"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
-                />
+                /> */}
                 <section
+                    id="formContainer"
                     ref={targetContainerRef}
                     className="w-full flex flex-col bg-custom-cream px-6 py-12 md:p-24 lg:p-32 justify-center"
                 >
