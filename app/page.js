@@ -94,7 +94,7 @@ export default function Home() {
                         animate={{ opacity: 1 }}
                         className="z-[60] text-custom-grey bg-custom-cream py-3 px-5 mb-32 w-fit rounded-full hover:scale-110 hover:shadow-lg transition-all"
                     >
-                        Descubre los beneficios
+                        Genera ahorros en tu consumo
                     </motion.button>
                 </section>
                 <section className="w-full flex flex-col bg-custom-green px-6 py-12 md:p-24 lg:p-32 justify-center">

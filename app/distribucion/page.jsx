@@ -29,6 +29,7 @@ const dots = [
         left: "84px",
         top: "194px",
         url: "/images/zonas-de-concesion/2.jpg",
+        enproyecto: false,
     },
     {
         title: "Lima",
@@ -41,6 +42,7 @@ const dots = [
         left: "175px",
         top: "347px",
         url: "/images/zonas-de-concesion/3.png",
+        enproyecto: false,
     },
     {
         title: "Ica",
@@ -53,6 +55,7 @@ const dots = [
         left: "215px",
         top: "448px",
         url: "/images/zonas-de-concesion/4.png",
+        enproyecto: false,
     },
     {
         title: "Tacna",
@@ -65,6 +68,7 @@ const dots = [
         left: "392px",
         top: "568px",
         url: "/images/zonas-de-concesion/5.jpg",
+        enproyecto: true,
     },
     {
         title: "Piura",
@@ -77,6 +81,7 @@ const dots = [
         left: "70px",
         top: "153px",
         url: "/images/zonas-de-concesion/6.jpg",
+        enproyecto: true,
     },
     {
         title: "Moquegua",
@@ -89,6 +94,7 @@ const dots = [
         left: "374px",
         top: "539px",
         url: "/images/zonas-de-concesion/7.jpg",
+        enproyecto: true,
     },
 ];
 
@@ -104,6 +110,7 @@ const Page = () => {
         redes: "",
         clientes: "",
         url: "",
+        enproyecto: false,
     });
 
     const handleHover = (d) => {
@@ -117,6 +124,7 @@ const Page = () => {
             redes: d.redes,
             clientes: d.clientes,
             url: d.url,
+            enproyecto: d.enproyecto,
         });
     };
 
@@ -212,6 +220,11 @@ const Page = () => {
                                     alt={dotData.title}
                                     src={dotData.url}
                                 />
+                            )}
+                            {dotData.enproyecto && (
+                                <div className="z-50 bg-custom-grey text-xl h-16 flex absolute rotate-90 top-[148px] -right-[150px] p-2 w-[360px] items-center justify-center text-custom-cream uppercase">
+                                    En proyecto
+                                </div>
                             )}
                         </div>
                     </div>
