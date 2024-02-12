@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const lineasDeTransmision = [
     {
-        title: "L.T. Independencia Coelvisac 1",
+        title: "LT Independencia Coelvisac 1",
         topLeftTitle: "Distancia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "SE de origen",
@@ -18,31 +18,31 @@ const lineasDeTransmision = [
         url: "/images/transmision/1.jpg",
     },
     {
-        title: "L.T. Felam Tierras Nuevas",
+        title: "LT Felam Tierras Nuevas",
         topLeftTitle: "Distancia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "SE de origen",
         bottomRightTitle: "SE de destino",
         topLeftData: "28 km",
         topRightData: "220 kV",
-        bottomLeftData: "S.E.T. Felam",
-        bottomRightData: "S.E.T. Tierras Nuevas",
+        bottomLeftData: "SE Félam",
+        bottomRightData: "SE Tierras Nuevas",
         url: "/images/transmision/2.jpg",
     },
     {
-        title: "S.E.T. Coelvisac 1",
+        title: "SE Coelvisac 1",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
         bottomRightTitle: "SE de destino",
-        topLeftData: "60 MVA",
+        topLeftData: "40 + 20 MVA",
         topRightData: "60 kV",
         bottomLeftData: "2",
         bottomRightData: "Villacurí",
         url: "/images/transmision/3.jpg",
     },
     {
-        title: "S.E.T. Tierras Nuevas",
+        title: "SE Tierras Nuevas",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -54,7 +54,7 @@ const lineasDeTransmision = [
         url: "/images/transmision/4.jpg",
     },
     {
-        title: "S.E. Félam",
+        title: "SE Félam",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -63,6 +63,42 @@ const lineasDeTransmision = [
         topRightData: "220 kV",
         bottomLeftData: "0",
         bottomRightData: "Olmos",
+        url: "/images/transmision/5.jpg",
+    },
+    {
+        title: "SE Lomas",
+        topLeftTitle: "Capacidad",
+        topRightTitle: "Voltaje",
+        bottomLeftTitle: "# de trafos",
+        bottomRightTitle: "SE de destino",
+        topLeftData: "50 MVA",
+        topRightData: "60/22.9 kV",
+        bottomLeftData: "1",
+        bottomRightData: "SE Lomas",
+        url: "/images/transmision/5.jpg",
+    },
+    {
+        title: "SE Huarango",
+        topLeftTitle: "Capacidad",
+        topRightTitle: "Voltaje",
+        bottomLeftTitle: "# de trafos",
+        bottomRightTitle: "SE de destino",
+        topLeftData: "50 MVA",
+        topRightData: "60/22.9 kV",
+        bottomLeftData: "1",
+        bottomRightData: "SE Huarango",
+        url: "/images/transmision/5.jpg",
+    },
+    {
+        title: "LT Tierras Nuevas - Pampa Pañala",
+        topLeftTitle: "Distancia",
+        topRightTitle: "Voltaje",
+        bottomLeftTitle: "SE de origen",
+        bottomRightTitle: "SE de destino",
+        topLeftData: "33.861 km",
+        topRightData: "60 kV",
+        bottomLeftData: "SE Tierras Nuevas",
+        bottomRightData: "SE Pampa Pañala",
         url: "/images/transmision/5.jpg",
     },
 ];
@@ -105,14 +141,10 @@ const Page = () => {
             />
             <section className="w-full p-28 bg-custom-cream text-custom-grey flex flex-col gap-12">
                 <p className="text-4xl font-normal leading-normal">
-                    Hemos construido nuestras propias líneas de transmisión para
-                    alimentar eléctricamente nuestras zonas de concesión en
-                    Villacurí y Olmos
-                </p>
-                <p className="text-4xl font-normal leading-normal">
-                    También hemos construido nuestras subestaciones de
-                    transformación eléctrica: “SE Coelvisac 1”, “SE Tierras
-                    Nuevas” y “SE Felam”
+                    Hemos desarrollado nuestras propias líneas de transmisión
+                    para alimentar eléctricamente nuestras zonas de concesión en
+                    Villacurí y Olmos. Además, hemos construido nuestras
+                    subestaciones de transformación eléctrica.
                 </p>
             </section>
             <section className="w-full flex h-[95vh] relative overflow-hidden">
