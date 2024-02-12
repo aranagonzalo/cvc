@@ -8,6 +8,7 @@ import { RotatingLines } from "react-loader-spinner";
 import Input from "@/components/Form/Input";
 import Select from "@/components/Form/Select";
 import CustomFileInput from "./CustomFileInput";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const LandingForm = () => {
     const [formData, setFormData] = useState({
@@ -152,12 +153,14 @@ const LandingForm = () => {
                 </div>
             </div>
             <div className="flex">
-                <div className="flex flex-col w-1/2 gap-4 text-custom-blue font-normal text-2xl">
-                    <p className="w-3/4">
-                        Al apretar el botón, usted está aceptando los{" "}
-                        <Link href="/terminos" className="underline">
-                            Términos y Condiciones
-                        </Link>
+                <div className="flex items-start w-1/2 gap-4 text-custom-blue font-normal">
+                    <Checkbox className="border-[2px] mt-2 border-custom-blue data-[state=checked]:bg-custom-blue data-[state=checked]:text-custom-cream" />
+                    <p className="text-lg w-3/5 leading-tight ml-4">
+                        Acepto el uso de mis datos personales conforme a la{" "}
+                        <Link href="/politica" className="underline">
+                            Política de Protección de Datos Personales
+                        </Link>{" "}
+                        de CVC Energía
                     </p>
                 </div>
                 <div className="flex flex-col w-1/2 gap-4">
