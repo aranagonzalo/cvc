@@ -470,7 +470,7 @@ export default function Home() {
                         + Ver todas las entradas
                     </p>
                 </section>
-                <section className="w-full bg-custom-cream px-6 py-12 md:p-24 lg:py-32 lg:px-48 flex justify-between">
+                <section className="w-full h-[400px] bg-custom-cream px-6 py-12 md:p-24 lg:px-48 items-center flex justify-between">
                     <Image
                         alt="coes"
                         src="/images/landing/coes.png"
@@ -480,7 +480,7 @@ export default function Home() {
                     <Image
                         alt="osinergmin"
                         src="/images/landing/osinergmin.png"
-                        width={320}
+                        width={280}
                         height={100}
                     />
                     <Image

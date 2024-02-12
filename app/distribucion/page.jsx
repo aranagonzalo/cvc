@@ -40,7 +40,7 @@ const dots = [
         clientes: "2139",
         left: "175px",
         top: "347px",
-        url: "/images/zonas-de-concesion/3.jpg",
+        url: "/images/zonas-de-concesion/3.png",
     },
     {
         title: "Ica",
@@ -52,7 +52,7 @@ const dots = [
         clientes: "1526",
         left: "215px",
         top: "448px",
-        url: "/images/zonas-de-concesion/4.jpg",
+        url: "/images/zonas-de-concesion/4.png",
     },
     {
         title: "Tacna",
