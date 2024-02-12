@@ -152,7 +152,7 @@ const Page = () => {
                     {lineasDeTransmision.map((l, i) => (
                         <h1
                             onClick={() => handleClick(l)}
-                            className={`text-3xl cursor-pointer transition-all w-full ${
+                            className={`text-3xl cursor-pointer transition-all w-full        ${
                                 activeData.title === l.title
                                     ? "font-semibold text-custom-cream"
                                     : "font-light text-custom-cream/90"

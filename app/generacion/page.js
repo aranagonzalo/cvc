@@ -7,57 +7,68 @@ import "slick-carousel/slick/slick.css";
 
 const lineasDeGeneracion = [
     {
-        title: "C.H. Coelvihidro 1",
+        title: "CH Coelvihidro 1 - Quipico",
+        subtitle: "Central Hidroeléctrica Coelvihidro 1 - Quipico",
         description:
-            "Nuestra central hidroeléctrica de 1.6 MW  cuya producción de energía alimenta el mercado regulado de CVC energía en Andahuasi. Adicionalmente, cuenta con una concesión de generación de 15 MW del proyecto Coelvihidro II.",
+            "Operación en modo continuo y conectada al sistema eléctrico Andahuasi",
         topLeftData: "1.6 MW",
-        topRightData: "Francis",
-        bottomLeftData: "Andahuasi",
-        bottomRightData: "Hidroeléctrica",
+        topRightData: "Hidroeléctrica",
+        bottomData:
+            "Distrito de Huaura, provincia de Sayan, departamento de Lima",
         url: "/images/generacion/1.jpg",
     },
     {
-        title: "C.T. Villacurí",
+        title: "CT Villacurí",
+        subtitle: "Central Termoeléctrica Villacurí",
         description:
-            "Contamos con una operación térmica de 5 MW que se está reubicando en Villacurí desde Piura, donde operó hasta el 2017. Esta Operación se ha denominado “C.T. Villacurí”.",
-        topLeftData: "5 MW",
-        topRightData: "Natural Gas",
-        bottomLeftData: "Villacurí",
-        bottomRightData: "Termoeléctrica",
+            "Operación en modo peak shaving y respaldo ante contingencias del sistema eléctrico Villacurí",
+        topLeftData: "9.99 MW",
+        topRightData: "Termoeléctrica de ciclo simple a gas natural",
+        bottomData: "Distrito de Salas, provincia de Ica, departamento de Ica",
         url: "/images/generacion/2.jpg",
     },
     {
-        title: "C.T. Salas",
+        title: "CT Salas",
+        subtitle: "Central Termoeléctrica Salas",
         description:
-            "Contamos con una operación térmica de 5 MW que se está reubicando en Villacurí desde Piura, donde operó hasta el 2017. Esta Operación se ha denominado “C.T. Villacurí”.",
-        topLeftData: "5 MW",
-        topRightData: "Natural Gas",
-        bottomLeftData: "Villacurí",
-        bottomRightData: "Termoeléctrica",
+            "Operación en modo peak shaving y respaldo ante contingencias del sistema eléctrico Villacurí",
+        topLeftData: "9.95 MW",
+        topRightData: "Termoeléctrica de ciclo simple a gas natural",
+        bottomData: "Distrito de Salas, provincia de Ica, departamento de Ica",
         url: "/images/generacion/3.jpg",
+    },
+    {
+        title: "CS Villacurí",
+        subtitle: "Central Solar Fotovoltáica Villacurí",
+        description: "Proyecto en desarrollo",
+        topLeftData: "10 MW",
+        topRightData: "Seguidores solares",
+        bottomData: "Villacurí",
+        url: "/images/generacion/4.jpg",
     },
 ];
 
 const Page = () => {
     const [activeData, setActiveData] = useState({
-        title: "C.H. Coelvihidro 1",
+        title: "CH Coelvihidro 1 - Quipico",
+        subtitle: "Central Hidroeléctrica Coelvihidro 1 - Quipico",
         description:
-            "Nuestra central hidroeléctrica de 1.6 MW  cuya producción de energía alimenta el mercado regulado de CVC energía en Andahuasi. Adicionalmente, cuenta con una concesión de generación de 15 MW del proyecto Coelvihidro II.",
+            "Operación en modo continuo y conectada al sistema eléctrico Andahuasi",
         topLeftData: "1.6 MW",
-        topRightData: "Francis",
-        bottomLeftData: "Andahuasi",
-        bottomRightData: "Hidroeléctrica",
+        topRightData: "Hidroeléctrica",
+        bottomData:
+            "Distrito de Huaura, provincia de Sayan, departamento de Lima",
         url: "/images/generacion/1.jpg",
     });
 
     const handleClick = (d) => {
         setActiveData({
             title: d.title,
+            subtitle: d.subtitle,
             description: d.description,
             topLeftData: d.topLeftData,
             topRightData: d.topRightData,
-            bottomLeftData: d.bottomLeftData,
-            bottomRightData: d.bottomRightData,
+            bottomData: d.bottomData,
             url: d.url,
         });
     };
@@ -95,9 +106,15 @@ const Page = () => {
                         />
                     </div>
                     <div className="h-[60%] w-full relative px-16 py-20 flex justify-between flex-col">
-                        <p className="text-3xl font-light leading-normal">
-                            {activeData.description}
-                        </p>
+                        <div className="flex-col gap-4 flex">
+                            <p className="text-xl font-light leading-normal text-custom-green">
+                                {activeData.subtitle}
+                            </p>
+                            <p className="text-4xl font-light w-[80%] leading-normal">
+                                {activeData.description}
+                            </p>
+                        </div>
+
                         <div className="grid grid-cols-2 grid-rows-2 gap-y-8">
                             <div className="flex flex-col justify-center">
                                 <h3 className="font-light text-2xl">
@@ -108,23 +125,19 @@ const Page = () => {
                                 </p>
                             </div>
                             <div className="flex flex-col justify-center">
-                                <h3 className="font-light text-2xl">Turbina</h3>
+                                <h3 className="font-light text-2xl">
+                                    Tecnología
+                                </h3>
                                 <p className="font-medium text-3xl">
                                     {activeData.topRightData}
                                 </p>
                             </div>
-                            <div className="flex flex-col justify-center">
+                            <div className="flex flex-col justify-center col-span-2">
                                 <h3 className="font-light text-2xl">
                                     Ubicación
                                 </h3>
                                 <p className="font-medium text-3xl">
-                                    {activeData.bottomLeftData}
-                                </p>
-                            </div>
-                            <div className="flex flex-col justify-center">
-                                <h3 className="font-light text-2xl">Tipo</h3>
-                                <p className="font-medium text-3xl">
-                                    {activeData.bottomRightData}
+                                    {activeData.bottomData}
                                 </p>
                             </div>
                         </div>
