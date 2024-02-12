@@ -98,27 +98,24 @@ const Page = () => {
                     Empieza aquí
                 </motion.button>
             </section>
-            <section className="w-full flex h-[640px] relative overflow-hidden">
+            <section className="w-full flex relative overflow-hidden">
                 <div className="w-1/2 flex justify-start items-end h-full">
-                    <div className="flex justify-start items-end bg-custom-blue h-full p-28 w-full">
-                        <motion.h1
-                            initial={{ opacity: 0, x: -100 }}
-                            whileInView={{
-                                opacity: 1,
-                                x: 0,
-                                transition: { duration: 0.3 },
-                            }}
-                            className="text-5xl text-custom-cream font-light leading-tight"
-                        >
-                            Si facturas{" "}
-                            <strong className="font-bold">
-                                más de 25 mil soles
-                            </strong>{" "}
-                            en luz puedes acceder al mercado libre de energía
-                        </motion.h1>
+                    <div className="flex flex-col justify-start items-end bg-custom-blue h-full p-28 w-full">
+                        <h1 className=" self-start mb-12 text-4xl text-custom-cream font-light w-[85%]">
+                            Potenciamos el desarrollo a lo largo del país
+                        </h1>
+                        <div className="w-full h-auto flex self-center relative">
+                            <Image
+                                width={380}
+                                height={200}
+                                className="self-center"
+                                alt="Mapa político del Perú"
+                                src="/images/zonas-de-concesion/mapa.svg"
+                            />
+                        </div>
                     </div>
                 </div>
-                <div className="w-1/2 flex h-full justify-center p-32 bg-custom-cream">
+                <div className="w-1/2 flex justify-center p-32 bg-custom-cream">
                     <ul className="flex flex-col justify-evenly gap-12 items-end w-full m-0">
                         <motion.li
                             initial={{ opacity: 0, x: -50 }}
@@ -129,7 +126,7 @@ const Page = () => {
                             }}
                             className="text-right"
                         >
-                            <h1 className="font-semibold text-7xl">+100</h1>
+                            <h1 className="font-semibold text-7xl">+210</h1>
                             <p className="font-extralight text-xl">
                                 clientes libres
                             </p>
@@ -143,7 +140,7 @@ const Page = () => {
                             }}
                             className="text-right"
                         >
-                            <h1 className="font-semibold text-7xl">+150</h1>
+                            <h1 className="font-semibold text-7xl">+220</h1>
                             <p className="font-extralight text-xl">
                                 MW contratados
                             </p>
@@ -171,7 +168,7 @@ const Page = () => {
                 <div className="w-1/3 relative">
                     <Image
                         alt="Maquinaria"
-                        src="/images/ahorra-energia/1.jpg"
+                        src="/images/ahorra-energia/1.png"
                         fill
                         className="object-cover"
                     />
@@ -198,102 +195,13 @@ const Page = () => {
                 className="w-full flex gap-48 relative overflow-hidden bg-custom-cream px-28 py-32"
             >
                 <div className="w-1/2">
-                    <h1 className="text-7xl font-medium text-custom-grey w-3/4 leading-tight">
+                    <h1 className="text-5xl font-normal text-custom-grey w-[65%] leading-tight">
                         ¡Déjanos tus datos para simular gratuitamente tu ahorro!
                     </h1>
                 </div>
                 <div className="w-1/2">
                     <AhorroEnergiaForm color="cream" />
                 </div>
-            </section>
-            <section className="w-full flex h-[320px] relative overflow-hidden">
-                <div className="w-3/4 flex justify-start items-center h-full">
-                    <div className="flex flex-col justify-start bg-custom-green h-full pl-24 py-24 w-full">
-                        <h1 className="text-5xl text-custom-cream leading-tight">
-                            Más información
-                        </h1>
-                        <h1 className="text-5xl text-custom-cream leading-tight">
-                            al +51 951 306 952
-                        </h1>
-                    </div>
-                </div>
-                <div className="w-1/4 flex h-full justify-end pr-24 py-24 bg-custom-green text-custom-cream items-center">
-                    <Link
-                        target="_blank"
-                        href="https://api.whatsapp.com/send/?phone=51951306952"
-                        className="relative font-normal leading-tight text-4xl"
-                    >
-                        <Image
-                            height={128}
-                            width={128}
-                            alt="WhatsApp"
-                            src="/images/ahorra-energia/whatsapp.svg"
-                        />
-                    </Link>
-                </div>
-            </section>
-            <section className="w-full flex relative overflow-hidden bg-custom-sky">
-                <div className="relative w-[45%]">
-                    <Image
-                        fill
-                        alt="Trabajador de CVC saludando"
-                        src="/images/ahorra-energia/4.jpg"
-                        className="object-cover"
-                    />
-                </div>
-                <div className="w-[55%] flex flex-col p-32 gap-16 text-custom-cream">
-                    <h1 className="leading-tight font-normal text-6xl w-3/4 pb-12">
-                        Cambia tu condición en tres pasos
-                    </h1>
-                    <div className="flex gap-8 items-center">
-                        <h1 className="font-semibold text-9xl pr-6">1</h1>
-                        <p className="font-extralight text-lg w-1/4">
-                            suscripción y firma del contrato
-                        </p>
-                    </div>
-                    <div className="flex gap-8 items-center">
-                        <h1 className="font-semibold text-9xl">2</h1>
-                        <p className="font-extralight text-lg w-1/4">
-                            notificación al distribuidor local y osinergmin
-                        </p>
-                    </div>
-                    <div className="flex gap-8 items-center">
-                        <h1 className="font-semibold text-9xl">3</h1>
-                        <p className="font-extralight text-lg w-1/4">
-                            inicio del nuevo contrato en 12 meses
-                        </p>
-                    </div>
-                </div>
-            </section>
-            <section className="bg-custom-blue text-custom-cream flex-col p-32">
-                <h1 className="font-medium text-5xl text-center pb-20">
-                    Preguntas frecuentes
-                </h1>
-                {preguntasFrecuentes.map((p) => (
-                    <div
-                        key={p.id}
-                        onClick={() => handleClick(p)}
-                        className="flex flex-col font-normal text-3xl pb-8 gap-8 hover:scale-105 transition-all cursor-pointer"
-                    >
-                        <div className="flex items-center">
-                            <Image
-                                width={64}
-                                height={64}
-                                alt="Icono de +"
-                                src={`/images/ahorra-energia/${
-                                    activeQuestion[p.id] ? "minus" : "plus"
-                                }.png`}
-                            />
-                            <h2>{p.title}</h2>
-                        </div>
-
-                        {activeQuestion[p.id] && (
-                            <p className="text-lg font-extralight pl-[72px] pb-8 w-3/4">
-                                {p.text}
-                            </p>
-                        )}
-                    </div>
-                ))}
             </section>
             <section className="flex flex-col p-32 bg-custom-cream">
                 <h1 className="font-medium text-5xl text-center pb-20 text-custom-grey">
@@ -400,7 +308,121 @@ const Page = () => {
                             />
                         </div>
                     </div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
+                            <Image
+                                width={140}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/backus.png"
+                            />
+                            <Image
+                                width={120}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/nestle.png"
+                            />
+                            <Image
+                                width={180}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/amcor.png"
+                            />
+                        </div>
+                    </div>
                 </Slider>
+            </section>
+            <section className="w-full flex h-[320px] relative overflow-hidden">
+                <div className="w-3/4 flex justify-start items-center h-full">
+                    <div className="flex flex-col justify-start bg-custom-green h-full pl-24 py-24 w-full">
+                        <h1 className="text-5xl text-custom-cream leading-tight">
+                            Más información
+                        </h1>
+                        <h1 className="text-5xl text-custom-cream leading-tight">
+                            al +51 951 306 952
+                        </h1>
+                    </div>
+                </div>
+                <div className="w-1/4 flex h-full justify-end pr-24 py-24 bg-custom-green text-custom-cream items-center">
+                    <Link
+                        target="_blank"
+                        href="https://api.whatsapp.com/send/?phone=51951306952"
+                        className="relative font-normal leading-tight text-4xl"
+                    >
+                        <Image
+                            height={128}
+                            width={128}
+                            alt="WhatsApp"
+                            src="/images/ahorra-energia/whatsapp.svg"
+                        />
+                    </Link>
+                </div>
+            </section>
+            <section className="w-full flex relative overflow-hidden bg-custom-sky">
+                <div className="relative w-[45%]">
+                    <Image
+                        fill
+                        alt="Trabajador de CVC saludando"
+                        src="/images/ahorra-energia/4.jpg"
+                        className="object-cover"
+                    />
+                </div>
+                <div className="w-[55%] flex flex-col p-32 gap-16 text-custom-cream">
+                    <h1 className="leading-tight font-normal text-6xl w-3/4 pb-12">
+                        Cambia tu condición en tres pasos
+                    </h1>
+                    <div className="flex gap-8 items-center">
+                        <h1 className="font-semibold text-9xl pr-6">1</h1>
+                        <p className="font-extralight text-lg w-1/4">
+                            suscripción y firma del contrato
+                        </p>
+                    </div>
+                    <div className="flex gap-8 items-center">
+                        <h1 className="font-semibold text-9xl">2</h1>
+                        <p className="font-extralight text-lg w-1/4">
+                            notificación al distribuidor local y osinergmin
+                        </p>
+                    </div>
+                    <div className="flex gap-8 items-center">
+                        <h1 className="font-semibold text-9xl">3</h1>
+                        <p className="font-extralight text-lg w-1/4">
+                            inicio del nuevo contrato en 12 meses
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section className="bg-custom-blue text-custom-cream flex-col p-32">
+                <h1 className="font-medium text-5xl text-center pb-20">
+                    Preguntas frecuentes
+                </h1>
+                {preguntasFrecuentes.map((p) => (
+                    <div
+                        key={p.id}
+                        onClick={() => handleClick(p)}
+                        className="flex flex-col font-normal text-3xl pb-8 gap-8 hover:scale-105 transition-all cursor-pointer"
+                    >
+                        <div className="flex items-center">
+                            <Image
+                                width={64}
+                                height={64}
+                                alt="Icono de +"
+                                src={`/images/ahorra-energia/${
+                                    activeQuestion[p.id] ? "minus" : "plus"
+                                }.png`}
+                            />
+                            <h2>{p.title}</h2>
+                        </div>
+
+                        {activeQuestion[p.id] && (
+                            <p className="text-lg font-extralight pl-[72px] pb-8 w-3/4">
+                                {p.text}
+                            </p>
+                        )}
+                    </div>
+                ))}
             </section>
         </div>
     );

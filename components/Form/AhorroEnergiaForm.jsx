@@ -8,6 +8,7 @@ import { RotatingLines } from "react-loader-spinner";
 import Input from "@/components/Form/Input";
 import Select from "@/components/Form/Select";
 import CustomFileInput from "./CustomFileInput";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const AhorroEnergiaForm = ({ color }) => {
     const initialFormData = {
@@ -72,7 +73,6 @@ const AhorroEnergiaForm = ({ color }) => {
                         backgroundColor={`${color}`}
                         name="empresa"
                         type="text"
-                        required
                         fieldName="Empresa"
                         handleChange={handleChange}
                         onBlur={onBlur}
@@ -84,9 +84,8 @@ const AhorroEnergiaForm = ({ color }) => {
                         color="grey"
                         backgroundColor={`${color}`}
                         name="name"
-                        required
                         type="text"
-                        fieldName="Nombre Completo"
+                        fieldName="Nombres y apellidos"
                         handleChange={handleChange}
                         onBlur={onBlur}
                         onFocus={onFocus}
@@ -97,9 +96,8 @@ const AhorroEnergiaForm = ({ color }) => {
                         color="grey"
                         backgroundColor={`${color}`}
                         name="number"
-                        required
                         type="number"
-                        fieldName="Teléfono"
+                        fieldName="Celular"
                         handleChange={handleChange}
                         onBlur={onBlur}
                         onFocus={onFocus}
@@ -110,9 +108,8 @@ const AhorroEnergiaForm = ({ color }) => {
                         color="grey"
                         backgroundColor={`${color}`}
                         name="email"
-                        required
                         type="email"
-                        fieldName="Correo Electrónico"
+                        fieldName="Correo"
                         handleChange={handleChange}
                         onBlur={onBlur}
                         onFocus={onFocus}
@@ -123,7 +120,6 @@ const AhorroEnergiaForm = ({ color }) => {
                         color="grey"
                         backgroundColor={`${color}`}
                         name="location"
-                        required
                         type="text"
                         fieldName="Ubicación del proyecto"
                         handleChange={handleChange}
@@ -136,7 +132,17 @@ const AhorroEnergiaForm = ({ color }) => {
                 </div>
             </div>
             <div className="flex flex-col">
-                <div className="flex flex-col gap-4 pb-6">
+                <div className="flex items-start w-full gap-4 text-custom-grey font-normal">
+                    <Checkbox className="border-[2px] mt-2 border-custom-grey data-[state=checked]:bg-custom-grey data-[state=checked]:text-custom-cream" />
+                    <p className="text-lg w-3/5 leading-tight ml-4">
+                        Acepto el uso de mis datos personales conforme a la{" "}
+                        <Link href="/politica" className="underline">
+                            Política de Protección de Datos Personales
+                        </Link>{" "}
+                        de CVC Energía
+                    </p>
+                </div>
+                <div className="flex flex-col gap-4 pt-12">
                     <button
                         disabled={
                             isLoading ||
@@ -145,12 +151,12 @@ const AhorroEnergiaForm = ({ color }) => {
                             !formData.number
                         }
                         type="submit"
-                        className={`flex items-center justify-center text-2xl py-3 px-8 font-normal text-custom-cream bg-custom-grey rounded-full max-w-max ${
+                        className={`flex items-center justify-center text-2xl py-3 px-8 font-normal text-custom-grey bg-custom-cream border-[2.5px] border-custom-grey rounded-full max-w-max ${
                             !formData.email &&
-                            "bg-custom-grey-100 cursor-not-allowed text-custom-grey"
+                            "bg-custom-grey-100 cursor-not-allowed"
                         } ${
                             !formData.name &&
-                            "bg-custom-grey-100 cursor-not-allowed text-custom-grey"
+                            "bg-custom-grey-100 cursor-not-allowed"
                         }`}
                     >
                         {isLoading ? (
@@ -166,17 +172,6 @@ const AhorroEnergiaForm = ({ color }) => {
                         )}
                         <Toaster richColors />
                     </button>
-                </div>
-                <div className="flex flex-col gap-4 text-custom-grey font-normal text-2xl">
-                    <p className="w-full">
-                        Al apretar el botón, usted está aceptando los{" "}
-                        <Link
-                            href="/terminos"
-                            className="font-semibold underline"
-                        >
-                            Términos y Condiciones
-                        </Link>
-                    </p>
                 </div>
             </div>
         </form>
