@@ -177,7 +177,7 @@ const ExtraForm = ({ reclamo, denuncia, color }) => {
                         name="message"
                         onChange={handleChange}
                         value={formData.message}
-                        className={`h-full placeholder:text-custom-cream/80 border-[2px] w-full border-custom-cream bg-custom-${color} text-custom-cream p-4 text-2xl font-medium focus:outline-none rounded-3xl`}
+                        className={`h-full placeholder:text-custom-cream/80 border-[2px] w-full border-custom-cream bg-custom-${color} text-custom-cream p-6 text-2xl font-normal focus:outline-none rounded-3xl`}
                         placeholder="Escribenos los detalles aquí"
                     ></textarea>
                 </div>
@@ -207,7 +207,7 @@ const ExtraForm = ({ reclamo, denuncia, color }) => {
                             !formData.number
                         }
                         type="submit"
-                        className={`cursor-pointer flex items-center justify-center text-2xl py-3 px-8 h-12 font-normal !text-custom-${color} bg-custom-cream rounded-full max-w-max ${
+                        className={`cursor-pointer flex items-center justify-center text-xl py-3 px-8 h-12 font-normal !text-custom-${color} bg-custom-cream rounded-full max-w-max ${
                             !formData.email &&
                             "bg-custom-grey-100 cursor-not-allowed"
                         } ${

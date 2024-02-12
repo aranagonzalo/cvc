@@ -6,18 +6,18 @@ import { motion } from "framer-motion";
 import { ChevronLeft } from "lucide-react";
 
 const dots = [
-    {
-        title: "Lambayeque",
-        subtitle: "Olmos - Motupe - Íllimo",
-        area: "+10,000 Ha",
-        inversion: "US$ 533 M",
-        demanda: "265 kW",
-        redes: "23 km",
-        clientes: "501",
-        left: "63px",
-        top: "167px",
-        url: "/images/zonas-de-concesion/1.jpg",
-    },
+    // {
+    //     title: "Lambayeque",
+    //     subtitle: "Olmos - Motupe - Íllimo",
+    //     area: "+10,000 Ha",
+    //     inversion: "US$ 533 M",
+    //     demanda: "265 kW",
+    //     redes: "23 km",
+    //     clientes: "501",
+    //     left: "63px",
+    //     top: "167px",
+    //     url: "/images/zonas-de-concesion/1.jpg",
+    // },
     {
         title: "Lambayeque",
         subtitle: "Tierras Nuevas - Olmos",
@@ -26,8 +26,8 @@ const dots = [
         demanda: "30 MW",
         redes: "292 km",
         clientes: "143",
-        left: "78px",
-        top: "204px",
+        left: "84px",
+        top: "194px",
         url: "/images/zonas-de-concesion/2.jpg",
     },
     {
@@ -38,8 +38,8 @@ const dots = [
         demanda: "2 MW",
         redes: "67 km",
         clientes: "2139",
-        left: "170px",
-        top: "355px",
+        left: "175px",
+        top: "347px",
         url: "/images/zonas-de-concesion/3.jpg",
     },
     {
@@ -50,8 +50,8 @@ const dots = [
         demanda: "43 MW",
         redes: "483 km",
         clientes: "1526",
-        left: "210px",
-        top: "445px",
+        left: "215px",
+        top: "448px",
         url: "/images/zonas-de-concesion/4.jpg",
     },
     {
@@ -62,8 +62,8 @@ const dots = [
         demanda: "420 MW",
         redes: "28 km",
         clientes: "",
-        left: "384px",
-        top: "580px",
+        left: "392px",
+        top: "568px",
         url: "/images/zonas-de-concesion/5.jpg",
     },
     {
@@ -74,8 +74,8 @@ const dots = [
         demanda: "+ 1 MW",
         redes: "32 km",
         clientes: "",
-        left: "86px",
-        top: "143px",
+        left: "70px",
+        top: "153px",
         url: "/images/zonas-de-concesion/6.jpg",
     },
     {
@@ -86,7 +86,7 @@ const dots = [
         demanda: "160 MW",
         redes: "75 km",
         clientes: "",
-        left: "368px",
+        left: "374px",
         top: "539px",
         url: "/images/zonas-de-concesion/7.jpg",
     },
@@ -145,9 +145,9 @@ const Page = () => {
                                 x: 0,
                                 transition: { duration: 0.3 },
                             }}
-                            className="text-5xl text-custom-cream w-1/2"
+                            className="text-5xl text-custom-cream w-[60 %]"
                         >
-                            Descubre todas nuestras concesiones
+                            Brindamos desarrollo a nuestras zonas de concesión
                         </motion.h1>
                     </div>
                     <div className="w-1/2 flex flex-col justify-start items-end bg-custom-yellow">
@@ -232,7 +232,7 @@ const Page = () => {
                             <div
                                 key={i}
                                 onClick={() => handleHover(d)}
-                                className="cursor-pointer bg-custom-yellow rounded-full w-[22px] h-[22px] absolute before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:pointer-events-none hover:before:h-24 hover:before:w-24 before:transition-all before:-translate-y-1/2 before:flex before:rounded-full before:bg-custom-yellow/40 before:w-0 before:h-0"
+                                className="cursor-pointer bg-custom-yellow rounded-full w-[16px] h-[16px] absolute before:content-[''] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:pointer-events-none hover:before:h-20 hover:before:w-20 before:transition-all before:-translate-y-1/2 before:flex before:rounded-full before:bg-custom-yellow/40 before:w-0 before:h-0"
                                 style={{ top: d.top, left: d.left }}
                             ></div>
                         ))}

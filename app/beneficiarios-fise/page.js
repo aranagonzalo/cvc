@@ -1,6 +1,7 @@
 "use client";
 import Hero from "@/components/Hero.jsx";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Page = () => {
@@ -139,9 +140,36 @@ const Page = () => {
                     </li>
                 </ul>
             </section>
-            <section className="w-full flex h-[320px] relative overflow-hidden">
+            <section className="w-full flex flex-col h-[800px] relative overflow-hidden px-20 py-32">
+                <Image
+                    fill
+                    className="object-cover"
+                    src="/images/beneficiarios-fise/vales.jpg"
+                    alt="Imagen de vales FISE"
+                />
+                <div className="z-20 flex justify-between h-1/2">
+                    <h1 className="text-custom-grey z-20 text-6xl font-medium leading-tight w-96">
+                        El Vale GLP ahora en tu celular
+                    </h1>
+                    <Image
+                        className="w-64 h-64 -mt-24 -mr-14"
+                        width={120}
+                        height={120}
+                        src="/images/beneficiarios-fise/fise-logo.png"
+                        alt="Imagen de logo  FISE"
+                    />
+                </div>
+                <div className="h-1/2 z-20 items-end flex">
+                    <h2 className="text-custom-grey z-20 text-4xl font-normal w-96 leading-snug">
+                        Envía gratis la palabra{" "}
+                        <span className="font-bold">VALE al 38383</span> ¡y
+                        recibe tu código al instante!
+                    </h2>
+                </div>
+            </section>
+            <section className="w-full flex h-[500px] relative overflow-hidden">
                 <div className="w-1/2 flex justify-start items-end h-full">
-                    <div className="flex justify-start items-end bg-custom-red h-full p-24 w-full">
+                    <div className="flex justify-start items-end bg-custom-red h-full p-20 w-full">
                         <motion.h1
                             initial={{ opacity: 0, x: -100 }}
                             whileInView={{
@@ -155,21 +183,28 @@ const Page = () => {
                         </motion.h1>
                     </div>
                 </div>
-                <div className="w-1/2 flex h-full justify-center p-12 bg-custom-cream">
-                    <ul className="flex flex-col justify-evenly items-center w-3/4 m-0 text-custom-red">
+                <div className="w-1/2 flex h-full justify-start p-20 bg-custom-cream">
+                    <ul className="flex flex-col justify-end gap-8 m-0 text-custom-red">
                         <Link
                             target="_blank"
                             href="/pdf/beneficiarios.pdf"
-                            className="font-normal leading-tight text-4xl"
+                            className="font-light leading-tight text-4xl"
                         >
                             Beneficiarios del programa
                         </Link>
                         <Link
                             target="_blank"
                             href="/pdf/fise.pdf"
-                            className="font-normal leading-tight text-4xl"
+                            className="font-light leading-tight text-4xl"
                         >
                             Tríptico informativo del FISE
+                        </Link>
+                        <Link
+                            target="_blank"
+                            href="https://www.youtube.com/watch?v=j1bxL38e8SY"
+                            className="font-light leading-tight text-4xl"
+                        >
+                            Video informativo FISE
                         </Link>
                     </ul>
                 </div>

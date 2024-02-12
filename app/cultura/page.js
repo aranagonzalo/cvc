@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 const page = () => {
     const slideItems = [
@@ -37,6 +38,8 @@ const page = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
+        prevArrow: <ChevronLeft />,
+        nextArrow: <ChevronRight className="slick-next text-custom-cream" />,
     };
 
     return (

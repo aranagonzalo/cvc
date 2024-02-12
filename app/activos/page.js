@@ -5,25 +5,31 @@ import { motion } from "framer-motion";
 
 const page = () => {
     const distribucion = [
-        "Concesión de Villacurí",
-        "Concesión de Tierras Nuevas - Olmos",
-        "Concesión de Andahuasi",
-        "Concesión de Olmos - Motupe - Íllimo",
-        "Concesión de Hospicio",
-        "Concesión de Pasto Grande",
-        "Concesión de La Huaca 2",
+        "Concesión de Villacurí - Ica",
+        "Concesión de Tierras Nuevas - Olmos - Lambayeque",
+        "Concesión de Andahuasi - Lima",
+        "Concesión de Hospicio - Tacna",
+        "Concesión de Pasto Grande - Moquegua",
+        "Concesión de La Huaca 2 - Piura",
     ];
 
     const transmision = [
-        "Doble Terna L.T. Independencia – Coelvisa 1",
-        "L.T. Felam – Tierras Nuevas",
-        "S.E.T. Coelvisac 1",
-        "S.E.T. Huarango",
-        "S.E.T. Tierras Nuevas",
-        "S.E. Félam",
+        "LT Independencia – Coelvisac 1",
+        "LT Felam – Tierras Nuevas",
+        "SE Coelvisac 1",
+        "SE Tierras Nuevas",
+        "SE Félam",
+        "SE Lomas",
+        "SE Huarango",
+        "LT Tierras Nuevas - Pampa Pañala",
     ];
 
-    const generacion = ["C.H. Coelvihidro 1", "C.T. Villacurí", "C.T. Salas"];
+    const generacion = [
+        "CH Coelvihidro 1",
+        "CT Villacurí",
+        "CT Salas",
+        "CS Villacurí (en desarrollo)",
+    ];
 
     return (
         <div className="w-full flex flex-col">
@@ -45,7 +51,7 @@ const page = () => {
                     </h1>
                 </div>
                 <div className="px-24 py-20 bg-custom-blue flex flex-col w-[48%] relative justify-between">
-                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-[85%]">
+                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-full">
                         {distribucion.map((item, index) => {
                             let delay = index * 0.1;
                             return (
@@ -81,7 +87,7 @@ const page = () => {
                     </h1>
                 </div>
                 <div className="px-24 py-20 bg-custom-sky flex flex-col w-[48%] relative justify-between">
-                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-[85%]">
+                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-full">
                         {transmision.map((item, index) => {
                             let delay = index * 0.1;
                             return (
@@ -117,7 +123,7 @@ const page = () => {
                     </h1>
                 </div>
                 <div className="px-24 py-20 bg-custom-green flex flex-col w-[48%] relative justify-between">
-                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-[85%]">
+                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-full">
                         {generacion.map((item, index) => {
                             let delay = index * 0.1;
                             return (
