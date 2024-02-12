@@ -75,7 +75,7 @@ const lineasDeTransmision = [
         topRightData: "60/22.9 kV",
         bottomLeftData: "1",
         bottomRightData: "SE Lomas",
-        url: "/images/transmision/5.jpg",
+        url: "/images/transmision/6.jpg",
     },
     {
         title: "SE Huarango",
@@ -87,7 +87,7 @@ const lineasDeTransmision = [
         topRightData: "60/22.9 kV",
         bottomLeftData: "1",
         bottomRightData: "SE Huarango",
-        url: "/images/transmision/5.jpg",
+        url: "/images/transmision/7.jpg",
     },
     {
         title: "LT Tierras Nuevas - Pampa Pañala",
@@ -99,7 +99,7 @@ const lineasDeTransmision = [
         topRightData: "60 kV",
         bottomLeftData: "SE Tierras Nuevas",
         bottomRightData: "SE Pampa Pañala",
-        url: "/images/transmision/5.jpg",
+        url: "/images/transmision/8.jpg",
     },
 ];
 
@@ -148,11 +148,11 @@ const Page = () => {
                 </p>
             </section>
             <section className="w-full flex h-[95vh] relative overflow-hidden">
-                <div className="w-[42%] bg-custom-sky flex flex-col p-24 justify-between">
+                <div className="w-[42%] bg-custom-sky flex flex-col p-20 justify-between">
                     {lineasDeTransmision.map((l, i) => (
                         <h1
                             onClick={() => handleClick(l)}
-                            className={`text-4xl cursor-pointer transition-all w-fit ${
+                            className={`text-3xl cursor-pointer transition-all w-full ${
                                 activeData.title === l.title
                                     ? "font-semibold text-custom-cream"
                                     : "font-light text-custom-cream/90"
