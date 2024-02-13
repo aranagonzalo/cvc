@@ -181,10 +181,10 @@ const Page = () => {
                                             Av. Victor Andrés Belaunde N°147
                                         </p>
                                         <p className="text-base font-light leading-none text-custom-cream">
-                                            Torre 1 - Pisos 8 y 9, Lima
+                                            Torre 1 - Piso 8, Lima
                                         </p>
                                         <p className="text-base font-light leading-none text-custom-cream pb-[102px]">
-                                            Atención al público | 9am a 6pm
+                                            Atención al público | 9am a 4:30pm
                                         </p>
                                         {/* <p className="text-base font-light leading-none text-custom-cream pb-20">
                                             Recepción de documentos | 9am a
