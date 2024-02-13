@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const lineasDeTransmision = [
     {
-        title: "LT Independencia Coelvisac 1",
+        title: "LT Independencia - Coelvisac 1",
         topLeftTitle: "Distancia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "SE de origen",
@@ -18,7 +18,7 @@ const lineasDeTransmision = [
         url: "/images/transmision/1.jpg",
     },
     {
-        title: "LT Felam Tierras Nuevas",
+        title: "LT Felam - Tierras Nuevas",
         topLeftTitle: "Distancia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "SE de origen",
@@ -30,7 +30,7 @@ const lineasDeTransmision = [
         url: "/images/transmision/2.jpg",
     },
     {
-        title: "SE Coelvisac 1",
+        title: "SE Coelvisac 1 - Ica",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -38,11 +38,11 @@ const lineasDeTransmision = [
         topLeftData: "40 + 20 MVA",
         topRightData: "60 kV",
         bottomLeftData: "2",
-        bottomRightData: "Villacurí",
+        bottomRightData: "Villacurí, Ica",
         url: "/images/transmision/3.jpg",
     },
     {
-        title: "SE Tierras Nuevas",
+        title: "SE Tierras Nuevas - Lambayeque",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -50,11 +50,11 @@ const lineasDeTransmision = [
         topLeftData: "60 MVA",
         topRightData: "220 kV",
         bottomLeftData: "1",
-        bottomRightData: "Olmos",
+        bottomRightData: "Olmos, Lambayeque",
         url: "/images/transmision/4.jpg",
     },
     {
-        title: "SE Félam",
+        title: "SE Félam - Lambayeque",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -62,11 +62,11 @@ const lineasDeTransmision = [
         topLeftData: "150 MVA",
         topRightData: "220 kV",
         bottomLeftData: "0",
-        bottomRightData: "Olmos",
+        bottomRightData: "Olmos, Lambayeque",
         url: "/images/transmision/5.jpg",
     },
     {
-        title: "SE Lomas",
+        title: "SE Lomas - Ica",
         topLeftTitle: "Capacidad",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -74,11 +74,11 @@ const lineasDeTransmision = [
         topLeftData: "50 MVA",
         topRightData: "60/22.9 kV",
         bottomLeftData: "1",
-        bottomRightData: "SE Lomas",
+        bottomRightData: "Villacurí, Ica",
         url: "/images/transmision/6.jpg",
     },
     {
-        title: "SE Huarango",
+        title: "SE Huarango - Ica",
         topLeftTitle: "Capacidad",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -86,7 +86,7 @@ const lineasDeTransmision = [
         topLeftData: "50 MVA",
         topRightData: "60/22.9 kV",
         bottomLeftData: "1",
-        bottomRightData: "SE Huarango",
+        bottomRightData: "Villacurí, Ica",
         url: "/images/transmision/7.jpg",
     },
     {
@@ -173,9 +173,9 @@ const Page = () => {
                         />
                     </div>
                     <div className="h-[36%] w-full relative grid grid-rows-2 grid-cols-2 pl-20 py-12 gap-x-28">
-                        <p className="absolute right-3 top-1 font-medium text-xs">
+                        {/* <p className="absolute right-3 top-1 font-medium text-xs">
                             Información general Nov - 2023
-                        </p>
+                        </p> */}
                         <div className="flex flex-col justify-center">
                             <h3 className="font-light text-2xl">
                                 {activeData.topLeftTitle}

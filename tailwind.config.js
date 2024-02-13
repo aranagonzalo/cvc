@@ -25,6 +25,8 @@ module.exports = {
                 "custom-yellow": "#fac32a",
                 "custom-cream": "#fefdf4",
                 "custom-grey": "#1c1c1c",
+                "custom-grey-100": "#4d4c44",
+                "custom-grey-300": "#8d8c88",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

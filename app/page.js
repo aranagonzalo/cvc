@@ -89,12 +89,13 @@ export default function Home() {
                         de tu negocio.
                     </motion.h1>
                     <motion.button
-                        onClick={scrollToContainer}
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         className="z-[60] text-custom-grey bg-custom-cream py-3 px-5 mb-32 w-fit rounded-full hover:scale-110 hover:shadow-lg transition-all"
                     >
-                        Genera ahorros en tu consumo
+                        <Link href="ahorra-energia">
+                            Genera ahorros en tu consumo
+                        </Link>
                     </motion.button>
                 </section>
                 <section className="w-full flex flex-col bg-custom-green px-6 py-12 md:p-24 lg:p-32 justify-center">
@@ -187,15 +188,15 @@ export default function Home() {
                         style={{
                             backgroundImage: `${
                                 textHover.distribucionElectrica
-                                    ? "url(/images/landing/1.jpg)"
+                                    ? "url(/images/landing/0.jpg)"
                                     : textHover.transmisionElectrica
-                                    ? "url(/images/landing/2.jpg)"
+                                    ? "url(/images/landing/0.jpg)"
                                     : textHover.generacionElectrica
-                                    ? "url(/images/landing/3.jpg)"
+                                    ? "url(/images/landing/0.jpg)"
                                     : textHover.comercializacionDeEnergia
-                                    ? "url(/images/landing/4.jpg)"
+                                    ? "url(/images/landing/0.jpg)"
                                     : textHover.elaboracionDeProyectos
-                                    ? "url(/images/landing/5.jpg)"
+                                    ? "url(/images/landing/0.jpg)"
                                     : "bg-custom-grey"
                             }`,
                         }}
@@ -355,10 +356,14 @@ export default function Home() {
                     ref={targetContainerRef}
                     className="w-full flex flex-col bg-custom-cream px-6 py-12 md:p-24 lg:p-32 justify-center"
                 >
-                    <div className="w-full flex items-center pb-36">
+                    <div className="w-full flex flex-col items-start pb-36">
                         <h1 className="text-6xl font-normal w-1/2 text-custom-blue">
                             Potencia tu desarollo con nosotros
                         </h1>
+                        <p className="pt-12 text-xl font-normal text-custom-blue/80">
+                            Completa el formulario y te contactaremos a la
+                            brevedad
+                        </p>
                     </div>
                     <LandingForm />
                 </section>

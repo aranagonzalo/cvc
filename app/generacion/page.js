@@ -43,7 +43,7 @@ const lineasDeGeneracion = [
         description: "Proyecto en desarrollo",
         topLeftData: "10 MW",
         topRightData: "Seguidores solares",
-        bottomData: "Villacurí",
+        bottomData: "Distrito de Salas, provincia de Ica, departamento de Ica",
         url: "/images/generacion/4.jpg",
     },
 ];

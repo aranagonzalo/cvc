@@ -145,7 +145,7 @@ const Page = () => {
                         isHovered ? "-left-[42%]" : "left-0"
                     }`}
                 >
-                    <div className="w-1/2 flex justify-start items-end bg-custom-blue h-full p-24">
+                    <div className="w-1/2 flex justify-start items-start bg-custom-blue h-full p-24">
                         <motion.h1
                             initial={{ opacity: 0, x: -100 }}
                             whileInView={{
@@ -189,7 +189,11 @@ const Page = () => {
                                             {dotData.demanda}
                                         </p>
                                         <p className="text-xl font-light w-1/4 leading-none">
-                                            demanda actual
+                                            {dotData.title === "Piura" ||
+                                            dotData.title === "Moquegua" ||
+                                            dotData.title === "Tacna"
+                                                ? "demanda proyectada"
+                                                : "demanda actual"}
                                         </p>
                                     </li>
                                     <li className="flex gap-4 items-center">

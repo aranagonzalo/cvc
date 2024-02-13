@@ -152,9 +152,9 @@ const Page = () => {
                         El Vale GLP ahora en tu celular
                     </h1>
                     <Image
-                        className="w-64 h-64 -mt-24 -mr-14"
-                        width={120}
-                        height={120}
+                        className="w-auto h-52 -mt-20 -mr-2"
+                        width={80}
+                        height={80}
                         src="/images/beneficiarios-fise/fise-logo.png"
                         alt="Imagen de logo  FISE"
                     />

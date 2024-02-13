@@ -48,11 +48,12 @@ const Page = () => {
                     <>
                         <div className="px-24 pb-24">
                             <p className="font-light text-custom-cream w-[60%] text-2xl">
-                                Manifestación que un usuario realiza ante la
-                                distribuidora expresando una disconformidad que
-                                no se encuentra relacionada al servicio público
-                                de electricidad; o, expresando su malestar o
-                                descontento respecto a la atención al público.
+                                Si experimentas alguna insatisfacción que no
+                                esté vinculada con el servicio de electricidad,
+                                sino más bien con nuestro servicio de atención
+                                al cliente, por favor, comparte tus comentarios.
+                                Nos comprometemos a responder a la mayor
+                                brevedad posible.
                             </p>
                             <h2 className="pt-24 pb-16 font-medium text-3xl text-custom-cream">
                                 Formulario
@@ -129,10 +130,10 @@ const Page = () => {
                     <>
                         <div className="px-24 pb-24">
                             <p className="font-light text-custom-cream w-[60%] text-2xl">
-                                Acción del usuario con la finalidad de obtener
-                                un pronunciamiento sobre cualquier conflicto de
-                                carácter particular derivado de la prestación
-                                del servicio público de electricidad.
+                                Si tienes alguna insatisfacción referente a
+                                nuestro servicio, compártenos tus comentarios.
+                                Nos comprometemos a responder a la mayor
+                                brevedad posible.
                             </p>
                             <h2 className="pt-24 pb-12 font-medium text-3xl text-custom-cream">
                                 Formulario
@@ -268,14 +269,12 @@ const Page = () => {
                     <>
                         <div className="px-24 pb-24">
                             <p className="font-light text-custom-cream w-[60%] text-2xl">
-                                Acción del usuario cuyo objetivo es la atención
-                                de deficiencias en la prestación del servicio
-                                eléctrico, originadas por fallas en el sistema
-                                eléctrico o por procesos de facturación
+                                Para denunciar deficiencias en la prestación del
+                                servicio eléctrico, originadas por fallas en el
+                                sistema eléctrico o por procesos de facturación
                                 irregular bajo responsabilidad de la
-                                distribuidora, que afecten intereses colectivos
-                                o difusos de los usuarios del servicio público
-                                de electricidad.
+                                distribuidora, completa el formulario y te
+                                responderemos tan pronto sea posible.
                             </p>
                             <h2 className="pt-24 pb-12 font-medium text-3xl text-custom-cream">
                                 Formulario

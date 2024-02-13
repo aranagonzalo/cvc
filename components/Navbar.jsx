@@ -121,10 +121,21 @@ const Navbar = () => {
                                     whileHover={{ x: 5 }}
                                 >
                                     <Link
+                                        className="py-2 w-full"
+                                        href="/distribucion"
+                                    >
+                                        Zonas de concesión
+                                    </Link>
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
+                                    <Link
                                         className="pt-2 w-full"
                                         href="/activos"
                                     >
-                                        Activos eléctricos
+                                        Activos (fotos)
                                     </Link>
                                 </motion.li>
                             </motion.ul>
@@ -201,7 +212,7 @@ const Navbar = () => {
                                         className="py-2 w-full"
                                         href="/elaboracion-de-proyectos"
                                     >
-                                        Elaboración de Proyectos
+                                        Diseño y construcción de proyectos
                                     </Link>
                                 </motion.li>
                                 <motion.li
@@ -216,33 +227,6 @@ const Navbar = () => {
                                     </Link>
                                 </motion.li>
                             </motion.ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div
-                            className={`w-24 transition-all ${
-                                !isActive("ahorra-energia")
-                                    ? "text-custom-grey-300"
-                                    : "text-custom-cream"
-                            }`}
-                            onMouseEnter={() =>
-                                handleHoverSection("ahorra-energia")
-                            }
-                            onMouseLeave={() => handleHoverSection(null)}
-                        >
-                            <motion.p
-                                initial={{ opacity: 0, y: -20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                className={`${
-                                    isHovered
-                                        ? "pb-8"
-                                        : "pb-0 text-custom-cream"
-                                }`}
-                            >
-                                <Link href="/ahorra-energia">
-                                    Ahorra Energía
-                                </Link>
-                            </motion.p>
                         </div>
                     </li>
                     <li>
@@ -326,13 +310,11 @@ const Navbar = () => {
                     <li>
                         <div
                             className={`w-20 transition-all ${
-                                !isActive("linea-etica")
+                                !isActive("mi-cuenta")
                                     ? "text-custom-grey-300"
                                     : "text-custom-cream"
                             }`}
-                            onMouseEnter={() =>
-                                handleHoverSection("linea-etica")
-                            }
+                            onMouseEnter={() => handleHoverSection("mi-cuenta")}
                             onMouseLeave={() => handleHoverSection(null)}
                         >
                             <motion.p
@@ -345,12 +327,69 @@ const Navbar = () => {
                                 }`}
                             >
                                 <Link
+                                    href="http://190.187.233.82/iscon/Login.aspx"
                                     target="_blank"
-                                    href="http://190.187.233.86:83/LINEA_ETICA_FORM"
                                 >
-                                    Linea Ética
+                                    Mi Cuenta
                                 </Link>
                             </motion.p>
+                        </div>
+                    </li>
+                    <li>
+                        <div
+                            className={`w-20 transition-all ${
+                                !isActive("canal-etico")
+                                    ? "text-custom-grey-300"
+                                    : "text-custom-cream"
+                            }`}
+                            onMouseEnter={() =>
+                                handleHoverSection("canal-etico")
+                            }
+                            onMouseLeave={() => handleHoverSection(null)}
+                        >
+                            <motion.p
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                className={`${
+                                    isHovered
+                                        ? "pb-8"
+                                        : "pb-0 text-custom-cream"
+                                }`}
+                            >
+                                Canal ético
+                            </motion.p>
+                            <motion.ul
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                className={`font-light text-sm ${
+                                    isHovered ? "flex flex-col pb-4" : "hidden"
+                                }`}
+                            >
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
+                                    <Link
+                                        className="pb-2 w-full"
+                                        href="http://190.187.233.86:83/LINEA_ETICA_FORM/Otherfiles/CodigoDeEtica.pdf"
+                                        target="_blank"
+                                    >
+                                        Código de ética
+                                    </Link>
+                                </motion.li>
+                                <motion.li
+                                    className="flex"
+                                    whileHover={{ x: 5 }}
+                                >
+                                    <Link
+                                        className="py-2 w-full"
+                                        href="http://190.187.233.86:83/LINEA_ETICA_FORM"
+                                        target="_blank"
+                                    >
+                                        Linea ética
+                                    </Link>
+                                </motion.li>
+                            </motion.ul>
                         </div>
                     </li>
                 </ul>
@@ -380,7 +419,7 @@ const Navbar = () => {
                         <Search size={16} />
                     </li>
                     <li>
-                        <select className="bg-custom-grey focus:outline-none text-xs">
+                        <select className="bg-transparent focus:outline-none text-xs">
                             <option>ES</option>
                             <option>EN</option>
                         </select>
