@@ -121,21 +121,10 @@ const Navbar = () => {
                                     whileHover={{ x: 5 }}
                                 >
                                     <Link
-                                        className="py-2 w-full"
-                                        href="/distribucion"
-                                    >
-                                        Zonas de concesión
-                                    </Link>
-                                </motion.li>
-                                <motion.li
-                                    className="flex"
-                                    whileHover={{ x: 5 }}
-                                >
-                                    <Link
                                         className="pt-2 w-full"
                                         href="/activos"
                                     >
-                                        Activos (fotos)
+                                        Nuestros activos
                                     </Link>
                                 </motion.li>
                             </motion.ul>
@@ -290,18 +279,6 @@ const Navbar = () => {
                                         href="/guia-de-reclamos"
                                     >
                                         Reclamos
-                                    </Link>
-                                </motion.li>
-                                <motion.li
-                                    className="flex"
-                                    whileHover={{ x: 5 }}
-                                >
-                                    <Link
-                                        className="pt-2 w-full"
-                                        href="http://190.187.233.82/iscon/Login.aspx"
-                                        target="_blank"
-                                    >
-                                        Mi cuenta
                                     </Link>
                                 </motion.li>
                             </motion.ul>

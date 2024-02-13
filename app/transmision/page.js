@@ -30,7 +30,7 @@ const lineasDeTransmision = [
         url: "/images/transmision/2.jpg",
     },
     {
-        title: "SE Coelvisac 1 - Ica",
+        title: "SE Coelvisac 1",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -42,7 +42,7 @@ const lineasDeTransmision = [
         url: "/images/transmision/3.jpg",
     },
     {
-        title: "SE Tierras Nuevas - Lambayeque",
+        title: "SE Tierras Nuevas",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -54,7 +54,7 @@ const lineasDeTransmision = [
         url: "/images/transmision/4.jpg",
     },
     {
-        title: "SE Félam - Lambayeque",
+        title: "SE Félam",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -66,7 +66,7 @@ const lineasDeTransmision = [
         url: "/images/transmision/5.jpg",
     },
     {
-        title: "SE Lomas - Ica",
+        title: "SE Lomas",
         topLeftTitle: "Capacidad",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
@@ -78,7 +78,7 @@ const lineasDeTransmision = [
         url: "/images/transmision/6.jpg",
     },
     {
-        title: "SE Huarango - Ica",
+        title: "SE Huarango",
         topLeftTitle: "Capacidad",
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
