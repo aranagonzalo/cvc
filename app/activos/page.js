@@ -16,18 +16,18 @@ const page = () => {
     const transmision = [
         "LT Independencia – Coelvisac 1",
         "LT Felam – Tierras Nuevas",
-        "SE Coelvisac 1",
-        "SE Tierras Nuevas",
-        "SE Félam",
-        "SE Lomas",
-        "SE Huarango",
+        "SE Coelvisac 1 - Ica",
+        "SE Tierras Nuevas - Lambayeque",
+        "SE Félam - Lambayeque",
+        "SE Lomas - Ica",
+        "SE Huarango - Ica",
         "LT Tierras Nuevas - Pampa Pañala",
     ];
 
     const generacion = [
-        "CH Coelvihidro 1",
-        "CT Villacurí",
-        "CT Salas",
+        "CH Coelvihidro 1 - Andahuasi",
+        "CT Villacurí - Ica",
+        "CT Salas - Ica",
         "CS Villacurí (en desarrollo)",
     ];
 
