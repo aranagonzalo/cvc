@@ -33,9 +33,69 @@ const preguntasFrecuentes = [
 
 const dots = [
     {
-        left: "84px",
+        left: "20px",
+        top: "108px",
+        number: "2",
+    },
+    {
+        left: "26px",
+        top: "150px",
+        number: "11",
+    },
+    {
+        left: "40px",
+        top: "186px",
+        number: "38",
+    },
+    {
+        left: "74px",
         top: "194px",
+        number: "1",
+    },
+    {
+        left: "80px",
+        top: "240px",
+        number: "8",
+    },
+    {
+        left: "134px",
+        top: "220px",
+        number: "1",
+    },
+    {
+        left: "104px",
+        top: "276px",
+        number: "4",
+    },
+    {
+        left: "124px",
+        top: "330px",
         number: "82",
+    },
+    {
+        left: "124px",
+        top: "360px",
+        number: "3",
+    },
+    {
+        left: "228px",
+        top: "290px",
+        number: "3",
+    },
+    {
+        left: "164px",
+        top: "424px",
+        number: "56",
+    },
+    {
+        left: "184px",
+        top: "384px",
+        number: "1",
+    },
+    {
+        left: "264px",
+        top: "474px",
+        number: "1",
     },
 ];
 
@@ -43,15 +103,9 @@ const Page = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const [dotData, setDotData] = useState({
-        title: "",
-        subtitle: "",
-        area: "",
-        inversion: "",
-        demanda: "",
-        redes: "",
-        clientes: "",
-        url: "",
-        enproyecto: false,
+        left: "",
+        top: "",
+        number: "",
     });
 
     const [activeQuestion, setActiveQuestion] = useState({
@@ -64,16 +118,14 @@ const Page = () => {
     const handleHover = (d) => {
         setIsHovered(true);
         setDotData({
-            title: d.title,
-            subtitle: d.subtitle,
-            area: d.area,
-            inversion: d.inversion,
-            demanda: d.demanda,
-            redes: d.redes,
-            clientes: d.clientes,
-            url: d.url,
-            enproyecto: d.enproyecto,
+            left: d.left,
+            top: d.top,
+            number: d.number,
         });
+    };
+
+    const handleExit = () => {
+        setIsHovered(false);
     };
 
     const handleClick = (p) => {
@@ -153,10 +205,17 @@ const Page = () => {
                                 <div
                                     key={i}
                                     onMouseOver={() => handleHover(d)}
-                                    className={`cursor-pointer bg-custom-sky rounded-full w-[12px] h-[12px] absolute before:content['${d.number}'] before:absolute before:top-1/2 before:left-1/2 before:-translate-x-1/2 before:pointer-events-none hover:before:h-12 hover:before:w-12 before:transition-all before:-translate-y-1/2 before:flex before:rounded-full before:bg-custom-sky before:w-0 before:h-0`}
+                                    onMouseLeave={() => handleExit()}
+                                    className={`cursor-pointer items-center justify-center bg-custom-sky text-custom-sky hover:text-custom-cream text-sm hover:text-[1px] rounded-full w-[14px] h-[14px] absolute hover:h-14 hover:-translate-x-1/3 hover:-translate-y-1/3 hover:w-14 transition-all flex`}
                                     style={{ top: d.top, left: d.left }}
                                 >
-                                    {isHovered && d.number}
+                                    <span
+                                        className={`z-50 ${
+                                            isHovered ? "text-xs" : "text-[1px]"
+                                        }`}
+                                    >
+                                        {d.number}
+                                    </span>
                                 </div>
                             ))}
                         </div>
@@ -201,11 +260,9 @@ const Page = () => {
                             }}
                             className="text-right"
                         >
-                            <h1 className="font-semibold text-7xl">
-                                +S/. 110 M
-                            </h1>
+                            <h1 className="font-semibold text-7xl">+12</h1>
                             <p className="font-extralight text-xl">
-                                ahorros anuales
+                                departamentos
                             </p>
                         </motion.li>
                     </ul>
