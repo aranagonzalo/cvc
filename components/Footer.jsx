@@ -59,7 +59,10 @@ const Footer = () => {
                 >
                     Línea ética
                 </Link>
-                <Link href="/" className="h-fit text-sm font-light">
+                <Link
+                    href="http://190.187.233.82/isosi/Login.aspx?ReturnUrl=%2fISOsi"
+                    className="h-fit text-sm font-light"
+                >
                     Fiscalización
                 </Link>
             </div>

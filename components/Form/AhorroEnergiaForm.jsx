@@ -152,12 +152,8 @@ const AhorroEnergiaForm = ({ color }) => {
                         }
                         type="submit"
                         className={`flex items-center justify-center text-2xl py-3 px-8 font-normal text-custom-grey bg-custom-cream border-[2.5px] border-custom-grey rounded-full max-w-max ${
-                            !formData.email &&
-                            "bg-custom-grey-100 cursor-not-allowed"
-                        } ${
-                            !formData.name &&
-                            "bg-custom-grey-100 cursor-not-allowed"
-                        }`}
+                            !formData.email && "cursor-not-allowed"
+                        } ${!formData.name && "cursor-not-allowed"}`}
                     >
                         {isLoading ? (
                             <RotatingLines

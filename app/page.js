@@ -301,27 +301,6 @@ export default function Home() {
                                     x: 0,
                                     opacity: 1,
                                     transition: { duration: 0.3, delay: 0.1 },
-                                    viewport: { amount: 0.8 },
-                                }}
-                                whileHover={{
-                                    fontWeight: 600,
-                                    cursor: "pointer",
-                                }}
-                                onMouseEnter={() =>
-                                    handleHover("elaboracionDeProyectos")
-                                }
-                                onMouseLeave={() => handleExitHover()}
-                            >
-                                <Link href="/elaboracion-de-proyectos">
-                                    Elaboración de proyectos
-                                </Link>
-                            </motion.li>
-                            <motion.li
-                                initial={{ x: -50, opacity: 0 }}
-                                whileInView={{
-                                    x: 0,
-                                    opacity: 1,
-                                    transition: { duration: 0.3, delay: 0.1 },
                                 }}
                                 whileHover={{
                                     fontWeight: 600,
@@ -334,6 +313,27 @@ export default function Home() {
                             >
                                 <Link href="/ahorra-energia">
                                     Comercialización de energía
+                                </Link>
+                            </motion.li>
+                            <motion.li
+                                initial={{ x: -50, opacity: 0 }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: { duration: 0.3, delay: 0.1 },
+                                    viewport: { amount: 0.8 },
+                                }}
+                                whileHover={{
+                                    fontWeight: 600,
+                                    cursor: "pointer",
+                                }}
+                                onMouseEnter={() =>
+                                    handleHover("elaboracionDeProyectos")
+                                }
+                                onMouseLeave={() => handleExitHover()}
+                            >
+                                <Link href="/elaboracion-de-proyectos">
+                                    Diseño y construcción de proyectos
                                 </Link>
                             </motion.li>
                         </ul>

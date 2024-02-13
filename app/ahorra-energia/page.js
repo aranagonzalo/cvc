@@ -11,23 +11,23 @@ import "slick-carousel/slick/slick.css";
 const preguntasFrecuentes = [
     {
         id: 1,
-        title: "¿Qué es el mercado libre?",
-        text: "Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto.",
+        title: "¿Quiénes son los Clientes Libres?",
+        text: "El mercado eléctrico se divide en dos tipos de clientes: los regulados y los libres. Los clientes regulados están supeditados a las tarifas fijadas por el Estado y deben adquirir su energía del distribuidor asignado a la zona en la que se encuentren. Por otro lado, los clientes libres tienen la oportunidad de negociar el costo de la energía con un proveedor y beneficiarse de precios más bajos de energía eléctrica.",
     },
     {
         id: 2,
         title: "¿Cuánto puedo ahorrar siendo Usuario Libre?",
-        text: "Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto.",
+        text: "Tu facturación eléctrica mensual se reduce entre 15%-30%, dependiendo de tu nivel de consumo.",
     },
     {
         id: 3,
-        title: "¿Quiénes pueden ser Usuarios Libres?",
-        text: "Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto.",
+        title: "¿Quiénes pueden ser Clientes Libres?",
+        text: "Todas aquellas empresas que tengan una Máxima Demanda Anual de por lo menos 200kW. Esto puedes verificarlo rápidamente en tu último recibo de luz.",
     },
     {
         id: 4,
         title: "¿Mi distribuidor actual me cortará la luz o dejará de atender mis averías o solicitudes?",
-        text: "Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto.",
+        text: "La Ley de Concesiones Eléctricas y la Norma Técnica de Calidad de los Servicios Eléctricos respaldan esta condición. La calidad del servicio seguirá siendo la misma y el distribuidor está obligado a atender las averías y mantenimientos en su red de todos sus usuarios por igual, sino existe una multa de por medio. Nosotros facturamos tus consumos de luz y atendemos tus requerimientos para garantizar la continuidad y calidad del suministro.",
     },
 ];
 
