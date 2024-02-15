@@ -43,7 +43,7 @@ const Footer = () => {
                 >
                     Reclamos
                 </Link>
-                <Link href="/" className="h-fit text-sm font-light">
+                <Link href="/noticias" className="h-fit text-sm font-light">
                     Noticias
                 </Link>
                 <Link href="/" className="h-fit text-sm font-light">
