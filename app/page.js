@@ -336,6 +336,27 @@ export default function Home() {
                                     Diseño y construcción de proyectos
                                 </Link>
                             </motion.li>
+                            <motion.li
+                                initial={{ x: -50, opacity: 0 }}
+                                whileInView={{
+                                    x: 0,
+                                    opacity: 1,
+                                    transition: { duration: 0.3, delay: 0.1 },
+                                    viewport: { amount: 0.8 },
+                                }}
+                                whileHover={{
+                                    fontWeight: 600,
+                                    cursor: "pointer",
+                                }}
+                                onMouseEnter={() =>
+                                    handleHover("elaboracionDeProyectos")
+                                }
+                                onMouseLeave={() => handleExitHover()}
+                            >
+                                <Link href="/elaboracion-de-proyectos#operationContainer">
+                                    Operación y mantenimiento
+                                </Link>
+                            </motion.li>
                         </ul>
                     </div>
                 </section>
@@ -434,7 +455,7 @@ export default function Home() {
                                 <h3>Noviembre 2023</h3>
                                 <p className="font-medium text-xl">
                                     ¡Recibimos la Visita de estudiantes de la
-                                    Uni en nuestra sede Ica!
+                                    UNI en nuestra sede Ica!
                                 </p>
                             </div>
                         </div>
@@ -476,24 +497,30 @@ export default function Home() {
                     </p>
                 </section>
                 <section className="w-full h-[400px] bg-custom-cream px-6 py-12 md:p-24 lg:px-48 items-center flex justify-between">
-                    <Image
-                        alt="coes"
-                        src="/images/landing/coes.png"
-                        width={160}
-                        height={120}
-                    />
-                    <Image
-                        alt="osinergmin"
-                        src="/images/landing/osinergmin.png"
-                        width={280}
-                        height={100}
-                    />
-                    <Image
-                        alt="ministerio de energia y minas"
-                        src="/images/landing/minas.png"
-                        width={280}
-                        height={120}
-                    />
+                    <Link href="https://www.coes.org.pe/Portal" target="_blank">
+                        <Image
+                            alt="coes"
+                            src="/images/landing/coes.png"
+                            width={160}
+                            height={120}
+                        />
+                    </Link>
+                    <Link href="https://www.gob.pe/osinergmin" target="_blank">
+                        <Image
+                            alt="osinergmin"
+                            src="/images/landing/osinergmin.png"
+                            width={280}
+                            height={100}
+                        />
+                    </Link>
+                    <Link href="https://www.gob.pe/minem" target="_blank">
+                        <Image
+                            alt="ministerio de energia y minas"
+                            src="/images/landing/minas.png"
+                            width={280}
+                            height={120}
+                        />
+                    </Link>
                 </section>
             </div>
         </>

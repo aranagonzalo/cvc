@@ -38,7 +38,7 @@ const page = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        prevArrow: <ChevronLeft />,
+        autoplaySpeed: 8000,
         nextArrow: <ChevronRight className="slick-next text-custom-cream" />,
     };
 
@@ -112,7 +112,7 @@ const page = () => {
                     <Image
                         className="object-cover"
                         fill
-                        src="/images/cultura/cultura2.jpg"
+                        src="/images/cultura/cultura4.jpg"
                         alt="Ingeniero de obra con brazos cruzados"
                     />
                 </div>
@@ -198,7 +198,7 @@ const page = () => {
                     <Image
                         className="object-cover"
                         fill
-                        src="/images/cultura/cultura4.jpg"
+                        src="/images/cultura/cultura2.jpg"
                         alt="Ingeniero de obra con brazos cruzados"
                     />
                 </div>

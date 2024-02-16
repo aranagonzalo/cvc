@@ -112,7 +112,7 @@ const page = () => {
                     <Image
                         className="object-cover"
                         fill
-                        src={`/images/elaboracion-de-proyectos/2.jpg`}
+                        src={`/images/elaboracion-de-proyectos/3.jpg`}
                         alt="Ingeniero de obra con brazos cruzados"
                     />
                 </div>
@@ -162,11 +162,14 @@ const page = () => {
                     <Image
                         className="object-cover"
                         fill
-                        src={`/images/elaboracion-de-proyectos/2.jpg`}
+                        src={`/images/elaboracion-de-proyectos/4.jpg`}
                         alt="Ingeniero de obra con brazos cruzados"
                     />
                 </div>
-                <div className="px-28 py-24 bg-custom-green flex flex-col w-1/2 relative justify-between">
+                <div
+                    id="operationContainer"
+                    className="px-28 py-24 bg-custom-green flex flex-col w-1/2 relative justify-between"
+                >
                     <motion.h1
                         initial={{ x: 15, opacity: 0 }}
                         whileInView={{
@@ -208,7 +211,7 @@ const page = () => {
                     <Image
                         className="object-cover"
                         fill
-                        src={`/images/elaboracion-de-proyectos/2.jpg`}
+                        src={`/images/elaboracion-de-proyectos/5.jpg`}
                         alt="Ingeniero de obra con brazos cruzados"
                     />
                 </div>

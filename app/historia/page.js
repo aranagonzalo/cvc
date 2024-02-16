@@ -70,85 +70,90 @@ const page = () => {
             <section className="w-full flex flex-col bg-custom-cream py-32 relative">
                 <StoryCardRight
                     first={true}
-                    text=""
+                    text="El 22 de febrero de 1994 "
                     date="1994"
                     title="Fundación"
                 />
                 <StoryCardLeft
-                    text="Es la zona de concesión de distribución más desarrollada, dado que fue otorgada a CVC energía en el año 1995. En ese entonces, tan sólo existían 500 hectáreas cultivadas. Ahora, existen más de 40,000 hectáreas cultivadas que generan más de 160,000 puestos de trabajo, gracias al soporte energético que promovió CVC energía"
+                    text="Es la zona de concesión de distribución más desarrollada, dado que fue otorgada a CVC energía en el año 1995. En ese entonces, tan sólo existían 500 hectáreas cultivadas. Ahora, existen más de 40,000 hectáreas cultivadas que generan más de 160,000 puestos de trabajo, gracias al soporte energético que promovió CVC energía."
                     date="1995"
-                    title="Otorgamiento Villacurí"
+                    title="Concesión de Distribución - Villacurí"
                 />
                 <StoryCardRight
-                    text="El 5 de agosto de 1995, se realizó la puesta en servicio de la primera subestación: Coelvisac 1"
+                    text="El 5 de agosto de 1995, se realizó la puesta en servicio de la primera subestación: Coelvisac 1."
                     date="1995"
-                    title="SE Coelvisac 1"
+                    title="SET Coelvisac 1"
                 />
                 <StoryCardLeft
-                    text="Fue otorgada en el 2001, atiende suministros residenciales y operaciones productivas de agricultura"
+                    text="Fue otorgada en el 2001. Cuenta con más de 21,000 hectáreas. Atiende suministros residenciales y operaciones productivas de agricultura."
                     date="2001"
-                    title="Otorgamiento Andahuasi"
+                    title="Concesión de Distribución - Andahuasi"
                 />
                 <StoryCardRight
-                    text="Pusimos en servicio la línea de transmisión Independencia Coelvisac 1 de 60 kV entre la Subestación Independencia y la subestación Coelvisac 1, en eldepartamento de Ica"
+                    text="Pusimos en servicio la línea de transmisión Independencia Coelvisac 1 de 60 kV entre la Subestación Independencia y la subestación COELVISAC I, en el departamento de Ica."
                     date="2010"
-                    title="LT Independencia - Coelvisac 1"
+                    title="LT Independencia Coelvisac 1 "
                 />
                 <StoryCardLeft
-                    text="Fue puesta en operación comercial en septiembre del 2013 con una capacidad instalada de 1.6 MW en el Distrito de Huaura, provincia de Sayan, departamentode Lima"
+                    text="Fue puesta en operación comercial en septiembre del 2013 con una capacidad Instalada de 1.6 MW en el Distrito de Huaura, provincia de Sayan, departamento de Lima."
                     date="2013"
-                    title="Central Hidroeléctrica Coelvihidro 1 - Quipico"
+                    title="Central Hidroeléctrica Coelvihidro I – Quipico"
                 />
                 <StoryCardRight
-                    text="Fue otorgada en el año 2014, el crecimiento dinámico de su demanda de potencia fue más rápida gracias a los proyectos del gobierno que incentivaron las inversiones por más de $ 1,000 millones para el proyecto de irrigación de Olmos, que se encuentra en parte de la zona de concesión de distribución"
+                    text="Fue otorgada en el año 2014. Cuenta con un área de concesión de  más de 150,000 héctareas y una demanda actual de más de 30 MWA."
                     date="2014"
-                    title="Otorgamiento Lambayeque"
+                    title="Concesión de Distribución - Lambayeque"
                 />
                 <StoryCardLeft
-                    text="El 30 de octubre del 2014, se realizó la puesta en servicio de las SE TierrasNuevas y SE Félam"
+                    text="El 30 de octubre del 2014, pusimos en servicio las SET Tierras Nuevas y SET Felam. Así como la línea de transmisión Felam Tierras Nuevas de 220 kV entre ambas subestaciones,  en el departamento de Lambayeque."
                     date="2014"
-                    title="SE Tierras Nuevas y SE Félam"
+                    title="Sistema de Transmisión FELAM y Tierras Nuevas"
                 />
                 <StoryCardRight
-                    text="Pusimos en servicio la línea de transmisión Felam Tierras Nuevas de 220 kV entre la Subestación Felam y la SubestaciónTierras Nuevas, en el departamento de Lambayeque"
-                    date="2015"
-                    title="LT Felam - Tierras Nuevas"
-                />
-                <StoryCardLeft
-                    text="Contrato por alquiler, operación y mantenimiento desde enero 2010 a julio 2017 en distrito de El Alto, provincia de Talara, departamento de Piura"
+                    text="Operación y mantenimiento desde enero 2010 a julio 2017 en distrito de El Alto, provincia de Talara, departamento de Piura."
                     date="2017"
                     title="Central Termoeléctrica El Alto"
                 />
+                <StoryCardLeft
+                    text="El 24 de febrero del 2019 pusimos en servicio la SE Huarango ubicada en Villacurí, Ica."
+                    date="2019"
+                    title="SE Huarango"
+                />
                 <StoryCardRight
-                    text="Fue puesta en operación comercial en mayo del 2019, termoeléctrica de ciclo simple a gas natural con una capacidad instalada: 9.99 MW en el distrito de Salas, provincia de Ica, departamento de Ica"
+                    text="Fue puesta en operación comercial en  mayo del 2019, termoeléctrica de ciclo simple a gas natural con una capacidad Instalada: 9.99 MW en el distrito de Salas, provincia de Ica, departamento de Ica."
                     date="2019"
                     title="Central Termoeléctrica Villacurí"
                 />
                 <StoryCardLeft
-                    text="Pusimos en servicio la línea de transmisión de 60 kV entre la Subestación Tierras Nuevas y la Subestación Pampa Pañala, en el departamento de Lambayeque"
+                    text="Pusimos en servicio la línea de transmisión de 60 kV entre la Subestación Tierras Nuevas y la Subestación Pampa Pañala, en el departamento de Lambayeque."
                     date="2020"
                     title="LT Tierras Nuevas - Pampa Pañala"
                 />
                 <StoryCardRight
-                    text="Fue otorgada en el 2021, cuenta con 74,000 hectáreas y una inversión en activos de más de 12 millones. Tenemos el objetivo de suministrar energía eléctrica para impulsar proyectos de agroexportación que generen un mayor desarrollo en las comunidades y comercios"
+                    text="El 7 de febrero del 2021 pusimos en servicio la SE Lomas, ubicada en Villacurí – Ica. "
                     date="2021"
-                    title="Otorgamiento Tacna"
+                    title="SE Lomas"
                 />
                 <StoryCardLeft
-                    text="En junio del 2022, tras más de 20 años de operaciones, decidimos evolucionar y cambiar nuestro nombre comercial a CVC energía. Junto con ello, iniciamos la construcción de una imagen más moderna e innovadora, manteniendo nuestra esencia y el compromiso de potenciar el desarrollo de nuestro país"
+                    text="El proyecto en Tacna tiene un valor estimado de 12 millones de dólares y se extiende sobre 74,000 hectáreas. Tenemos el objetivo de suministrar energía eléctrica para impulsar proyectos de agroexportación que generen un mayor desarrollo en las comunidades y comercios."
+                    date="2021"
+                    title="Concesión de Distribución - Tacna "
+                />
+                <StoryCardRight
+                    text="En junio del 2022, tras más de 20 años de operaciones, decidimos evolucionar y cambiar nuestro nombre comercial a CVC energía. Junto con ello, iniciamos la construcción de una imagen más moderna e innovadora, manteniendo nuestra esencia y el compromiso de potenciar el desarrollo de nuestro país."
                     date="2022"
                     title="Renovamos nuestra imagen"
                 />
-                <StoryCardRight
-                    text="Fue puesta en operación comercial en febrero del 2023, termoeléctrica de ciclo simple a gas natural con una capacidad Instalada: 9.95 MW en el distrito de Salas, provincia de Ica, departamento de Ica"
-                    date="2023"
-                    title="Central Termoélectrica Salas"
-                />
                 <StoryCardLeft
-                    last={true}
-                    text="En el 2023 nos otorgaron ambas concesiones. Piura con 78,000 hectáreas y con una inversión aproximada de 13 millones de dólares. Mientras que Moquegua, con 215,000 hectáreas y una inversión aproximada de 9 millones. De esta manera podremos abastecer miles de hectáreas rurales que aún no tienen acceso a electricidad"
+                    text="Fue puesta en operación comercial en  febrero del 2023, termoeléctrica de ciclo simple a gas natural con una capacidad Instalada: 9.95 MW en el distrito de Salas, provincia de Ica, departamento de Ica."
                     date="2023"
-                    title="Otorgamiento Piura y Moquegua"
+                    title="Central Termoeléctrica Salas"
+                />
+                <StoryCardRight
+                    last={true}
+                    text="En el año 2023, obtuvimos ambas concesiones de distribución. El proyecto en Piura está estimado en 13 millones de dólares y abarca 78,000 hectáreas, mientras que el proyecto en Moquegua tiene un valor estimado de 9 millones de dólares y se extiende sobre 215,000 hectáreas. Esta iniciativa nos permitirá suministrar electricidad a miles de hectáreas rurales que actualmente carecen de acceso a este servicio esencial."
+                    date="2023"
+                    title="Concesiones de Distribución - Piura y Moquegua "
                 />
             </section>
         </div>

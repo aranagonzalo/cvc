@@ -22,9 +22,9 @@ const dots = [
         title: "Lambayeque",
         subtitle: "Tierras Nuevas - Olmos",
         area: "+150,000 Ha",
-        inversion: "US$ 5771 M",
+        inversion: "US$ +6,8 M",
         demanda: "30 MW",
-        redes: "292 km",
+        redes: "+550 km",
         clientes: "143",
         left: "84px",
         top: "194px",
@@ -35,9 +35,9 @@ const dots = [
         title: "Lima",
         subtitle: "Andahuasi",
         area: "+21,000 Ha",
-        inversion: "US$ 1238 M",
+        inversion: "US$ +1,2 M",
         demanda: "2 MW",
-        redes: "67 km",
+        redes: "+69 km",
         clientes: "2139",
         left: "175px",
         top: "347px",
@@ -48,9 +48,9 @@ const dots = [
         title: "Ica",
         subtitle: "Villacurí",
         area: "+102,000 Ha",
-        inversion: "US$ 9120 M",
+        inversion: "US$ +9,2 M",
         demanda: "43 MW",
-        redes: "483 km",
+        redes: "+570 km",
         clientes: "1526",
         left: "215px",
         top: "448px",
@@ -181,7 +181,11 @@ const Page = () => {
                                             {dotData.inversion}
                                         </p>
                                         <p className="text-xl font-light w-1/4 leading-none">
-                                            inversión en activos
+                                            {dotData.title === "Piura" ||
+                                            dotData.title === "Moquegua" ||
+                                            dotData.title === "Tacna"
+                                                ? "inversión proyectada en activos"
+                                                : "inversión en activos"}
                                         </p>
                                     </li>
                                     <li className="flex gap-4 items-center">

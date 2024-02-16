@@ -30,6 +30,18 @@ const lineasDeTransmision = [
         url: "/images/transmision/2.jpg",
     },
     {
+        title: "LT Tierras Nuevas - Pampa Pañala",
+        topLeftTitle: "Distancia",
+        topRightTitle: "Voltaje",
+        bottomLeftTitle: "SE de origen",
+        bottomRightTitle: "SE de destino",
+        topLeftData: "33.861 km",
+        topRightData: "60 kV",
+        bottomLeftData: "SE Tierras Nuevas",
+        bottomRightData: "SE Pampa Pañala",
+        url: "/images/transmision/8.jpg",
+    },
+    {
         title: "SE Coelvisac 1",
         topLeftTitle: "Potencia",
         topRightTitle: "Voltaje",
@@ -88,18 +100,6 @@ const lineasDeTransmision = [
         bottomLeftData: "1",
         bottomRightData: "Villacurí, Ica",
         url: "/images/transmision/7.jpg",
-    },
-    {
-        title: "LT Tierras Nuevas - Pampa Pañala",
-        topLeftTitle: "Distancia",
-        topRightTitle: "Voltaje",
-        bottomLeftTitle: "SE de origen",
-        bottomRightTitle: "SE de destino",
-        topLeftData: "33.861 km",
-        topRightData: "60 kV",
-        bottomLeftData: "SE Tierras Nuevas",
-        bottomRightData: "SE Pampa Pañala",
-        url: "/images/transmision/8.jpg",
     },
 ];
 

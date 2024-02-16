@@ -16,12 +16,12 @@ const page = () => {
     const transmision = [
         "LT Independencia – Coelvisac 1",
         "LT Felam – Tierras Nuevas",
+        "LT Tierras Nuevas - Pampa Pañala",
         "SE Coelvisac 1 - Ica",
         "SE Tierras Nuevas - Lambayeque",
         "SE Félam - Lambayeque",
         "SE Lomas - Ica",
         "SE Huarango - Ica",
-        "LT Tierras Nuevas - Pampa Pañala",
     ];
 
     const generacion = [

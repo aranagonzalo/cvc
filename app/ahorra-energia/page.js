@@ -260,9 +260,9 @@ const Page = () => {
                             }}
                             className="text-right"
                         >
-                            <h1 className="font-semibold text-7xl">+12</h1>
+                            <h1 className="font-semibold text-7xl">+70M</h1>
                             <p className="font-extralight text-xl">
-                                departamentos
+                                en ahorros anuales
                             </p>
                         </motion.li>
                     </ul>
