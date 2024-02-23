@@ -354,7 +354,7 @@ const Page = () => {
                                 src="/images/ahorra-energia/razzeto.png"
                             />
                             <Image
-                                width={200}
+                                width={220}
                                 height={0}
                                 className="object-contain"
                                 alt=""
@@ -434,6 +434,106 @@ const Page = () => {
                                 className="object-contain"
                                 alt=""
                                 src="/images/ahorra-energia/amcor.png"
+                            />
+                        </div>
+                    </div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
+                            <Image
+                                width={200}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/produmar.png"
+                            />
+                            <Image
+                                width={160}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/resinplast.png"
+                            />
+                            <Image
+                                width={180}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/iprisco.png"
+                            />
+                        </div>
+                    </div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
+                            <Image
+                                width={140}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/eurotubo.png"
+                            />
+                            <Image
+                                width={120}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/peruplast.png"
+                            />
+                            <Image
+                                width={160}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/recuperada.png"
+                            />
+                        </div>
+                    </div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
+                            <Image
+                                width={170}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/textiles.png"
+                            />
+                            <Image
+                                width={200}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/packplast.png"
+                            />
+                            <Image
+                                width={120}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/marcampo.png"
+                            />
+                        </div>
+                    </div>
+                    <div className="w-full">
+                        <div className="flex justify-evenly">
+                            <Image
+                                width={200}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/inmobideas.png"
+                            />
+                            <Image
+                                width={100}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/agricola.png"
+                            />
+                            <Image
+                                width={220}
+                                height={0}
+                                className="object-contain"
+                                alt=""
+                                src="/images/ahorra-energia/agrolatina.png"
                             />
                         </div>
                     </div>

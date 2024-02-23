@@ -19,6 +19,7 @@ export default function Home() {
         generacionElectrica: false,
         comercializacionDeEnergia: false,
         elaboracionDeProyectos: false,
+        operacionYMantenimiento: false,
     });
 
     const handleHover = (name) => {
@@ -28,6 +29,7 @@ export default function Home() {
             generacionElectrica: false,
             comercializacionDeEnergia: false,
             elaboracionDeProyectos: false,
+            operacionYMantenimiento: false,
             [name]: true,
         });
     };
@@ -38,6 +40,7 @@ export default function Home() {
             generacionElectrica: false,
             comercializacionDeEnergia: false,
             elaboracionDeProyectos: false,
+            operacionYMantenimiento: false,
         });
     };
 
@@ -188,15 +191,17 @@ export default function Home() {
                         style={{
                             backgroundImage: `${
                                 textHover.distribucionElectrica
-                                    ? "url(/images/landing/0.jpg)"
+                                    ? "url(/images/landing/1.jpg)"
                                     : textHover.transmisionElectrica
-                                    ? "url(/images/landing/0.jpg)"
+                                    ? "url(/images/landing/2.png)"
                                     : textHover.generacionElectrica
-                                    ? "url(/images/landing/0.jpg)"
+                                    ? "url(/images/landing/3.jpg)"
                                     : textHover.comercializacionDeEnergia
-                                    ? "url(/images/landing/0.jpg)"
+                                    ? "url(/images/landing/4.png)"
                                     : textHover.elaboracionDeProyectos
-                                    ? "url(/images/landing/0.jpg)"
+                                    ? "url(/images/landing/5.png)"
+                                    : textHover.operacionYMantenimiento
+                                    ? "url(/images/landing/6.png)"
                                     : "bg-custom-grey"
                             }`,
                         }}
@@ -211,6 +216,8 @@ export default function Home() {
                                 "opacity-0"
                             } ${
                                 textHover.elaboracionDeProyectos && "opacity-0"
+                            } ${
+                                textHover.operacionYMantenimiento && "opacity-0"
                             } transition-all duration-500 bg-custom-grey z-10 w-full h-full absolute top-0 left-0`}
                         ></div>
                         {!Object.values(textHover).some((value) => value) && (
@@ -349,7 +356,7 @@ export default function Home() {
                                     cursor: "pointer",
                                 }}
                                 onMouseEnter={() =>
-                                    handleHover("elaboracionDeProyectos")
+                                    handleHover("operacionYMantenimiento")
                                 }
                                 onMouseLeave={() => handleExitHover()}
                             >
