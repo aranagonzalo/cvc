@@ -43,7 +43,7 @@ const page = () => {
                     <Image
                         className="object-cover"
                         fill
-                        src="/images/activos/distribucion.jpg"
+                        src="/images/activos/distribucion.png"
                         alt="Activos CVC Energía - Planta eléctrica"
                     />
                     <h1 className="absolute top-1/2 text-custom-cream text-6xl left-1/2 -translate-x-1/2 -translate-y-1/2">

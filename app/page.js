@@ -187,7 +187,7 @@ export default function Home() {
                 </section>
                 <section className="w-full flex h-[85vh]">
                     <div
-                        className="relative bg-custom-grey text-custom-cream w-1/2 p-32 items-end justify-start flex transition-all duration-500"
+                        className="relative bg-custom-grey text-custom-cream w-1/2 p-32 items-end justify-start flex transition-all duration-500 bg-cover"
                         style={{
                             backgroundImage: `${
                                 textHover.distribucionElectrica
@@ -499,9 +499,11 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <p className="self-end text-2xl mt-12 cursor-pointer text-custom-cream">
-                        + Ver todas las entradas
-                    </p>
+                    <Link href="/noticias" className="self-end">
+                        <p className="text-2xl mt-12 cursor-pointer text-custom-cream">
+                            + Ver todas las entradas
+                        </p>
+                    </Link>
                 </section>
                 <section className="w-full h-[400px] bg-custom-cream px-6 py-12 md:p-24 lg:px-48 items-center flex justify-between">
                     <Link href="https://www.coes.org.pe/Portal" target="_blank">

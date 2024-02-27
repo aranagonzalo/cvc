@@ -127,17 +127,6 @@ const Navbar = () => {
                                         Nuestros activos
                                     </Link>
                                 </motion.li>
-                                <motion.li
-                                    className="flex"
-                                    whileHover={{ x: 5 }}
-                                >
-                                    <Link
-                                        className="pt-2 w-full"
-                                        href="/noticias"
-                                    >
-                                        Noticias
-                                    </Link>
-                                </motion.li>
                             </motion.ul>
                         </div>
                     </li>

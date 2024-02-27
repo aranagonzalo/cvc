@@ -5,25 +5,25 @@ import Link from "next/link";
 
 const posts = [
     {
-        date: "Mayo 2023",
-        title: "Coelvisac suministrará energía a San Gabán por cinco años",
+        date: "Noviembre 2023",
+        title: "¡Recibimos la Visita de estudiantes de la UNI en nuestra sede Ica!",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu mollis felis, sit amet aliquam...",
         color: "bg-custom-blue",
-        image: "/images/noticias/cultura2.jpg",
+        image: "/images/landing/blog1.jpg",
     },
     {
-        date: "Mayo 2023",
-        title: "Coelvisac suministrará energía a San Gabán por cinco años",
+        date: "Octubre 2023",
+        title: "Oficializamos Nuevas Concesiones en Piura y Lambayeque",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu mollis felis, sit amet aliquam...",
         color: "bg-custom-green",
-        image: "/images/noticias/cultura3.jpg",
+        image: "/images/landing/blog2.jpg",
     },
     {
-        date: "Mayo 2023",
-        title: "Coelvisac suministrará energía a San Gabán por cinco años",
+        date: "Agosto 2023",
+        title: "Nuestros compañeros nos representaron en la HackaCoes",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu mollis felis, sit amet aliquam...",
         color: "bg-custom-yellow",
-        image: "/images/noticias/cultura4.jpg",
+        image: "/images/landing/blog3.jpg",
     },
     {
         date: "Mayo 2023",
