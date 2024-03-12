@@ -38,20 +38,20 @@ const page = () => {
                 src="/images/activos/activos.jpg"
                 title="Nuestros activos eléctricos"
             />
-            <section className="w-full flex">
-                <div className="relative w-[52%]">
+            <section className="w-full flex lg:flex-row flex-col">
+                <div className="relative lg:w-[52%] h-[360px] lg:h-auto">
                     <Image
                         className="object-cover"
                         fill
                         src="/images/activos/distribucion.png"
                         alt="Activos CVC Energía - Planta eléctrica"
                     />
-                    <h1 className="absolute top-1/2 text-custom-cream text-6xl left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <h1 className="absolute top-1/2 text-custom-cream text-5xl lg:text-6xl left-1/2 -translate-x-1/2 -translate-y-1/2">
                         Distribución
                     </h1>
                 </div>
-                <div className="px-24 py-20 bg-custom-blue flex flex-col w-[48%] relative justify-between">
-                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-full">
+                <div className="px-12 lg:px-24 py-12 lg:py-20 bg-custom-blue flex flex-col lg:w-[48%] relative justify-between">
+                    <ul className="text-custom-cream font-light gap-6 lg:gap-12 text-lg lg:text-4xl flex flex-col w-[90%] lg:w-full">
                         {distribucion.map((item, index) => {
                             let delay = index * 0.1;
                             return (
@@ -74,20 +74,20 @@ const page = () => {
                     </ul>
                 </div>
             </section>
-            <section className="w-full flex">
-                <div className="relative w-[52%]">
+            <section className="w-full flex lg:flex-row flex-col">
+                <div className="relative lg:w-[52%] h-[360px] lg:h-auto">
                     <Image
                         className="object-cover"
                         fill
                         src="/images/activos/transmision.jpg"
                         alt="Activos CVC Energía - Planta eléctrica"
                     />
-                    <h1 className="absolute top-1/2 text-custom-cream text-6xl left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <h1 className="absolute top-1/2 text-custom-cream text-5xl lg:text-6xl left-1/2 -translate-x-1/2 -translate-y-1/2">
                         Transmisión
                     </h1>
                 </div>
-                <div className="px-24 py-20 bg-custom-sky flex flex-col w-[48%] relative justify-between">
-                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-full">
+                <div className="px-12 lg:px-24 py-12 lg:py-20 bg-custom-sky flex flex-col lg:w-[48%] relative justify-between">
+                    <ul className="text-custom-cream font-light gap-6 lg:gap-12 text-lg lg:text-4xl flex flex-col w-[90%] lg:w-full">
                         {transmision.map((item, index) => {
                             let delay = index * 0.1;
                             return (
@@ -110,20 +110,20 @@ const page = () => {
                     </ul>
                 </div>
             </section>
-            <section className="w-full flex">
-                <div className="relative w-[52%]">
+            <section className="w-full flex lg:flex-row flex-col">
+                <div className="relative lg:w-[52%] h-[360px] lg:h-auto">
                     <Image
                         className="object-cover"
                         fill
                         src="/images/activos/generacion.jpg"
                         alt="Activos CVC Energía - Planta eléctrica"
                     />
-                    <h1 className="absolute top-1/2 text-custom-cream text-6xl left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <h1 className="absolute top-1/2 text-custom-cream text-5xl lg:text-6xl left-1/2 -translate-x-1/2 -translate-y-1/2">
                         Generación
                     </h1>
                 </div>
-                <div className="px-24 py-20 bg-custom-green flex flex-col w-[48%] relative justify-between">
-                    <ul className="text-custom-cream font-light gap-12 text-4xl flex flex-col w-full">
+                <div className="px-12 lg:px-24 py-12 lg:py-20 bg-custom-green flex flex-col lg:w-[48%] relative justify-between">
+                    <ul className="text-custom-cream font-light gap-6 lg:gap-12 text-lg lg:text-4xl flex flex-col w-[90%] lg:w-full">
                         {generacion.map((item, index) => {
                             let delay = index * 0.1;
                             return (
