@@ -49,8 +49,8 @@ const page = () => {
                 src="/images/cultura/cultura.jpg"
                 title="Nuestra cultura CVC"
             />
-            <section className="w-full flex">
-                <div className="w-1/2 flex flex-col bg-custom-cream p-32 justify-center items-center">
+            <section className="w-full flex lg:flex-row flex-col">
+                <div className="lg:w-1/2 flex flex-col bg-custom-cream p-20 lg:p-32 justify-center items-center">
                     <motion.h1
                         initial={{ x: -20, opacity: 0 }}
                         whileInView={{
@@ -61,24 +61,28 @@ const page = () => {
                                 delay: 0.2,
                             },
                         }}
-                        className="text-custom-blue font-medium text-5xl pb-28"
+                        className="text-custom-blue font-normal lg:font-medium text-4xl lg:text-5xl pb-12 lg:pb-28"
                     >
                         Aspiración
                     </motion.h1>
-                    <p className="text-custom-grey font-extralight text-xl">
+                    <p className="text-custom-grey font-extralight text-xl lg:hidden block text-center">
+                        Ser líder en el sector energético, generando valor de
+                        manera sostenible para nuestros grupos de interés.
+                    </p>
+                    <p className="text-custom-grey font-extralight text-xl lg:block hidden">
                         Ser líder en el sector
                     </p>
-                    <p className="text-custom-grey font-extralight text-xl">
+                    <p className="text-custom-grey font-extralight text-xl lg:block hidden">
                         energético, generando valor
                     </p>
-                    <p className="text-custom-grey font-extralight text-xl">
+                    <p className="text-custom-grey font-extralight text-xl lg:block hidden">
                         de manera sostenible para
                     </p>
-                    <p className="text-custom-grey font-extralight text-xl">
+                    <p className="text-custom-grey font-extralight text-xl lg:block hidden">
                         nuestros grupos de interés.
                     </p>
                 </div>
-                <div className="w-1/2 flex flex-col bg-custom-cream p-36 justify-center items-center">
+                <div className="lg:w-1/2 flex flex-col bg-custom-cream p-20 lg:p-36 justify-center items-center">
                     <motion.h1
                         initial={{ x: 20, opacity: 0 }}
                         whileInView={{
@@ -89,26 +93,31 @@ const page = () => {
                                 delay: 0.2,
                             },
                         }}
-                        className="text-custom-blue font-medium text-5xl pb-28"
+                        className="text-custom-blue font-normal lg:font-medium text-4xl lg:text-5xl pb-12 lg:pb-28"
                     >
                         Propósito
                     </motion.h1>
-                    <p className="text-custom-grey font-extralight text-xl">
+                    <p className="text-custom-grey font-extralight text-xl lg:hidden block text-center">
+                        Brindamos soluciones energéticas, innovadoras y
+                        sostenibles de manera eficiente para la contribución del
+                        desarrollo de nuestros clientes y del país.
+                    </p>
+                    <p className="text-custom-grey font-extralight text-xl lg:block hidden">
                         Brindamos soluciones energéticas,
                     </p>
-                    <p className="text-custom-grey font-extralight text-xl">
+                    <p className="text-custom-grey font-extralight text-xl lg:block hidden">
                         innovadoras y sostenibles de manera
                     </p>
-                    <p className="text-custom-grey font-extralight text-xl">
+                    <p className="text-custom-grey font-extralight text-xl lg:block hidden">
                         eficiente para la contribución del
                     </p>
-                    <p className="text-custom-grey font-extralight text-xl">
+                    <p className="text-custom-grey font-extralight text-xl lg:block hidden">
                         desarrollo de nuestros clientes y del país.
                     </p>
                 </div>
             </section>
-            <section className="w-full flex h-[90vh]">
-                <div className="relative w-1/2">
+            <section className="w-full flex lg:flex-row flex-col lg:h-[90vh]">
+                <div className="relative w-full lg:h-auto h-72 lg:w-1/2">
                     <Image
                         className="object-cover"
                         fill
@@ -116,7 +125,43 @@ const page = () => {
                         alt="Ingeniero de obra con brazos cruzados"
                     />
                 </div>
-                <div className="px-24 py-20 bg-custom-blue flex flex-col w-1/2 relative justify-between">
+                <div className="px-10 py-16 bg-custom-blue flex lg:hidden flex-col w-full relative justify-between gap-4">
+                    <h1 className="text-custom-cream font-normal w-3/4 text-5xl mb-16">
+                        Conoce nuestros principios
+                    </h1>
+                    <div>
+                        <h1 className="text-custom-cream text-2xl">Esfuerzo</h1>
+                        <p className="text-custom-cream/40 text-sm font-light">
+                            Brindamos lo mejor de nuestra energía
+                        </p>
+                    </div>
+                    <div>
+                        <h1 className="text-custom-cream text-2xl">
+                            Buen comportamiento
+                        </h1>
+                        <p className="text-custom-cream/40 text-sm font-light">
+                            Trabajamos con compromiso ético y social
+                        </p>
+                    </div>
+                    <div>
+                        <h1 className="text-custom-cream text-2xl">
+                            Enfoque en resultados
+                        </h1>
+                        <p className="text-custom-cream/40 text-sm font-light">
+                            Promovemos el desarrollo de nuestros stakeholders
+                        </p>
+                    </div>
+                    <div>
+                        <h1 className="text-custom-cream text-2xl">
+                            Buen clima laboral
+                        </h1>
+                        <p className="text-custom-cream/40 text-sm font-light">
+                            Impulsamos el bienestar y creciemiento de nuestra
+                            gente
+                        </p>
+                    </div>
+                </div>
+                <div className="px-24 py-20 bg-custom-blue hidden lg:flex lg:flex-col w-1/2 relative justify-between">
                     <motion.h1
                         initial={{ x: -20, opacity: 0 }}
                         whileInView={{
@@ -148,8 +193,8 @@ const page = () => {
                     </Slider>
                 </div>
             </section>
-            <section className="w-full flex h-[90vh]">
-                <div className="px-24 py-20 bg-custom-sky flex flex-col w-1/2 relative justify-between">
+            <section className="w-full flex lg:flex-row flex-col lg:h-[90vh]">
+                <div className="px-24 py-20 bg-custom-sky hidden lg:flex lg:flex-col w-1/2 relative justify-between">
                     <motion.h1
                         initial={{ x: -20, opacity: 0 }}
                         whileInView={{
@@ -184,7 +229,7 @@ const page = () => {
                         de nuestro equipo.
                     </motion.p>
                 </div>
-                <div className="relative w-1/2">
+                <div className="relative w-full lg:h-auto h-72 lg:w-1/2">
                     <Image
                         className="object-cover"
                         fill
@@ -192,9 +237,28 @@ const page = () => {
                         alt="Ingeniero de obra con brazos cruzados"
                     />
                 </div>
+                <div className="px-10 py-16 bg-custom-sky flex lg:hidden flex-col w-full relative justify-between gap-4">
+                    <h1 className="text-custom-cream font-normal w-full lg:w-3/4 text-5xl mb-16">
+                        Todo empieza por nuestro equipo
+                    </h1>
+                    <p className="text-custom-cream text-xl font-thin">
+                        En CVC energía creemos firmemente que el{" "}
+                        <span className="font-medium">
+                            elemento central para alcanzar el éxito
+                        </span>{" "}
+                        de la organización reside en el{" "}
+                        <span className="font-medium">equipo humano</span> que
+                        la conforma. Es por ello que nos enorgullecemos de ser
+                        una{" "}
+                        <span className="font-medium">
+                            empresa comprometida con el desarrollo y bienestar
+                        </span>{" "}
+                        de cada persona que forma parte de nuestro equipo.
+                    </p>
+                </div>
             </section>
-            <section className="w-full flex h-[90vh]">
-                <div className="relative w-1/2">
+            <section className="w-full flex lg:flex-row flex-col lg:h-[90vh]">
+                <div className="relative w-full lg:h-auto h-72 lg:w-1/2">
                     <Image
                         className="object-cover"
                         fill
@@ -202,7 +266,7 @@ const page = () => {
                         alt="Ingeniero de obra con brazos cruzados"
                     />
                 </div>
-                <div className="px-24 py-20 bg-custom-red flex flex-col w-1/2 relative justify-between">
+                <div className="px-10 lg:px-24 py-16 lg:py-20 bg-custom-red flex flex-col w-full lg:w-1/2 relative justify-between">
                     <motion.h1
                         initial={{ x: -20, opacity: 0 }}
                         whileInView={{
@@ -213,7 +277,7 @@ const page = () => {
                                 delay: 0.2,
                             },
                         }}
-                        className="text-custom-cream font-normal w-3/4 text-6xl leading-tight"
+                        className="text-custom-cream font-normal w-full lg:w-3/4 text-5xl lg:text-6xl mb-16 lg:mb-0 leading-tight"
                     >
                         Programa CRECVC
                     </motion.h1>
@@ -227,18 +291,23 @@ const page = () => {
                                 delay: 0.2,
                             },
                         }}
-                        className="text-lg text-custom-cream/90 font-thin pt-4 leading-tight text-justify w-3/4"
+                        className="text-xl lg:text-lg text-custom-cream lg:text-custom-cream/90 font-thin lg:pt-4 lg:leading-tight lg:text-justify w-full  lg:w-3/4"
                     >
-                        Nació con el objetivo de contar con un sólido modelo de
-                        evaluación de desempeño el cual busca fomentar la
-                        atracción, retención, planificación de sucesión y
-                        desarrollo del talento en CVC energía, impulsando así el
-                        crecimiento de nuestros colaboradores y la cultura de
-                        alto desempeño.
+                        Nació con el objetivo de contar con un{" "}
+                        <span className="font-medium">
+                            sólido modelo de evaluación de desempeño
+                        </span>{" "}
+                        el cual busca{" "}
+                        <span className="font-medium">
+                            fomentar la atracción, retención, planificación de
+                            sucesión y desarrollo del talento en CVC energía,
+                        </span>{" "}
+                        impulsando así el crecimiento de nuestros colaboradores
+                        y la cultura de alto desempeño.
                     </motion.p>
                 </div>
             </section>
-            <section className="w-full flex p-32 bg-custom-yellow justify-between items-center">
+            <section className="w-full flex lg:flex-row flex-col gap-16 lg:gap-0 p-16 lg:p-32 bg-custom-yellow justify-center lg:justify-between items-center">
                 <motion.h1
                     initial={{ x: -20, opacity: 0 }}
                     whileInView={{
@@ -249,14 +318,14 @@ const page = () => {
                             delay: 0.2,
                         },
                     }}
-                    className="text-7xl text-custom-grey w-1/2 leading-tight font-medium"
+                    className="text-5xl lg:text-7xl text-custom-grey w-full lg:w-1/2 text-center lg:text-left lg:leading-tight font-medium"
                 >
                     ¡Se parte de nuestro equipo!
                 </motion.h1>
                 <Link
                     href="https://www.bumeran.com.pe/perfiles/empresa_consorcio-electrico-de-villacuri-cvc-energia_13228415.html"
                     target="blank"
-                    className="text-4xl font-medium rounded-[40px] bg-custom-cream text-custom-grey px-16 h-fit py-8 mr-24 hover:scale-105 hover:shadow-lg transition-all"
+                    className="text-2xl lg:text-4xl lg:font-medium rounded-[30px] lg:rounded-[40px] bg-custom-cream text-custom-grey px-8 lg:px-16 h-fit py-6 lg:py-8 lg:mr-24 hover:scale-105 hover:shadow-lg transition-all"
                 >
                     Postula aquí
                 </Link>

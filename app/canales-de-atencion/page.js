@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { Plus } from "lucide-react";
 
 const items = [
     {
@@ -70,6 +71,10 @@ const Page = () => {
             : null;
     };
 
+    const [mobileDetail, setMobileDetail] = useState({});
+
+    const handleOpen = () => {};
+
     return (
         <div className="w-full flex flex-col">
             <Hero
@@ -77,7 +82,7 @@ const Page = () => {
                 src="/images/canales-de-atencion/canales-de-atencion.jpg"
                 title="Comunícate con nosotros"
             />
-            <section className="w-full flex h-[700px] relative overflow-hidden">
+            <section className="w-full hidden lg:flex h-[700px] relative overflow-hidden">
                 <div className="w-1/2 flex justify-start items-end h-full bg-custom-cream p-24">
                     <motion.h1
                         initial={{ opacity: 0, x: -100 }}
@@ -293,6 +298,28 @@ const Page = () => {
                         ))}
                     </div>
                 )}
+            </section>
+            <section className="w-full flex flex-col">
+                {items.map((item, i) => (
+                    <>
+                        <div
+                            key={i}
+                            className={`px-12 py-10 relative flex justify-between text-custom-cream font-normal text-xl bg-custom-${item.color}`}
+                        >
+                            <Image
+                                alt={item.label}
+                                width={40}
+                                height={40}
+                                src={item.src}
+                            />
+                            <p>{item.label}</p>
+                            <button onClick={() => handleOpen(item.label)}>
+                                <Plus />
+                            </button>
+                        </div>
+                        <div></div>
+                    </>
+                ))}
             </section>
         </div>
     );
