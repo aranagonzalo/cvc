@@ -102,7 +102,7 @@ export default function Home() {
                                 animate={{ opacity: 1, x: 0 }}
                                 className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pb-12 w-fit"
                             >
-                                de tu negocio.
+                                de tu negocio
                             </motion.h1>
                             <motion.button
                                 initial={{ opacity: 0 }}
@@ -134,7 +134,7 @@ export default function Home() {
                                 animate={{ opacity: 1, x: 0 }}
                                 className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pb-3 w-fit"
                             >
-                                tu desarrollo.
+                                tu desarrollo
                             </motion.h1>
                         </div>
                     </Slider>
@@ -159,10 +159,10 @@ export default function Home() {
                                 K
                             </h1>
                             <p className="text-lg lg:text-2xl text-custom-cream font-extralight">
-                                hectáreas de
+                                hectáreas de cultivo
                             </p>
                             <p className="text-lg lg:text-2xl text-custom-cream font-extralight">
-                                cultivo de distribución
+                                de distribución eléctrica
                             </p>
                         </ScrollTrigger>
                         <ScrollTrigger className="flex flex-col items-center justify-center w-1/3">
