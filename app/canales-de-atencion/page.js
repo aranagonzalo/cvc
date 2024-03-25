@@ -71,9 +71,11 @@ const Page = () => {
             : null;
     };
 
-    const [mobileDetail, setMobileDetail] = useState({});
+    const [openItem, setOpenItem] = useState(null);
 
-    const handleOpen = () => {};
+    const handleOpen = (label) => {
+        setOpenItem(openItem === label ? null : label);
+    };
 
     return (
         <div className="w-full flex flex-col">
@@ -317,7 +319,153 @@ const Page = () => {
                                 <Plus />
                             </button>
                         </div>
-                        <div></div>
+                        {openItem === item.label && (
+                            <div
+                                className={`px-10 py-16 bg-custom-${item.color} text-custom-cream flex flex-col justify-center items-center`}
+                            >
+                                {/* Render additional information for the current item */}
+                                {item.label === "CVC Fono | 24h" ? (
+                                    <>
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Lima
+                                        </p>
+                                        <p className="text-base font-light text-custom-cream pb-8">
+                                            (01) 640-0770
+                                        </p>
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Ica
+                                        </p>
+                                        <p className="text-base font-light text-custom-cream pb-8">
+                                            (056) 640-001
+                                        </p>
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Lambayeque
+                                        </p>
+                                        <p className="text-base font-light text-custom-cream">
+                                            (074) 640-771
+                                        </p>
+                                    </>
+                                ) : item.label === "WhatsApp" ? (
+                                    <div className="text-center flex flex-col items-center gap-0">
+                                        <p className="text-lg font-semibold text-custom-cream ">
+                                            Horario de atención
+                                        </p>
+
+                                        <p className="text-lg font-light text-custom-cream pt-4">
+                                            Lunes a viernes
+                                        </p>
+                                        <p className="text-lg font-light text-custom-cream">
+                                            8:30am a 6pm
+                                        </p>
+                                        <Link
+                                            target="_blank"
+                                            href="https://api.whatsapp.com/send/?phone=51998166703"
+                                            className="text-lg font-semibold text-custom-grey w-[60%] my-8 flex flex-col rounded-xl p-4 bg-custom-cream"
+                                        >
+                                            <div>Escríbenos al</div>
+                                            <div>+51 998 166 703</div>
+                                        </Link>
+                                        <p className="flex self-center text-sm font-light text-custom-cream">
+                                            Este es un canal exclusivo de
+                                            mensajería. No se atenderán
+                                            llamadas.
+                                        </p>
+                                    </div>
+                                ) : item.label === "Centros de atención" ? (
+                                    <div className="flex flex-col h-full gap-2 text-center">
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Lima
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Av. Victor Andrés Belaunde N°147
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Torre 1 - Piso 8, Lima
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream pb-12">
+                                            Atención al público | 9am a 4:30pm
+                                        </p>
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Villacuri
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Carretera Panamericana Sur Km.274
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Salas de Guadalupe - Ica
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream pb-12">
+                                            Atención al publico | 8am a 4pm
+                                        </p>
+
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Andahuasi
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Las Alhelíe Mz.P Lote 6 Sector 4
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Sayán - Huaura - Lima
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream pb-12">
+                                            Atención al publico | 8am a 4pm
+                                        </p>
+                                        <p className="text-lg font-semibold text-custom-cream">
+                                            Lambayeque
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Calle Las Mercedes 466
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Pacora - Lambayeque
+                                        </p>
+                                        <p className="text-base font-light leading-none text-custom-cream">
+                                            Atención al publico | 8am a 4pm
+                                        </p>
+                                    </div>
+                                ) : item.label === "Medios de pago" ? (
+                                    <div className="flex flex-col text-custom-cream items-center text-center">
+                                        <h3 className="text-lg font-semibold pb-6">
+                                            Pago presencial
+                                        </h3>
+                                        <p className="text-base font-light w-3/4">
+                                            Puedes realizar tus pagos
+                                            presenciales en cualquiera de
+                                            nuestros centros de atención.
+                                        </p>
+
+                                        <h3 className="text-lg font-semibold pb-6 pt-12">
+                                            Pago digital
+                                        </h3>
+                                        <p className="text-base font-light w-[80%]">
+                                            Puedes realizar tus pagos digitales
+                                            en dólares o soles.
+                                        </p>
+                                        <p className="text-base font-light pb-12 w-[80%]">
+                                            Para ver nuestra{" "}
+                                            <strong className="font-semibold">
+                                                Guía de Pagos Digitales,{" "}
+                                                <Link
+                                                    target="_blank"
+                                                    href="pdf/Guia de pago - CVC energía VF.pdf"
+                                                    className="underline"
+                                                >
+                                                    haz click aquí.
+                                                </Link>
+                                            </strong>
+                                        </p>
+                                        <Link
+                                            target="_blank"
+                                            href="https://pagolink.niubiz.com.pe/pagoseguro/CVCenergia/1603339"
+                                            className="bg-custom-cream text-custom-grey p-4 rounded-full hover:shadow-lg hover:scale-110 transition-all"
+                                        >
+                                            Realiza tu pago aquí
+                                        </Link>
+                                    </div>
+                                ) : null}
+                                {/* You can add more details here */}
+                            </div>
+                        )}
                     </>
                 ))}
             </section>

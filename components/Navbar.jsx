@@ -170,7 +170,7 @@ const Navbar = () => {
                                             : "pb-0 text-custom-cream"
                                     }`}
                                 >
-                                    Soluciones
+                                    Actividades
                                 </motion.p>
                                 <motion.ul
                                     initial={{ opacity: 0, y: -20 }}
@@ -468,7 +468,7 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className="my-2">
-                                Soluciones
+                                Actividades
                                 <ul className="flex flex-col gap-4 mt-1">
                                     <li className="ml-4 font-extralight text-sm">
                                         <Link href="/distribucion">

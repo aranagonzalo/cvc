@@ -71,7 +71,7 @@ const lineasDeTransmision = [
         topRightTitle: "Voltaje",
         bottomLeftTitle: "# de trafos",
         bottomRightTitle: "Ubicación",
-        topLeftData: "150 MVA",
+        topLeftData: "50 MVA",
         topRightData: "220 kV",
         bottomLeftData: "0",
         bottomRightData: "Olmos, Lambayeque",

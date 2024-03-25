@@ -7,7 +7,8 @@ import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import Link from "next/link";
 import { Play } from "lucide-react";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 import LandingForm from "@/components/Form/LandingForm";
 
 export default function Home() {
@@ -54,6 +55,16 @@ export default function Home() {
         }
     };
 
+    const settings = {
+        dots: false,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        nextArrow: <span></span>,
+    };
+
     return (
         <>
             <div className="w-full flex flex-col">
@@ -70,36 +81,63 @@ export default function Home() {
                             alt="Instalaciones eléctricas"
                         />
                     </motion.div>
-                    <motion.h1
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pt-32 pb-3 w-fit"
-                    >
-                        Somos aliados
-                    </motion.h1>
-                    <motion.h1
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pb-3 w-fit"
-                    >
-                        en el desarrollo
-                    </motion.h1>
-                    <motion.h1
-                        initial={{ opacity: 0, x: -100 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pb-12 w-fit"
-                    >
-                        de tu negocio.
-                    </motion.h1>
-                    <motion.button
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        className="z-[60] text-custom-grey bg-custom-cream py-3 px-5 mb-32 w-fit rounded-full hover:scale-110 hover:shadow-lg transition-all"
-                    >
-                        <Link href="ahorra-energia">
-                            Genera ahorros en tu consumo
-                        </Link>
-                    </motion.button>
+                    <Slider {...settings} className="w-[360px]">
+                        <div>
+                            <motion.h1
+                                initial={{ opacity: 0, x: -100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pt-32 pb-3 w-fit"
+                            >
+                                Somos aliados
+                            </motion.h1>
+                            <motion.h1
+                                initial={{ opacity: 0, x: -100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pb-3 w-fit"
+                            >
+                                en el desarrollo
+                            </motion.h1>
+                            <motion.h1
+                                initial={{ opacity: 0, x: -100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pb-12 w-fit"
+                            >
+                                de tu negocio.
+                            </motion.h1>
+                            <motion.button
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                className="z-[60] text-custom-grey bg-custom-cream py-3 px-5 mb-32 w-fit rounded-full hover:scale-110 hover:shadow-lg transition-all"
+                            >
+                                <Link href="ahorra-energia">
+                                    Genera ahorros en tu consumo
+                                </Link>
+                            </motion.button>
+                        </div>
+                        <div>
+                            <motion.h1
+                                initial={{ opacity: 0, x: -100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pt-32 pb-3 w-fit"
+                            >
+                                Energía
+                            </motion.h1>
+                            <motion.h1
+                                initial={{ opacity: 0, x: -100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pb-3 w-fit"
+                            >
+                                que potencia
+                            </motion.h1>
+                            <motion.h1
+                                initial={{ opacity: 0, x: -100 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                className="z-10 text-custom-cream font-normal text-3xl md:text-4xl lg:text-5xl pb-3 w-fit"
+                            >
+                                tu desarrollo.
+                            </motion.h1>
+                        </div>
+                    </Slider>
                 </section>
                 <section className="w-full flex flex-col bg-custom-green px-6 py-12 md:p-24 lg:p-32 justify-center">
                     <div className="flex">
@@ -113,17 +151,18 @@ export default function Home() {
                                 {counterOn && (
                                     <CountUp
                                         start={0}
-                                        end={4450}
+                                        end={100}
                                         duration={2}
                                         delay={0}
                                     />
                                 )}
+                                K
                             </h1>
                             <p className="text-lg lg:text-2xl text-custom-cream font-extralight">
-                                clientes a
+                                hectáreas de
                             </p>
                             <p className="text-lg lg:text-2xl text-custom-cream font-extralight">
-                                nivel nacional
+                                cultivo de distribución
                             </p>
                         </ScrollTrigger>
                         <ScrollTrigger className="flex flex-col items-center justify-center w-1/3">
@@ -151,17 +190,18 @@ export default function Home() {
                                 {counterOn && (
                                     <CountUp
                                         start={0}
-                                        end={580}
+                                        end={380}
                                         duration={2}
                                         delay={0}
                                     />
                                 )}
+                                K
                             </h1>
                             <p className="text-lg lg:text-2xl text-custom-cream font-extralight">
-                                GWh
+                                puestos de
                             </p>
                             <p className="text-lg lg:text-2xl text-custom-cream font-extralight">
-                                al año
+                                trabajo generados
                             </p>
                         </ScrollTrigger>
                         <ScrollTrigger className="flex flex-col items-center justify-center w-1/3">
@@ -235,7 +275,7 @@ export default function Home() {
                                     exit={{ opacity: 0 }}
                                     className="text-6xl w-3/4 z-20"
                                 >
-                                    Expertos en soluciones eléctricas integrales
+                                    Actividades en nuestras zonas de concesión
                                 </motion.h1>
                             </AnimatePresence>
                         )}

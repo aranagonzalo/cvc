@@ -51,7 +51,8 @@ const page = () => {
                         sin acceso. Comprometidos, además, con generar polos de
                         desarrollo que no solo potencien el suministro de
                         energía, sino que también generen empleo y desarrollo en
-                        las diversas comunidades en las que operamos.
+                        las diversas comunidades en las que operamos,
+                        beneficiando así a la sociedad.
                     </motion.p>
                     <div className="absolute bottom-8 right-8 font-extralight text-3xl text-right text-custom-cream">
                         <p>Ing. Percy</p>

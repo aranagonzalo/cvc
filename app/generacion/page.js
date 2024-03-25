@@ -22,7 +22,7 @@ const lineasDeGeneracion = [
         subtitle: "Central Termoeléctrica Villacurí",
         description:
             "Operación en modo peak shaving y respaldo ante contingencias del sistema eléctrico Villacurí",
-        topLeftData: "9.99 MW",
+        topLeftData: "9.9 MW",
         topRightData: "Termoeléctrica de ciclo simple a gas natural",
         bottomData: "Distrito de Salas, provincia de Ica, departamento de Ica",
         url: "/images/generacion/2.jpg",
