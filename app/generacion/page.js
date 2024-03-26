@@ -4,6 +4,7 @@ import Hero from "@/components/Hero.jsx";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
+import { Minus, Plus } from "lucide-react";
 
 const lineasDeGeneracion = [
     {
@@ -73,6 +74,12 @@ const Page = () => {
         });
     };
 
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const openMobile = (index) => {
+        setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+    };
+
     return (
         <div className="w-full flex flex-col">
             <Hero
@@ -80,7 +87,7 @@ const Page = () => {
                 src="/images/generacion/generacion.jpg"
                 title="Generación Eléctrica"
             />
-            <section className="w-full h-[1096px] flex relative overflow-hidden">
+            <section className="w-full h-[1096px] lg:flex relative overflow-hidden hidden">
                 <div className="w-[44%] bg-custom-green flex flex-col p-24 gap-24 justify-center">
                     {lineasDeGeneracion.map((l, i) => (
                         <h1
@@ -143,6 +150,63 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section>
+                {lineasDeGeneracion.map((linea, index) => (
+                    <div key={linea.title}>
+                        <div
+                            className="flex justify-between p-8 bg-custom-green text-custom-cream border-b border-green-200"
+                            onClick={() => openMobile(index)}
+                        >
+                            {linea.subtitle}
+                            {activeIndex === index ? <Minus /> : <Plus />}
+                        </div>
+                        {activeIndex === index && (
+                            <div className="bg-custom-cream text-custom-grey">
+                                <div
+                                    className="relative"
+                                    style={{ height: "320px" }}
+                                >
+                                    <Image
+                                        src={linea.url}
+                                        alt={linea.title}
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                </div>
+                                <div className="p-8 flex flex-col gap-10">
+                                    <p className="text-2xl w-[80%] font-light leading-tight pb-2">
+                                        {linea.description}
+                                    </p>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            Capacidad:
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium">
+                                            {linea.topLeftData}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            Tecnología:
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium">
+                                            {linea.topRightData}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            Ubicación:
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium leading-tight">
+                                            {linea.bottomData}
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                ))}
             </section>
         </div>
     );

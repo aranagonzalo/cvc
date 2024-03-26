@@ -3,6 +3,7 @@ import { useState } from "react";
 import Hero from "@/components/Hero.jsx";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { Minus, Plus } from "lucide-react";
 
 const lineasDeTransmision = [
     {
@@ -132,6 +133,12 @@ const Page = () => {
         });
     };
 
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const openMobile = (index) => {
+        setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+    };
+
     return (
         <div className="w-full flex flex-col">
             <Hero
@@ -139,15 +146,15 @@ const Page = () => {
                 src="/images/transmision/transmision.jpg"
                 title="Transmisión Eléctrica"
             />
-            <section className="w-full p-28 bg-custom-cream text-custom-grey flex flex-col gap-12">
-                <p className="text-4xl font-normal leading-normal">
+            <section className="w-full p-12 lg:p-28 bg-custom-cream text-custom-grey flex flex-col gap-12">
+                <p className="text-2xl lg:text-4xl font-light lg:font-normal leading-normal">
                     Hemos desarrollado nuestras propias líneas de transmisión
                     para alimentar eléctricamente nuestras zonas de concesión en
                     Villacurí y Olmos. Además, hemos construido nuestras
                     subestaciones de transformación eléctrica.
                 </p>
             </section>
-            <section className="w-full flex h-[95vh] relative overflow-hidden">
+            <section className="w-full lg:flex h-[95vh] relative overflow-hidden hidden">
                 <div className="w-[42%] bg-custom-sky flex flex-col p-20 justify-between">
                     {lineasDeTransmision.map((l, i) => (
                         <h1
@@ -210,6 +217,68 @@ const Page = () => {
                         </div>
                     </div>
                 </div>
+            </section>
+            <section>
+                {lineasDeTransmision.map((linea, index) => (
+                    <div key={linea.title}>
+                        <div
+                            className="flex justify-between p-8 bg-custom-sky text-custom-cream border-b border-sky-200"
+                            onClick={() => openMobile(index)}
+                        >
+                            {linea.title}
+                            {activeIndex === index ? <Minus /> : <Plus />}
+                        </div>
+                        {activeIndex === index && (
+                            <div className="bg-custom-cream text-custom-grey">
+                                <div
+                                    className="relative"
+                                    style={{ height: "320px" }}
+                                >
+                                    <Image
+                                        src={linea.url}
+                                        alt={linea.title}
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                </div>
+                                <div className="p-8 flex flex-col gap-10">
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            {linea.topLeftTitle}
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium">
+                                            {linea.topLeftData}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            {linea.topRightTitle}
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium">
+                                            {linea.topRightData}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            {linea.bottomLeftTitle}
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium leading-tight">
+                                            {linea.bottomLeftData}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            {linea.bottomRightTitle}
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium leading-tight">
+                                            {linea.bottomRightData}
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                ))}
             </section>
         </div>
     );

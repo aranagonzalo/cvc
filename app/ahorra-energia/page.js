@@ -147,6 +147,16 @@ const Page = () => {
         autoplay: true,
     };
 
+    const settings2 = {
+        dots: false,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        nextArrow: <span></span>,
+    };
+
     const targetContainerRef = useRef(null);
 
     const scrollToContainer = () => {
@@ -164,7 +174,7 @@ const Page = () => {
                 src="/images/ahorra-energia/ahorra-energia.jpg"
                 title="Ahorra energía en tu empresa"
             />
-            <section className="w-full flex p-32 bg-custom-grey justify-between items-center">
+            <section className="w-full flex lg:flex-row flex-col lg:gap-0 gap-6 p-12 lg:p-32 bg-custom-grey lg:justify-between lg:items-center">
                 <motion.h1
                     initial={{ x: -20, opacity: 0 }}
                     whileInView={{
@@ -175,19 +185,19 @@ const Page = () => {
                             delay: 0.2,
                         },
                     }}
-                    className="text-6xl text-custom-cream w-1/2 leading-tight font-medium"
+                    className="text-3xl lg:text-6xl text-custom-cream lg:w-1/2 w-full  leading-tight font-normal lg:font-medium"
                 >
                     Conviértete en cliente libre con nosotros.
                 </motion.h1>
                 <motion.button
                     onClick={scrollToContainer}
                     target="blank"
-                    className="text-4xl font-medium rounded-[40px] bg-custom-cream text-custom-grey px-16 h-fit py-8 mr-24 hover:scale-105 hover:shadow-lg transition-all"
+                    className="text-xl lg:text-4xl font-normal lg:font-medium rounded-[40px] bg-custom-cream text-custom-grey px-0 lg:px-16 w-1/2 lg:w-fit h-fit py-2 lg:py-8 lg:mr-24 hover:scale-105 hover:shadow-lg transition-all"
                 >
                     Empieza aquí
                 </motion.button>
             </section>
-            <section className="w-full flex relative overflow-hidden">
+            <section className="w-full lg:flex relative overflow-hidden hidden">
                 <div className="w-1/2 flex justify-start items-end h-full">
                     <div className="flex flex-col justify-start items-end bg-custom-blue h-full p-28 w-full">
                         <h1 className=" self-start mb-12 text-4xl text-custom-cream font-light w-[85%]">
@@ -268,7 +278,22 @@ const Page = () => {
                     </ul>
                 </div>
             </section>
-            <section className="w-full h-[520px] flex">
+            <section className="lg:hidden">
+                <div className="pt-16 px-16 font-normal text-4xl text-custom-grey bg-custom-cream">
+                    <p className="w-[90%]">
+                        Potenciamos el desarrollo a lo largo del país
+                    </p>
+                </div>
+                <div className="relative h-[580px] bg-custom-cream">
+                    <Image
+                        fill
+                        alt="Mapa político del Perú"
+                        src="/images/zonas-de-concesion/mapa.svg"
+                        className="px-16 py-0"
+                    />
+                </div>
+            </section>
+            <section className="w-full h-[520px] lg:flex hidden">
                 <div className="w-1/3 relative">
                     <Image
                         alt="Maquinaria"
@@ -294,24 +319,55 @@ const Page = () => {
                     />
                 </div>
             </section>
+
+            <Slider
+                {...settings2}
+                className="w-full h-[320px] relative lg:hidden"
+            >
+                <div className="w-full h-[320px] relative">
+                    <Image
+                        alt="Maquinaria"
+                        src="/images/ahorra-energia/1.png"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+                <div className="w-full h-[320px] relative">
+                    <Image
+                        alt="Maquinaria"
+                        src="/images/ahorra-energia/2.jpg"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+                <div className="w-full h-[320px] relative">
+                    <Image
+                        alt="Maquinaria"
+                        src="/images/ahorra-energia/3.jpg"
+                        fill
+                        className="object-cover"
+                    />
+                </div>
+            </Slider>
+
             <section
                 ref={targetContainerRef}
-                className="w-full flex gap-48 relative overflow-hidden bg-custom-cream px-28 py-32"
+                className="w-full flex lg:flex-row flex-col gap-20 lg:gap-48 relative overflow-hidden bg-custom-cream px-12 py-16 lg:px-28 lg:py-32"
             >
-                <div className="w-1/2">
-                    <h1 className="text-5xl font-normal text-custom-grey w-[65%] leading-tight">
+                <div className="lg:w-1/2">
+                    <h1 className="text-5xl font-normal text-custom-grey w-full lg:w-[65%] leading-tight">
                         ¡Déjanos tus datos para simular gratuitamente tu ahorro!
                     </h1>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                     <AhorroEnergiaForm color="cream" />
                 </div>
             </section>
-            <section className="flex flex-col p-32 bg-custom-cream">
-                <h1 className="font-medium text-5xl text-center pb-20 text-custom-grey">
+            <section className="flex flex-col p-12 pb-0 lg:p-32 bg-custom-cream">
+                <h1 className="font-normal lg:font-medium text-2xl lg:text-5xl text-center pb-10 lg:pb-20 text-custom-grey">
                     Algunos de nuestros clientes
                 </h1>
-                <Slider {...settings}>
+                <Slider {...settings} className="!lg:flex !hidden">
                     <div className="w-full">
                         <div className="flex justify-evenly">
                             <Image
@@ -538,19 +594,218 @@ const Page = () => {
                         </div>
                     </div>
                 </Slider>
+                <Slider {...settings2} className="!flex !lg:hidden">
+                    <Image
+                        width={220}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/kimberly.png"
+                    />
+                    <Image
+                        width={180}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/republica.png"
+                    />
+                    <Image
+                        width={160}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/agromar.png"
+                    />
+
+                    <Image
+                        width={140}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/dayr.png"
+                    />
+                    <Image
+                        width={140}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/razzeto.png"
+                    />
+                    <Image
+                        width={220}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/newton-college.png"
+                    />
+
+                    <Image
+                        width={220}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/sol-de-laredo.png"
+                    />
+                    <Image
+                        width={180}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/iron-mountain.png"
+                    />
+                    <Image
+                        width={120}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/mali.png"
+                    />
+
+                    <Image
+                        width={140}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/wenco.png"
+                    />
+                    <Image
+                        width={120}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/agrovision.png"
+                    />
+                    <Image
+                        width={180}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/chutana.png"
+                    />
+
+                    <Image
+                        width={140}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/backus.png"
+                    />
+                    <Image
+                        width={120}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/nestle.png"
+                    />
+                    <Image
+                        width={180}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/amcor.png"
+                    />
+
+                    <Image
+                        width={200}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/produmar.png"
+                    />
+                    <Image
+                        width={160}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/resinplast.png"
+                    />
+                    <Image
+                        width={180}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/iprisco.png"
+                    />
+
+                    <Image
+                        width={140}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/eurotubo.png"
+                    />
+                    <Image
+                        width={120}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/peruplast.png"
+                    />
+                    <Image
+                        width={160}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/recuperada.png"
+                    />
+
+                    <Image
+                        width={170}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/textiles.png"
+                    />
+                    <Image
+                        width={200}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/packplast.png"
+                    />
+                    <Image
+                        width={120}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/marcampo.png"
+                    />
+
+                    <Image
+                        width={200}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/inmobideas.png"
+                    />
+                    <Image
+                        width={100}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/agricola.png"
+                    />
+                    <Image
+                        width={220}
+                        height={0}
+                        className="object-contain"
+                        alt=""
+                        src="/images/ahorra-energia/agrolatina.png"
+                    />
+                </Slider>
             </section>
-            <section className="w-full flex h-[320px] relative overflow-hidden">
+            <section className="w-full flex h-[160px] lg:h-[320px] relative overflow-hidden">
                 <div className="w-3/4 flex justify-start items-center h-full">
-                    <div className="flex flex-col justify-start bg-custom-green h-full pl-24 py-24 w-full">
-                        <h1 className="text-5xl text-custom-cream leading-tight">
+                    <div className="flex flex-col justify-center lg:justify-start bg-custom-green h-full pl-8 lg:pl-24 lg:py-24 w-full">
+                        <h1 className="text-2xl lg:text-5xl text-custom-cream leading-tight">
                             Más información
                         </h1>
-                        <h1 className="text-5xl text-custom-cream leading-tight">
+                        <h1 className="text-2xl lg:text-5xl text-custom-cream leading-tight">
                             al +51 951 306 952
                         </h1>
                     </div>
                 </div>
-                <div className="w-1/4 flex h-full justify-end pr-24 py-24 bg-custom-green text-custom-cream items-center">
+                <div className="w-1/4 flex h-full justify-end pr-10 lg:pr-24 lg:py-24 bg-custom-green text-custom-cream items-center">
                     <Link
                         target="_blank"
                         href="https://api.whatsapp.com/send/?phone=51951306952"
@@ -565,8 +820,8 @@ const Page = () => {
                     </Link>
                 </div>
             </section>
-            <section className="w-full flex relative overflow-hidden bg-custom-sky">
-                <div className="relative w-[45%]">
+            <section className="w-full flex lg:flex-row flex-col relative overflow-hidden bg-custom-sky">
+                <div className="relative w-full h-[320px] lg:h-auto lg:w-[45%]">
                     <Image
                         fill
                         alt="Trabajador de CVC saludando"
@@ -574,41 +829,47 @@ const Page = () => {
                         className="object-cover"
                     />
                 </div>
-                <div className="w-[55%] flex flex-col p-32 gap-16 text-custom-cream">
-                    <h1 className="leading-tight font-normal text-6xl w-3/4 pb-12">
+                <div className="w-full lg:w-[55%] flex flex-col p-12 lg:p-32 gap-16 text-custom-cream">
+                    <h1 className="leading-tight font-normal text-4xl lg:text-6xl w-3/4 pb-2 lg:pb-12">
                         Cambia tu condición en tres pasos
                     </h1>
-                    <div className="flex gap-8 items-center">
-                        <h1 className="font-semibold text-9xl pr-6">1</h1>
-                        <p className="font-extralight text-lg w-1/4">
+                    <div className="flex gap-6 lg:gap-8 items-center">
+                        <h1 className="font-semibold text-7xl lg:text-9xl pr-6">
+                            1
+                        </h1>
+                        <p className="font-extralight text-lg w-1/2 lg:w-1/4">
                             suscripción y firma del contrato
                         </p>
                     </div>
-                    <div className="flex gap-8 items-center">
-                        <h1 className="font-semibold text-9xl">2</h1>
-                        <p className="font-extralight text-lg w-1/4">
+                    <div className="flex gap-6 lg:gap-8 items-center">
+                        <h1 className="font-semibold text-7xl lg:text-9xl">
+                            2
+                        </h1>
+                        <p className="font-extralight text-lg w-1/2 lg:w-1/4">
                             notificación al distribuidor local y osinergmin
                         </p>
                     </div>
-                    <div className="flex gap-8 items-center">
-                        <h1 className="font-semibold text-9xl">3</h1>
-                        <p className="font-extralight text-lg w-1/4">
+                    <div className="flex gap-6 lg:gap-8 items-center">
+                        <h1 className="font-semibold text-7xl lg:text-9xl">
+                            3
+                        </h1>
+                        <p className="font-extralight text-lg w-1/2 lg:w-1/4">
                             inicio del nuevo contrato en 12 meses
                         </p>
                     </div>
                 </div>
             </section>
-            <section className="bg-custom-blue text-custom-cream flex-col p-32">
-                <h1 className="font-medium text-5xl text-center pb-20">
+            <section className="bg-custom-blue text-custom-cream flex-col p-8 lg:p-32">
+                <h1 className="font-medium text-3xl lg:text-5xl text-center pb-10 lg:pb-20">
                     Preguntas frecuentes
                 </h1>
                 {preguntasFrecuentes.map((p) => (
                     <div
                         key={p.id}
                         onClick={() => handleClick(p)}
-                        className="flex flex-col font-normal text-3xl pb-8 gap-8 hover:scale-105 transition-all cursor-pointer"
+                        className="flex flex-col font-normal text-xl lg:text-3xl pb-8 gap-4 lg:gap-8 hover:scale-105 transition-all cursor-pointer"
                     >
-                        <div className="flex items-center">
+                        <div className="items-center lg:flex hidden">
                             <Image
                                 width={64}
                                 height={64}
@@ -619,9 +880,20 @@ const Page = () => {
                             />
                             <h2>{p.title}</h2>
                         </div>
+                        <div className="items-center flex lg:hidden">
+                            <Image
+                                width={32}
+                                height={32}
+                                alt="Icono de +"
+                                src={`/images/ahorra-energia/${
+                                    activeQuestion[p.id] ? "minus" : "plus"
+                                }.png`}
+                            />
+                            <h2 className="text-base w-[85%]">{p.title}</h2>
+                        </div>
 
                         {activeQuestion[p.id] && (
-                            <p className="text-lg font-extralight pl-[72px] pb-8 w-3/4">
+                            <p className="text-sm lg:text-lg font-extralight pl-[72px] pb-8 w-[93%] lg:w-3/4">
                                 {p.text}
                             </p>
                         )}

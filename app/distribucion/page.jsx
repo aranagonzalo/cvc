@@ -3,7 +3,7 @@ import { useState } from "react";
 import Hero from "@/components/Hero.jsx";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ChevronLeft } from "lucide-react";
+import { ChevronLeft, Minus, Plus } from "lucide-react";
 
 const dots = [
     // {
@@ -132,6 +132,12 @@ const Page = () => {
         setIsHovered(false);
     };
 
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const openMobile = (index) => {
+        setActiveIndex((prevIndex) => (prevIndex === index ? null : index));
+    };
+
     return (
         <div className="w-full flex flex-col">
             <Hero
@@ -139,7 +145,7 @@ const Page = () => {
                 src="/images/zonas-de-concesion/zonas-de-concesion.jpg"
                 title="Distribución Eléctrica"
             />
-            <section className="w-full flex h-[1000px] relative overflow-hidden">
+            <section className="w-full lg:flex h-[1000px] relative overflow-hidden hidden">
                 <div
                     className={`w-[84%] flex justify-start items-end z-0 absolute top-0 h-full transition-all duration-[800ms] ease-out ${
                         isHovered ? "-left-[42%]" : "left-0"
@@ -259,6 +265,96 @@ const Page = () => {
                         ))}
                     </div>
                 </div>
+            </section>
+            <section className="lg:hidden">
+                <div className="pt-16 px-16 font-normal text-4xl text-custom-grey bg-custom-cream">
+                    <p className="w-[75%]">
+                        Brindamos desarrollo a nuestras zonas de concesion
+                    </p>
+                </div>
+                <div className="relative h-[580px] bg-custom-cream">
+                    <Image
+                        fill
+                        alt="Mapa político del Perú"
+                        src="/images/zonas-de-concesion/mapa.svg"
+                        className="px-16 py-0"
+                    />
+                </div>
+            </section>
+            <section>
+                {dots.map((linea, index) => (
+                    <div key={linea.title}>
+                        <div
+                            className="flex justify-between p-8 bg-custom-yellow text-custom-grey border-b border-custom-grey"
+                            onClick={() => openMobile(index)}
+                        >
+                            {linea.title}
+                            {activeIndex === index ? <Minus /> : <Plus />}
+                        </div>
+                        {activeIndex === index && (
+                            <div className="bg-custom-cream text-custom-grey">
+                                <div
+                                    className="relative"
+                                    style={{ height: "320px" }}
+                                >
+                                    <Image
+                                        src={linea.url}
+                                        alt={linea.title}
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
+                                </div>
+                                <div className="p-8 flex flex-col gap-10">
+                                    <div className="flex justify-end">
+                                        {linea.subtitle}
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            Área de concesión
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium">
+                                            {linea.area}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            Inversión en activos
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium">
+                                            {linea.inversion}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            Demanda actual
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium leading-tight">
+                                            {linea.demanda}
+                                        </strong>
+                                    </div>
+                                    <div>
+                                        <p className="text-sm font-light pb-2">
+                                            Redes en media tensión
+                                        </p>{" "}
+                                        <strong className="text-lg font-medium leading-tight">
+                                            {linea.redes}
+                                        </strong>
+                                    </div>
+                                    {linea.clientes !== "" && (
+                                        <div>
+                                            <p className="text-sm font-light pb-2">
+                                                Clientes
+                                            </p>{" "}
+                                            <strong className="text-lg font-medium leading-tight">
+                                                {linea.clientes}
+                                            </strong>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                ))}
             </section>
         </div>
     );
