@@ -208,6 +208,51 @@ const Page = () => {
                     <Image
                         className="object-cover"
                         fill
+                        src={`/images/elaboracion-de-proyectos/5.jpg`}
+                        alt="Ingeniero de obra con brazos cruzados"
+                    />
+                </div>
+                <div className="px-28 py-24 bg-custom-yellow flex flex-col w-1/2 relative justify-between">
+                    <motion.h1
+                        initial={{ x: 15, opacity: 0 }}
+                        whileInView={{
+                            x: 0,
+                            opacity: 1,
+                            transition: {
+                                duration: 0.4,
+                                delay: 0.1,
+                            },
+                        }}
+                        className="text-custom-grey font-normal text-4xl leading-tight w-full"
+                    >
+                        Asesoría
+                    </motion.h1>
+                    <motion.div
+                        initial={{ x: 15, opacity: 0 }}
+                        whileInView={{
+                            x: 0,
+                            opacity: 1,
+                            transition: {
+                                duration: 0.4,
+                                delay: 0.1,
+                            },
+                        }}
+                        className="text-lg text-custom-grey font-normal pt-4 leading-normal text-justify w-full"
+                    >
+                        <p>
+                            Brindamos asesoramiento en optimización energética
+                            industrial y en desarrollo de proyectos eléctricos
+                            de media, alta y muy alta tensión.
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
+
+            <section className="w-full hidden lg:flex h-[50vw]">
+                <div className="relative w-1/2">
+                    <Image
+                        className="object-cover"
+                        fill
                         src={`/images/elaboracion-de-proyectos/4.jpg`}
                         alt="Ingeniero de obra con brazos cruzados"
                     />
@@ -252,52 +297,7 @@ const Page = () => {
                 </div>
             </section>
 
-            <section className="w-full hidden lg:flex h-[50vw]">
-                <div className="relative w-1/2">
-                    <Image
-                        className="object-cover"
-                        fill
-                        src={`/images/elaboracion-de-proyectos/5.jpg`}
-                        alt="Ingeniero de obra con brazos cruzados"
-                    />
-                </div>
-                <div className="px-28 py-24 bg-custom-yellow flex flex-col w-1/2 relative justify-between">
-                    <motion.h1
-                        initial={{ x: 15, opacity: 0 }}
-                        whileInView={{
-                            x: 0,
-                            opacity: 1,
-                            transition: {
-                                duration: 0.4,
-                                delay: 0.1,
-                            },
-                        }}
-                        className="text-custom-grey font-normal text-4xl leading-tight w-full"
-                    >
-                        Asesoría
-                    </motion.h1>
-                    <motion.div
-                        initial={{ x: 15, opacity: 0 }}
-                        whileInView={{
-                            x: 0,
-                            opacity: 1,
-                            transition: {
-                                duration: 0.4,
-                                delay: 0.1,
-                            },
-                        }}
-                        className="text-lg text-custom-grey font-normal pt-4 leading-normal text-justify w-full"
-                    >
-                        <p>
-                            Brindamos asesoramiento en optimización energética
-                            industrial y en desarrollo de proyectos eléctricos
-                            de media, alta y muy alta tensión.
-                        </p>
-                    </motion.div>
-                </div>
-            </section>
-
-            <section>
+            <section className="flex flex-col lg:hidden">
                 {dots.map((linea, index) => (
                     <div key={linea.title}>
                         <div

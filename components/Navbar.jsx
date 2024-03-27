@@ -21,10 +21,6 @@ const Navbar = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleHover = () => {
-        setIsHovered(!isHovered);
-    };
-
     const handleHoverSection = (section) => {
         setHoveredSection(section);
     };
@@ -60,8 +56,12 @@ const Navbar = () => {
                 }`}
             >
                 <motion.nav
-                    onMouseEnter={handleHover}
-                    onMouseLeave={handleHover}
+                    onMouseEnter={() =>
+                        setTimeout(() => setIsHovered(true), 200)
+                    }
+                    onMouseLeave={() =>
+                        setTimeout(() => setIsHovered(false), 150)
+                    }
                     className={`transition-all flex w-full text-custom-cream bg-custom-grey/[.95] backdrop-blur text-sm font-normal px-16 py-3 rounded-b-2xl ${
                         isHovered ? "items-start" : "items-center"
                     }`}

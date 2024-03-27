@@ -6,18 +6,6 @@ import { motion } from "framer-motion";
 import { ChevronLeft, Minus, Plus } from "lucide-react";
 
 const dots = [
-    // {
-    //     title: "Lambayeque",
-    //     subtitle: "Olmos - Motupe - Íllimo",
-    //     area: "+10,000 Ha",
-    //     inversion: "US$ 533 M",
-    //     demanda: "265 kW",
-    //     redes: "23 km",
-    //     clientes: "501",
-    //     left: "63px",
-    //     top: "167px",
-    //     url: "/images/zonas-de-concesion/1.jpg",
-    // },
     {
         title: "Lambayeque",
         subtitle: "Tierras Nuevas - Olmos",
@@ -25,7 +13,7 @@ const dots = [
         inversion: "US$ +6,8 M",
         demanda: "30 MW",
         redes: "+550 km",
-        clientes: "143",
+        trabajo: "+125K",
         left: "84px",
         top: "194px",
         url: "/images/zonas-de-concesion/2.jpg",
@@ -38,7 +26,7 @@ const dots = [
         inversion: "US$ +1,2 M",
         demanda: "2 MW",
         redes: "+69 km",
-        clientes: "2139",
+        trabajo: "+30K",
         left: "175px",
         top: "347px",
         url: "/images/zonas-de-concesion/3.png",
@@ -51,7 +39,7 @@ const dots = [
         inversion: "US$ +9,2 M",
         demanda: "43 MW",
         redes: "+570 km",
-        clientes: "1526",
+        trabajo: "+200K",
         left: "215px",
         top: "448px",
         url: "/images/zonas-de-concesion/4.png",
@@ -64,7 +52,7 @@ const dots = [
         inversion: "US$ 13 M",
         demanda: "420 MW",
         redes: "28 km",
-        clientes: "",
+        trabajo: "",
         left: "392px",
         top: "568px",
         url: "/images/zonas-de-concesion/5.jpg",
@@ -77,7 +65,7 @@ const dots = [
         inversion: "US$ 15 M",
         demanda: "+ 1 MW",
         redes: "32 km",
-        clientes: "",
+        trabajo: "",
         left: "70px",
         top: "153px",
         url: "/images/zonas-de-concesion/6.jpg",
@@ -90,7 +78,7 @@ const dots = [
         inversion: "US$ 11 M",
         demanda: "160 MW",
         redes: "75 km",
-        clientes: "",
+        trabajo: "",
         left: "374px",
         top: "539px",
         url: "/images/zonas-de-concesion/7.jpg",
@@ -108,7 +96,7 @@ const Page = () => {
         inversion: "",
         demanda: "",
         redes: "",
-        clientes: "",
+        trabajo: "",
         url: "",
         enproyecto: false,
     });
@@ -122,7 +110,7 @@ const Page = () => {
             inversion: d.inversion,
             demanda: d.demanda,
             redes: d.redes,
-            clientes: d.clientes,
+            trabajo: d.trabajo,
             url: d.url,
             enproyecto: d.enproyecto,
         });
@@ -214,13 +202,13 @@ const Page = () => {
                                             redes de media tensión
                                         </p>
                                     </li>
-                                    {dotData.clientes.length !== 0 && (
+                                    {dotData.trabajo.length !== 0 && (
                                         <li className="flex gap-4 items-center">
                                             <p className="text-3xl font-medium w-1/2 justify-end flex">
-                                                {dotData.clientes}
+                                                {dotData.trabajo}
                                             </p>
                                             <p className="text-xl font-light w-1/4 leading-none">
-                                                clientes
+                                                puestos de trabajo generados
                                             </p>
                                         </li>
                                     )}
@@ -281,7 +269,7 @@ const Page = () => {
                     />
                 </div>
             </section>
-            <section>
+            <section className="lg:hidden">
                 {dots.map((linea, index) => (
                     <div key={linea.title}>
                         <div
@@ -340,13 +328,13 @@ const Page = () => {
                                             {linea.redes}
                                         </strong>
                                     </div>
-                                    {linea.clientes !== "" && (
+                                    {linea.trabajo !== "" && (
                                         <div>
                                             <p className="text-sm font-light pb-2">
-                                                Clientes
+                                                Puestos de trabajo generados
                                             </p>{" "}
                                             <strong className="text-lg font-medium leading-tight">
-                                                {linea.clientes}
+                                                {linea.trabajo}
                                             </strong>
                                         </div>
                                     )}

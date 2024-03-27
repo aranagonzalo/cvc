@@ -301,7 +301,7 @@ const Page = () => {
                     </div>
                 )}
             </section>
-            <section className="w-full flex flex-col">
+            <section className="w-full flex flex-col lg:hidden">
                 {items.map((item, i) => (
                     <>
                         <div

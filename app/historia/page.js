@@ -148,7 +148,7 @@ const page = () => {
                     title="SE Lomas"
                 />
                 <StoryCardRight
-                    text="El proyecto en Tacna tiene un valor estimado de 12 millones de dólares y se extiende sobre 74,000 hectáreas. Tenemos el objetivo de suministrar energía eléctrica para impulsar proyectos de agroexportación, aviculura, vivienda, agua que generen un mayor desarrollo en las comunidades y comercios."
+                    text="En el proyecto Tacna se estima una inversión de 12 millones de dólares y se extiende sobre 74,000 hectáreas. Tenemos el objetivo de suministrar energía eléctrica para impulsar proyectos de agroexportación que generen un mayor desarrollo en las comunidades y comercios."
                     date="2021"
                     title="Concesión de Distribución - Tacna "
                 />
@@ -163,7 +163,7 @@ const page = () => {
                     title="Central Termoeléctrica Salas"
                 />
                 <StoryCardLeft
-                    text="En el año 2023, obtuvimos ambas concesiones de distribución. El proyecto en Piura está estimado en 13 millones de dólares y abarca 78,000 hectáreas, mientras que el proyecto en Moquegua tiene un valor estimado de 9 millones de dólares y se extiende sobre 215,000 hectáreas. Esta iniciativa nos permitirá suministrar electricidad a miles de hectáreas rurales que actualmente carecen de acceso a este servicio esencial y promover un nuevo polo de desarrollo."
+                    text="En el año 2023, obtuvimos ambas concesiones de distribución.  En el proyecto Piura se estima una inversión de 13 millones de dólares y abarca 78,000 hectáreas, mientras que en el proyecto Moquegua se estima una inversión de 9 millones de dólares y se extiende sobre 215,000 hectáreas. Esta iniciativa nos permitirá suministrar electricidad a miles de hectáreas rurales que actualmente carecen de acceso a este servicio esencial."
                     date="2023"
                     title="Concesiones de Distribución - Piura y Moquegua "
                 />
@@ -247,7 +247,7 @@ const page = () => {
                     title="SE Lomas"
                 />
                 <StoryCardBottom
-                    text="El proyecto en Tacna tiene un valor estimado de 12 millones de dólares y se extiende sobre 74,000 hectáreas. Tenemos el objetivo de suministrar energía eléctrica para impulsar proyectos de agroexportación, aviculura, vivienda, agua que generen un mayor desarrollo en las comunidades y comercios."
+                    text="En el proyecto Tacna se estima una inversión de 12 millones de dólares y se extiende sobre 74,000 hectáreas. Tenemos el objetivo de suministrar energía eléctrica para impulsar proyectos de agroexportación que generen un mayor desarrollo en las comunidades y comercios."
                     date="2021"
                     title="Concesión de Distribución - Tacna "
                 />
@@ -262,7 +262,7 @@ const page = () => {
                     title="Central Termoeléctrica Salas"
                 />
                 <StoryCardBottom
-                    text="En el año 2023, obtuvimos ambas concesiones de distribución. El proyecto en Piura está estimado en 13 millones de dólares y abarca 78,000 hectáreas, mientras que el proyecto en Moquegua tiene un valor estimado de 9 millones de dólares y se extiende sobre 215,000 hectáreas. Esta iniciativa nos permitirá suministrar electricidad a miles de hectáreas rurales que actualmente carecen de acceso a este servicio esencial y promover un nuevo polo de desarrollo."
+                    text="En el año 2023, obtuvimos ambas concesiones de distribución.  En el proyecto Piura se estima una inversión de 13 millones de dólares y abarca 78,000 hectáreas, mientras que en el proyecto Moquegua se estima una inversión de 9 millones de dólares y se extiende sobre 215,000 hectáreas. Esta iniciativa nos permitirá suministrar electricidad a miles de hectáreas rurales que actualmente carecen de acceso a este servicio esencial."
                     date="2023"
                     title="Concesiones de Distribución - Piura y Moquegua "
                 />

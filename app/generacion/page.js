@@ -151,7 +151,7 @@ const Page = () => {
                     </div>
                 </div>
             </section>
-            <section>
+            <section className="flex flex-col lg:flex-row lg:hidden">
                 {lineasDeGeneracion.map((linea, index) => (
                     <div key={linea.title}>
                         <div
